@@ -1,0 +1,49 @@
+---
+import "../styles/generel.css"
+---
+<article>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="sprog">
+            <a href="#" class="active">Dansk</a> /
+            <a href="#">English</a> /
+            <a href="#">Espanol</a>
+        </div>
+    </header>
+</article>
+
+<style>header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(  --primary-color);
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.sprog a {
+  text-decoration: none;
+  color: var( --secondary-color); /* secondary color */
+  margin: 0 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.sprog a:hover {
+  color: var(--tertiary-color);
+}
+
+.sprog .active {
+  border-bottom: 2px solid var(--tertiary-color); /* tertiary color */
+}
+
+</style>

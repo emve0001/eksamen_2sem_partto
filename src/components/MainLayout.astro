@@ -1,6 +1,8 @@
 ---
 import "../styles/generel.css";
+import Header from "./Header.astro";
 import Navigation from "../components/Navigation.astro";
+
 ---
 
 <html lang="da">
@@ -13,7 +15,9 @@ import Navigation from "../components/Navigation.astro";
     <title>Astro</title>
   </head>
   <body>
-    <header></header>
+   <header>
+<Header />
+  </header>
     <main>
       <Navigation />
     </main>
