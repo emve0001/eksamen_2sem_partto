@@ -1,0 +1,67 @@
+---
+import styles from "../styles/general.css"
+---
+<section class="footer">
+        <div class="footer_grid">
+            <div class="lokation">
+                <p class="fmt_tyk">LOKATION</p>
+                <p class="fmt_tynd">Strandgade 30 st. tv</p>
+                <p class="fmt_tynd">1401 København K</p>
+            </div>
+
+            <div class="kontakt">
+                <p class="fmt_tyk">KONTAKT</p>
+                <p class="fmt_tynd">Telefonnummer: +45 33 13 27 25</p>
+                <p class="fmt_tynd">Mail: www.arkitekturvaerkstedet.dk</p>
+            </div>
+
+            <div class="so_me">
+                <p class="fmt_tyk">FØLG MED PÅ</p>
+                <p class="fmt_tynd">Instagram</p>
+                <p class="fmt_tynd">Facebook</p>
+                <p class="fmt_tynd">Linkedin</p>
+            </div>
+        </div>
+
+        <div class="all_rights">
+            <p class="fmt_tyk1">©2024 Arkitekturvaerkstedet. All rights reserved.</p>
+        </div>
+    </section>
+
+    <style>
+    .fmt_tyk {
+        font-weight: 700;
+        font-size: var(--footer-font-size);
+        padding: 4% 1%;
+    }
+
+    .fmt_tynd {
+        font-size: var(--footer-secondary-font-size);
+        padding: 1% 1%;
+    }
+
+    .fmt_tyk1 {
+        font-weight: 700;
+        font-size: var(--footer-font-size);
+        padding: 0;
+    }
+    .lokation,
+    .kontakt,
+    .so_me {
+        border: 0.5px solid var(--secondary-color);
+        padding: 2%;
+    }
+
+    .all_rights {
+        border: 0.5px solid var(--secondary-color);
+        padding: 1% 1% 1% 1%;
+    }
+
+    @media (min-width: 768px) {
+        .footer_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* Tre kolonner med lige bredde */
+        }
+    }
+</style>
