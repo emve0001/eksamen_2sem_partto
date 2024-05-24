@@ -10,7 +10,7 @@ img {
   height: auto;
   display: block;
 }
-
+/*Emilie har udarbejdet CSS-variablerne d.21/5 - sat ind på ny d. 24/5 grundet probs m. gamle repository*/
 :root {
   /*Farver defineret*/
   --primary-color: #fff7e8; /* Knækket hvid */
