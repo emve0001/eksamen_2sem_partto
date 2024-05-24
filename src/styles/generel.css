@@ -1,0 +1,228 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  /*Farver defineret*/
+  --primary-color: #fff7e8; /* Knækket hvid */
+  --secondary-color: #202220; /* Dyb mørk grå */
+  --tertiary-color: #e73127; /* Rød */
+  --accent-color: #3f742f; /* Grøn */
+
+  /*Skrifttyper*/
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Raleway", sans-serif;
+
+  /*CAPS-Lock på tekst*/
+  --text-transform-uppercase: uppercase;
+
+  /*FONT-weight*/
+  --font-weight-black: 900;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  /*MOBIL MOBIL MOBIL MOBIL (MAX-WIDTH: 767PX)*/
+  /*MOBIL MOBIL MOBIL MOBIL (MAX-WIDTH: 767PX)*/
+  /*MOBIL MOBIL MOBIL MOBIL (MAX-WIDTH: 767PX)*/
+  /*MOBIL MOBIL MOBIL MOBIL (MAX-WIDTH: 767PX)*/
+
+  /* MOBIL SKRIFT STØRRELSER*/
+  --h1-font-size: 1.44rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.13rem;
+  --h4-font-size: 1.75rem;
+  --h5-font-size: 1.19rem;
+  --h6-font-size: 1.19rem;
+  --body-font-size: 1rem;
+  --footer-font-size: 1rem;
+  --footer-secondary-font-size: 0.81rem;
+}
+h1 {
+  font-size: var(--h1-font-size);
+  letter-spacing: 2.3px;
+  text-transform: var(--text-transform-uppercase);
+  font-weight: var(--font-weight-black);
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  letter-spacing: 1.68px;
+  text-transform: var(--text-transform-uppercase);
+  font-weight: var(--font-weight-black);
+  color: var(--secondary-color);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+  letter-spacing: 2.16px;
+  font-weight: var(--font-weight-medium);
+  color: var(--tertiary-color);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+  letter-spacing: 1.4px;
+  text-transform: var(--text-transform-uppercase);
+  font-weight: var(--font-weight-bold);
+  color: var(--secondary-color);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+  text-transform: var(--text-transform-uppercase);
+  font-weight: var(--font-weight-medium);
+  color: var(--tertiary-color);
+}
+
+h6 {
+  font-size: var(--h6-font-size);
+  text-transform: var(--text-transform-uppercase);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 5.7px;
+  color: var(--accent-color);
+}
+
+p {
+  font-size: var(--body-font-size);
+  font-family: var(--font-secondary);
+  color: var(--secondary-color);
+  line-height: 24px;
+}
+
+/*IPAD IPAD IPAD IPAD IPAD*/
+/*IPAD IPAD IPAD IPAD IPAD*/
+/*IPAD IPAD IPAD IPAD IPAD*/
+/*IPAD IPAD IPAD IPAD IPAD*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    /*IPAD SKRIFT STØRRELSER*/
+    --h1-font-size: 4.6rem;
+    --h2-font-size: 4.6rem;
+    --h3-font-size: 4.6rem;
+    --h4-font-size: 3.8rem;
+    --h5-font-size: 3rem;
+    --h6-font-size: 2.5rem;
+    --body-font-size: 1.44rem;
+    --footer-font-size: 1.19rem;
+    --footer-secondary-font-size: 1rem;
+  }
+  h1 {
+    font-size: var(--h1-font-size);
+    /* letter-spacing: ; */
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-black);
+  }
+  h2 {
+    font-size: var(--h2-font-size);
+    /* letter-spacing: ; */
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-black);
+  }
+
+  h3 {
+    font-size: var(--h3-font-size); /*h5 brugt til h3 (vi har ikke defineret andet)*/
+    /* letter-spacing:; */
+    font-weight: var(--font-weight-medium);
+  }
+  h4 {
+    font-size: var(--h4-font-size);
+    /* letter-spacing:; */
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-black);
+  }
+
+  h5 {
+    font-size: var(--h5-font-size);
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-medium);
+  }
+
+  h6 {
+    font-size: var(--h6-font-size);
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-medium);
+    /* letter-spacing:; */
+  }
+}
+
+/*DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP*/
+/*DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP*/
+/*DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP*/
+/*DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP*/
+
+@media (min-width: 1025px) {
+  :root {
+    /* DESKTOP SKRIFT STØRRELSER*/
+    --h1-font-size: 4.312rem;
+    --h2-font-size: 4.312rem;
+    --h3-font-size: 3rem;
+    --h4-font-size: 3rem;
+    --h5-font-size: 2.5rem;
+    --h6-font-size: 2.06rem;
+    --body-font-size: 1.44rem;
+    --footer-font-size: 1.19rem;
+    --footer-secondary-font-size: 1rem;
+
+    /*LETTER SPACING*/
+    --h1-letter-spacing: 0.86rem;
+    --h2-letter-spacing: 0.26rem;
+    --h3-letter-spacing: 0.36rem;
+    --h4-letter-spacing: 0.15rem;
+    --h6-letter-spacing: 0.31rem;
+  }
+
+  h1 {
+    font-size: var(--h1-font-size);
+    letter-spacing: var(--h1-letter-spacing);
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-black);
+  }
+
+  h2 {
+    font-size: var(--h2-font-size);
+    letter-spacing: var(--h2-letter-spacing);
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-black);
+  }
+
+  h3 {
+    font-size: var(--h5-font-size);
+    letter-spacing: var(--h3-letter-spacing);
+    font-weight: var(--font-weight-medium);
+  }
+
+  h4 {
+    font-size: var(--h2-h4-font-size);
+    letter-spacing: var(--h4-letter-spacing);
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-bold);
+  }
+
+  h5 {
+    font-size: var(--h5-font-size);
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-medium);
+  }
+  h6 {
+    font-size: var(--h6-font-size);
+    text-transform: var(--text-transform-uppercase);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--h6-letter-spacing);
+  }
+
+  p {
+    font-size: var(--body-font-size);
+    line-height: 24px;
+  }
+}

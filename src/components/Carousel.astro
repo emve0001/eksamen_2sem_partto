@@ -1,0 +1,61 @@
+---
+import "/src/styles/generel.css";
+---
+
+<div class="carousel">
+  <div class="carousel-container">
+    <button class="prev" onclick="changeSlide(-1);"><img src="/img/tilbage_pil.webp"></button>
+    <img src="/img/carousel_test.webp" class="carousel-image">
+    <img src="/img/carousel_test2.webp" class="carousel-image">
+    <img src="/img/carousel_test3.webp" class="carousel-image">
+    <button class="next" onclick="changeSlide(1);"><img src="/img/frem_pil.webp"></button>
+  </div>
+</div>
+
+
+
+<style>
+  .carousel {
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centrerer elementerne vertikalt */
+  }
+  .carousel-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  .carousel-image {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+    display: block;
+    flex-shrink: 0; /* Forhindrer billederne i at blive skaleret */
+  }
+  .prev, .next {
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .prev img, .next img {
+    width: 30px; /* Størrelse på dine pil-billeder */
+    height: auto;
+  }
+</style>
+
+
+<script>
+let current = 0;
+const images = document.querySelectorAll('.carousel-image');
+
+function changeSlide(direction: number) {
+  (images[current] as HTMLElement).style.display = 'none';
+  current = (current + direction + images.length) % images.length;
+  (images[current] as HTMLElement).style.display = 'block';
+}
+
+setInterval(() => {
+  changeSlide(1);
+}, 10000);
+</script>
