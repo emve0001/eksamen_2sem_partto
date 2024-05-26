@@ -1,0 +1,54 @@
+---
+import "../styles/generel.css"
+
+---
+<article>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="../img/desktop_logo.webp" alt="Logo">
+            </a>
+        </div>
+        <div class="sprog">
+            <a href="#" class="active">Dansk</a> |
+            <a href="#">English</a> |
+            <a href="#">Espanol</a>
+        </div>
+    </header>
+</article>
+
+<style>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(  --primary-color);
+  font-family: var( --font-primary);
+  font-weight: var( --font-weight-regular);
+}
+
+.logo img {
+  width: 100px;
+  height: 50px;
+}
+
+.sprog a {
+  text-decoration: none;
+  color: var( --secondary-color); /* secondary color */
+  margin: 0 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+         font-weight: 350;
+}
+
+.sprog a:hover {
+  color: var(--tertiary-color);
+}
+
+.sprog .active {
+  border-bottom: 2px solid var(--tertiary-color); /* tertiary color */
+  font-weight: 500;
+}
+
+</style>

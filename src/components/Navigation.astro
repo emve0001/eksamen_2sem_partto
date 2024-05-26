@@ -1,0 +1,371 @@
+---
+import "../styles/generel.css";
+---
+
+
+    <section>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">FORSIDE</a></li>
+                <li><a href="om.html">OM</a></li>
+                <li><a href="forloeb.html">FORLØB</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+                <li class="projekter_item">
+                    <a href="#">PROJEKTER</a>
+                    <ul class="projekter_dropdown">
+                        <li><a href="projekter_listeview.html">PRIVAT</a></li>
+                        <li><a href="#">ERHVERV</a></li>
+                        <li><a href="#">KULTUR</a></li>
+                        <li><a href="#">KOMMENDE PROJEKTER</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="sticky_menu">
+            <ul>
+                <li><a href="index.html">FORSIDE</a></li>
+                <li><a href="om.html">OM</a></li>
+                <li><a href="forloeb.html">FORLØB</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+                <li class="projekter_item">
+                    <a href="#">PROJEKTER</a>
+                    <ul class="projekter_dropdown">
+                        <li><a href="projketer_listeview.html">PRIVAT</a></li>
+                        <li><a href="#">ERHVERV</a></li>
+                        <li><a href="#">KULTUR</a></li>
+                        <li><a href="#">KOMMENDE PROJEKTER</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+     <style>
+   
+       nav {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    display: block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.6rem;
+    font-weight: 400;
+}
+
+.projekter_dropdown a {
+   font-size: 0.5rem; 
+    font-weight: 400;
+}
+
+.menu a:hover {
+    color: var(--tertiary-color);
+}
+
+.burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.burger .line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin-bottom: 7px;
+    transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+}
+
+.burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+}
+
+.sticky_menu a.active,
+.sticky_menu a:hover {
+    color: var(--tertiary-color);
+}
+
+@media screen and (max-width: 800px) {
+    .menu {
+        display: none;
+        font-family: var(--font-primary);
+        font-weight: var(--font-weight-regular);
+    }
+    .projekter_dropdown a {
+        font-size: 0.8em; /* Ændre denne værdi efter behov */ 
+    }
+
+    .burger {
+        display: block;
+        margin-left: 20px;
+        padding-top: 40px;
+    }
+
+    nav.active .menu {
+        display: block;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        padding-top: 40px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        height: 100vh;
+    }
+
+    nav.active .menu li {
+        margin: 10px 20px;
+    }
+
+    nav.active .menu a {
+        text-align: left;
+    }
+
+    .projekter_item .projekter_dropdown {
+        display: none;
+    }
+
+    .projekter_item.active .projekter_dropdown {
+        display: block;
+        position: static;
+        box-shadow: none;
+    }
+
+    .sticky_menu {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .sticky_menu {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 40px;
+        margin-left: 20px;
+        background-color: var(--primary-color);
+    }
+
+    .sticky_menu ul {
+        list-style-type: none;
+        padding: 0;
+        height: 100%;
+    }
+
+    .sticky_menu li {
+        margin: 10px 0;
+    }
+
+    .sticky_menu a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-family: var(--font-primary);
+     font-weight: 300;
+    }
+
+    .sticky_menu a:hover {
+        color: var(--tertiary-color);
+    }
+
+    .projekter_item.active .projekter_dropdown {
+        display: block;
+    }
+
+    .projekter_dropdown {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 220px;
+        z-index: 1;
+        font-family: var(--font-primary);
+    }
+
+    .projekter_dropdown a {
+        font-size: 0.8em;
+         font-weight: 400;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .sticky_menu {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 40px;
+        margin-left: 20px;
+        background-color: var(--primary-color);
+    }
+
+    .sticky_menu ul {
+        list-style-type: none;
+        padding: 0;
+        height: 100%;
+    }
+
+    .sticky_menu li {
+        margin: 10px 0;
+    }
+
+    .sticky_menu a {
+        text-decoration: none;
+        color: var(--secondary-color);
+        font-family: var(--font-primary);
+         font-weight: 300;
+    }
+
+    .sticky_menu a:hover {
+        color: var(--tertiary-color);
+    }
+
+    .projekter_item.active .projekter_dropdown {
+        display: block;
+    }
+
+    .projekter_dropdown {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 220px;
+        z-index: 1;
+    }
+
+    .projekter_dropdown a {
+        font-size: 0.8em;
+         font-weight: 400;
+    }
+
+    .menu {
+        display: none;
+    }
+}
+
+    </style>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector(".burger") as HTMLElement;
+    const nav = document.querySelector("nav") as HTMLElement;
+    const menu = document.querySelector(".menu") as HTMLElement;
+    const links = document.querySelectorAll(".menu li a");
+    const linksSticky = document.querySelectorAll(".sticky_menu li a");
+    const projekterItemSticky = document.querySelector(".sticky_menu .projekter_item") as HTMLElement;
+    const projekterDropdown = document.querySelector(".projekter_dropdown") as HTMLElement;
+    const projekterItemMenu = document.querySelector(".menu .projekter_item") as HTMLElement;
+    const projekterDropdownMenu = document.querySelector(".menu .projekter_dropdown") as HTMLElement;
+    const stickyMenu = document.querySelector(".sticky_menu") as HTMLElement;
+    const stickyMenuUl = document.querySelector(".sticky_menu ul") as HTMLElement;
+
+    // Function to handle active link
+    function handleActiveLink(event: Event, linkList: NodeListOf<Element>) {
+        linkList.forEach((otherLink) => {
+            otherLink.classList.remove("active");
+        });
+        (event.target as HTMLElement).classList.add("active");
+    }
+
+    // Add click event to links in the sticky menu
+    linksSticky.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            handleActiveLink(event, linksSticky);
+            burger.classList.remove("active");
+            nav.classList.remove("active");
+        });
+    });
+
+    // Toggle dropdown for sticky menu
+    projekterItemSticky.addEventListener("click", (event) => {
+        event.stopPropagation();
+        projekterItemSticky.classList.toggle("active");
+        const dropdownHeight = projekterDropdown.offsetHeight;
+
+        if (projekterItemSticky.classList.contains("active")) {
+            stickyMenuUl.style.height = `calc(100% + ${dropdownHeight}px)`;
+            stickyMenu.style.marginBottom = `${dropdownHeight}px`;
+        } else {
+            stickyMenuUl.style.height = "100%";
+            stickyMenu.style.marginBottom = "0";
+        }
+    });
+
+    // Add click event to burger icon
+    burger.addEventListener("click", () => {
+        burger.classList.toggle("active");
+        nav.classList.toggle("active");
+    });
+
+    // Close menu when clicking on a link
+    links.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            handleActiveLink(event, links);
+            burger.classList.remove("active");
+            nav.classList.remove("active");
+        });
+    });
+
+    // Toggle dropdown for main menu in mobile view
+    projekterItemMenu.addEventListener("click", (event) => {
+        event.stopPropagation();
+        projekterItemMenu.classList.toggle("active");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+        const targetNode = event.target as Node;
+        if (!projekterItemMenu.contains(targetNode)) {
+            projekterItemMenu.classList.remove("active");
+        }
+    });
+});
+
+    </script>
+
+</body>
+
+</html>
