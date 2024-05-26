@@ -5,13 +5,13 @@ import "../styles/generel.css"
 <article>
     <header>
         <div class="logo">
-            <a href="index.astro">
+            <a href="index.html">
                 <img src="../img/desktop_logo.webp" alt="Logo">
             </a>
         </div>
         <div class="sprog">
-            <a href="#" class="active">Dansk</a> /
-            <a href="#">English</a> /
+            <a href="#" class="active">Dansk</a> |
+            <a href="#">English</a> |
             <a href="#">Espanol</a>
         </div>
     </header>
@@ -38,8 +38,8 @@ header {
   color: var( --secondary-color); /* secondary color */
   margin: 0 5px;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
   font-size: 1rem;
+         font-weight: 350;
 }
 
 .sprog a:hover {
@@ -48,6 +48,7 @@ header {
 
 .sprog .active {
   border-bottom: 2px solid var(--tertiary-color); /* tertiary color */
+  font-weight: 500;
 }
 
 </style>
