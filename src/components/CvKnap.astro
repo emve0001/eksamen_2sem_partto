@@ -1,0 +1,62 @@
+---
+import "../styles/generel.css";
+
+---
+<button type="button" >
+    <span class="label">
+      se cv
+    </span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+      <path d="M1 1L7 7L13 1" stroke="#E73127" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<style>
+    button{
+    align-items: center;
+    padding: 0.5rem;;
+    background: none;
+    color: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    }
+
+    .label{
+    font-size: var(--footer-secondary-font-size);
+      letter-spacing: 0.081rem;
+      text-transform: var(--text-transform-uppercase);
+      font-weight: var(--font-weight-medium);
+      color: var(--secondary-color);
+      white-space: nowrap;
+    }
+    button:hover .label{
+    color: var(--tertiary-color);
+}
+    
+/*TABLET TABLET TABLET TABLET*/
+    @media (min-width: 768px) and (max-width: 1024px) {
+.label{
+  font-size: var(--footer-secondary-font-size);
+  letter-spacing: 0.1375rem;
+}
+/* brugt chat til at lave billedet større og fjerne det gamle */
+svg{
+  width: 1.5rem;
+    height: 1.5rem; 
+}
+    }
+
+    /*DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP*/
+
+@media (min-width: 1025px) {
+  .label{
+  font-size: var(--footer-secondary-font-size);
+  letter-spacing: 0.1375rem;
+}
+svg{
+  width: 2rem;
+    height: 2rem; 
+}
+}
+    </style>

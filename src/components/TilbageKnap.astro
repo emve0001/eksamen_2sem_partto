@@ -1,0 +1,67 @@
+---
+import "../styles/generel.css";
+
+---
+<button type="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+        <path d="M15.75 18.75L9.75 12.75L15.75 6.75" stroke="#E73127" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+     <span class="label">
+      tilbage til oversigt
+    </span>
+  
+</button>
+
+<style>
+    button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: none;
+    color: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    }
+    /* .secondary{
+      width: 200px;
+      text-align: left;
+      text-wrap:wrap;
+    } */
+    .label{
+    font-size: var(--footer-secondary-font-size);
+      letter-spacing: 0.081rem;
+      text-transform: var(--text-transform-uppercase);
+      font-weight: var(--font-weight-medium);
+      color: var(--secondary-color);
+      align-self: center;
+    }
+    button:hover .label{
+    color: var(--tertiary-color);
+}
+
+    /*TABLET TABLET TABLET TABLET*/
+    @media (min-width: 768px) and (max-width: 1024px) {
+.label{
+  letter-spacing: 0.1375rem;
+}
+/* brugt chat til at lave billedet større og fjerne det gamle */
+svg{
+  width: 1.5rem;
+    height: 1.5rem; 
+}
+
+    /*DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP*/
+    }
+@media (min-width: 1025px) {
+  .label{
+  font-size: var(--footer-secondary-font-size);
+  letter-spacing: 0.1375rem;
+}
+svg{
+  width: 2rem;
+    height: 2rem; 
+}}
+    </style>

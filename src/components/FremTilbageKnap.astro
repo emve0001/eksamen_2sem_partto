@@ -1,27 +1,33 @@
 ---
+const {text, variant} = Astro.props;
 import "../styles/generel.css";
 
 ---
 <button type="button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M18 15L12 9L6 15" stroke="#E73127" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
     <span class="label">
-        Tilbage til toppen
+        {text}
     </span>
-
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+        <path d="M9.75 18.75L15.75 12.75L9.75 6.75" stroke="#E73127" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
 </button>
+
 <style>
-    button{
-    display: flex;
+    button{ 
+    display: inline flex;
     flex-direction: row;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.5rem;;
     background: none;
     color: none;
     border: none;
     cursor: pointer;
-    gap: 0.5rem;
+    width: 10rem;
+
+    }
+
+    svg{
+        flex-shrink: 0;
     }
     .label{
     font-size: var(--footer-secondary-font-size);
@@ -29,10 +35,14 @@ import "../styles/generel.css";
       text-transform: var(--text-transform-uppercase);
       font-weight: var(--font-weight-medium);
       color: var(--secondary-color);
+      word-wrap: break-word; /* Sikrer at ord kan bryde af */
+    white-space: normal; /* Tillader white space at bryde normalt */
+    text-align: left;
     }
     button:hover .label{
     color: var(--tertiary-color);
 }
+
     /*TABLET TABLET TABLET TABLET*/
     @media (min-width: 768px) and (max-width: 1024px) {
 .label{
@@ -44,14 +54,20 @@ svg{
     height: 1.5rem; 
 }
     }
-    
     /*DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP*/
+
 @media (min-width: 1025px) {
   .label{
+  font-size: var(--footer-secondary-font-size);
   letter-spacing: 0.1375rem;
 }
 svg{
   width: 2rem;
     height: 2rem; 
+    transition: transform 0.5s ease;
+}
+button:hover svg {
+    transform: translateX(1rem);
 }}
     </style>
+  
