@@ -1,0 +1,242 @@
+---
+import MainLayout from "../components/MainLayout.astro";
+import SiteOverskrifter from "../components/SiteOverskrifter.astro"
+import "../styles/generel.css"
+---
+<MainLayout>
+<SiteOverskrifter />
+    <section>
+    <div class="intro_sektion">
+        <p class="info_01">Som uddannet arkitekt fra Det Kongelige Danske Kunstakademi med bred international
+            erfaring
+            har jeg ledet adskillige
+            prestigefyldte projekter i Danmark.
+        </p>
+        <img class="img_01_hanspeter" src="https://placehold.co/594x525" alt="">
+        <p class="info_02">Min passion for arkitekturens indflydelse på samspillet mellem mennesker, bygninger og
+            landskaber er kernen i mit
+            arbejde. Jeg stræber efter at skabe rum, der både forbedrer livskvaliteten og styrker fællesskabet.
+        </p>
+        <h4 class="knap_cv">SE CV</h4>
+    </div>
+
+    <div class="om_sektion">
+        <h6 class="h6_01">OM HANS PETER HAGENS, DIREKTØR OG ARKITEKT MAA</h6>
+        <div class="kort_linje"></div>
+        <p class="p_01">En fremtrædende milepæl i min karriere var åbningen af Torvehallerne på Israels Plads i 2011, et
+            projekt der trodsede
+            stor skepsis og nu tiltrækker op til 100.000 besøgende ugentligt. Dette projekt understreger mit engagement
+            i at udvikle
+            funktionelle og inspirerende offentlige rum, der reflekterer min dybe passion for innovativ arkitektur.</p>
+    </div>
+
+    <div>
+        <img class="img_02_hanspeter" src="https://placehold.co/594x525" alt="">
+    </div>
+
+    <div class="firma_sektion">
+        <h6 class="h6_02">FIRMAPROFIL</h6>
+        <div class="kort_linje"></div>
+        <p class="p_02">Hos Arkitekturværkstedet, en innovativ arkitekttegnestue i hjertet af København, har vi
+            ekspertise i både nybyggeri og
+            renoveringer. Vores projekter spænder fra bolig- og erhvervsbyggeri til kulturelle og landskabsdesign. Vi er
+            stolte af
+            at påtage os og realisere idé- og udviklingsprojekter, som Torvehallerne på Israels Plads og Hovedstadens
+            Hængende
+            Haver.</p>
+    </div>
+
+    <div class="filosofi_sektion">
+        <h6 class="h6_03">FILOSOFI OG MÅLSÆTNING</h6>
+        <div class="kort_linje"></div>
+        <p class="p_03">Hos Arkitekturværkstedet, en innovativ arkitekttegnestue i hjertet af København, har vi
+            ekspertise i både nybyggeri og
+            renoveringer. Vores projekter spænder fra bolig- og erhvervsbyggeri til kulturelle og landskabsdesign. Vi er
+            stolte af
+            at påtage os og realisere idé- og udviklingsprojekter, som Torvehallerne på Israels Plads og Hovedstadens
+            Hængende
+            Haver.</p>
+    </div>
+
+    <div>(knap) kontakt mig her</div>
+
+    <div class="placering_sektion">
+        <h6 class="h6_04">ARKITEKTURVÆRKSTEDETS PLACERING</h6>
+        <div class="kort_linje"></div>
+        <p class="p_04">Arkitekturværkstedet er placeret på Strandgade 30 st tv, 1401 København K, i det charmerende
+            Christianshavn område i
+            hjertet af København.</p>
+    </div>
+
+    <div class="img_3_imger">
+        <div class="img_03">
+            <img src="https://placehold.co/256x198" alt="">
+            <p>Facade</p>
+        </div>
+
+        <div class="img_04">
+            <img src="https://placehold.co/256x198" alt="">
+            <p>Mødelokale</p>
+        </div>
+
+        <div class="img_05">
+            <img src="https://placehold.co/256x198" alt="">
+            <p>Kontor</p>
+        </div>
+    </div>
+
+    <div class="maps_sektion">
+        <h6 class="h6_04">FIND OS PÅ GOOGLE MAPS</h6>
+        <div class="kort_linje"></div>
+    </div>
+
+    <div>LAD OS SAMARBEJDE</div>
+</section>
+
+
+<style>
+    .line_kort {
+        border-top: 0.5px solid var(--secondary-color);
+        width: 10%;
+        margin: 10% 0% 3% 0%;
+    }
+
+    .img_02_hanspeter {
+        padding: 10%;
+    }
+
+    @media (min-width: 768px) {
+        .line_kort {
+            border-width: 1px;
+        }
+
+        .intro_sektion {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* Tre kolonner med lige bredde */
+            grid-template-rows: repeat(3, 1fr);
+            /* Tre kolonner med lige bredde */
+        }
+
+        .info_01 {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 1;
+        }
+
+        .info_02 {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+        }
+
+        .img_01_hanspeter {
+            grid-column: 3 / span 2;
+            grid-row: 1 / span 3;
+        }
+
+        .knap_cv {
+            grid-column: 1 / span 2;
+            grid-row: 3 / span 1;
+            padding: 1% 0% 17% 45%;
+        }
+
+        /* ------- */
+
+        .om_sektion {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        .h6_01 {
+            grid-column: 1 / span 5;
+            grid-row: 1 / span 1;
+        }
+
+        .kort_linje {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+        }
+
+        .p_01 {
+            grid-column: 2 / span 4;
+            grid-row: 3 / span 2;
+        }
+
+        /* ------- */
+
+        .firma_sektion {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        .h6_02 {
+            grid-column: 1 / span 5;
+            grid-row: 1 / span 1;
+        }
+
+        .kort_linje {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+        }
+
+        .p_02 {
+            grid-column: 2 / span 4;
+            grid-row: 3 / span 2;
+        }
+
+        /* ------- */
+
+        .filosofi_sektion {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        .h6_03 {
+            grid-column: 1 / span 5;
+            grid-row: 1 / span 1;
+        }
+
+        .kort_linje {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+        }
+
+        .p_03 {
+            grid-column: 2 / span 4;
+            grid-row: 3 / span 2;
+        }
+
+        /* ------- */
+
+        .placering_sektion {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+
+        .h6_04 {
+            grid-column: 1 / span 5;
+            grid-row: 1 / span 1;
+        }
+
+        .kort_linje {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+        }
+
+        .p_04 {
+            grid-column: 2 / span 4;
+            grid-row: 3 / span 2;
+        }
+
+        /* ------- */
+
+        .img_3_imger {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3%;
+        }
+    }
+</style>
