@@ -1,5 +1,5 @@
 ---
-import "../src/styles/generel.css";
+import "../styles/generel.css";
 
 import Navigation from "../components/Navigation.astro";
 ---
@@ -10,12 +10,13 @@ import Navigation from "../components/Navigation.astro";
     <link rel="icon" type="favicon" href="../public/img/favi.png"/>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="../src/styles/generel.css" />
+    <link rel="stylesheet" href="../styles/generel.css" />
     <title>Astro</title>
   </head>
   <body>
     <header><Navigation /></header>
     <main>
+      <slot/>
     </main>
     <footer></footer>
   </body>
