@@ -51,6 +51,10 @@ body {
   --footer-font-size: 1rem;
   --footer-secondary-font-size: 0.81rem;
 }
+@font-face {
+  font-family: Raleway;
+  src: url("../../public/fonts/Raleway-VariableFont_wght.tff");
+}
 h1 {
   font-size: var(--h1-font-size);
   letter-spacing: 2.3px;
@@ -135,7 +139,9 @@ p {
   }
 
   h3 {
-    font-size: var(--h3-font-size); /*h5 brugt til h3 (vi har ikke defineret andet)*/
+    font-size: var(
+      --h3-font-size
+    ); /*h5 brugt til h3 (vi har ikke defineret andet)*/
     /* letter-spacing:; */
     font-weight: var(--font-weight-medium);
   }
