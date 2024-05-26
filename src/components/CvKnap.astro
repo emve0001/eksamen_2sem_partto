@@ -1,11 +1,10 @@
 ---
-const {text} = Astro.props;
 import "../styles/generel.css";
 
 ---
 <button type="button" >
     <span class="label">
-    {text}
+      se cv
     </span>
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
       <path d="M1 1L7 7L13 1" stroke="#E73127" stroke-linecap="round" stroke-linejoin="round"/>
@@ -31,7 +30,9 @@ import "../styles/generel.css";
       color: var(--secondary-color);
       white-space: nowrap;
     }
-
+    button:hover .label{
+    color: var(--tertiary-color);
+}
     
 /*TABLET TABLET TABLET TABLET*/
     @media (min-width: 768px) and (max-width: 1024px) {

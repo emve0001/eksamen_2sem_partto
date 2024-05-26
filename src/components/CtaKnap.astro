@@ -1,44 +1,54 @@
 ---
-const {text} = Astro.props;
+const {text, variant} = Astro.props;
 import "../styles/generel.css";
-
 ---
 <button type="button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-        <path d="M15.75 18.75L9.75 12.75L15.75 6.75" stroke="#E73127" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
     <span class="label">
         {text}
     </span>
+    <slot><svg xmlns="http://www.w3.org/2000/svg" width="202" height="8" viewBox="0 0 202 8" fill="none">
+        <path d="M201.443 4.35355C201.638 4.15829 201.638 3.84171 201.443 3.64645L198.261 0.464466C198.066 0.269204 197.749 0.269204 197.554 0.464466C197.359 0.659728 197.359 0.976311 197.554 1.17157L200.382 4L197.554 6.82843C197.359 7.02369 197.359 7.34027 197.554 7.53553C197.749 7.7308 198.066 7.7308 198.261 7.53553L201.443 4.35355ZM0 4.5L201.09 4.5V3.5L0 3.5L0 4.5Z" fill="#E73127"/>
+      </svg>
+    </slot>
 </button>
 
 <style>
     button{ 
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+
     padding: 0.5rem;;
     background: none;
-    color: none;
     border: none;
     cursor: pointer;
     gap: 0.5rem;
-    width: 11rem;
     }
-svg{
+
+svg {
     flex-shrink: 0;
+    transition: transform 0.5s ease; /* Glat overgang kun for transformationer */
+
 }
-    .label{
+slot {
+    flex-shrink: 0;
+    transition: transform 0.5s ease; /* Glat overgang kun for transformationer */
+
+
+}
+
+button:hover svg {
+    transform: scaleX(1.1); /* Forstørrer SVG's bredde med 50% */
+}
+
+.label{
     font-size: var(--footer-secondary-font-size);
       letter-spacing: 0.081rem;
       text-transform: var(--text-transform-uppercase);
       font-weight: var(--font-weight-medium);
       color: var(--secondary-color);
       text-align: left;
-      word-wrap: break-word; /* Sikrer at ord kan bryde af */
-    white-space: normal; /* Tillader white space at bryde normalt */
     }
-    button:hover .label{
+button:hover .label{
     color: var(--tertiary-color);
 }
     /*TABLET TABLET TABLET TABLET*/

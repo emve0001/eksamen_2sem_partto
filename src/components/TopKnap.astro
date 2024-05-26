@@ -1,11 +1,13 @@
 ---
-const {variant, text} = Astro.props;
-import "../styles/general.css";
+import "../styles/generel.css";
 
 ---
 <button type="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M18 15L12 9L6 15" stroke="#E73127" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     <span class="label">
-        {text}
+        Tilbage til toppen
     </span>
 
 </button>
@@ -28,4 +30,7 @@ import "../styles/general.css";
       font-weight: var(--font-weight-medium);
       color: var(--secondary-color);
     }
+    button:hover .label{
+    color: var(--tertiary-color);
+}
     </style>

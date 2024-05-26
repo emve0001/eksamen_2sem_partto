@@ -2,7 +2,10 @@
 import TilbageKnap from "../components/TilbageKnap.astro"
 import CvKnap from "../components/CvKnap.astro"
 import FremKnap from "../components/FremKnap.astro"
+import FremTilbageKnap from "../components/FremTilbageKnap.astro"
 import "../styles/generel.css";
+import TopKnap from "../components/TopKnap.astro";
+import CtaKnap from "../components/CtaKnap.astro";
 ---
 
 <html lang="en">
@@ -15,8 +18,9 @@ import "../styles/generel.css";
 	</head>
 	<body>
 		<h1>Astro</h1>
-		<CvKnap text="se cv"/>
-	<FremKnap variant="secondary" text="Bæredygtige sommerhuse"/>
-	<TilbageKnap text="tilbage til oversigt" />
+		<CtaKnap text="Læs MERE OM TORVEHALLERNE">
+			<svg xmlns="http://www.w3.org/2000/svg" width="256" height="8" viewBox="0 0 256 8" fill="none">
+				<path d="M255.354 4.35355C255.549 4.15829 255.549 3.84171 255.354 3.64645L252.172 0.464466C251.976 0.269204 251.66 0.269204 251.464 0.464466C251.269 0.659728 251.269 0.976311 251.464 1.17157L254.293 4L251.464 6.82843C251.269 7.02369 251.269 7.34027 251.464 7.53553C251.66 7.7308 251.976 7.7308 252.172 7.53553L255.354 4.35355ZM0 4.5H255V3.5H0V4.5Z" fill="#E73127"/>
+			  </svg></CtaKnap>
 	</body>
 </html>
