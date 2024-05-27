@@ -1,10 +1,10 @@
 ---
-const {text, variant} = Astro.props;
+const { data} = Astro.props;
 import "../styles/generel.css";
 ---
 <button type="button">
     <span class="label">
-        {text}
+        {data.projektnavn}
     </span>
     <!-- sæt en kortere pil inden i knappen, der hvor kanppen skal sættes på siden den skal bruges, så slot tagget trækker den ind i stedet for den svg der er nu -->
     <slot>
