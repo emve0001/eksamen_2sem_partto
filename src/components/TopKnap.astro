@@ -3,19 +3,19 @@ import "../styles/generel.css";
 
 ---
 <button type="button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <a href="#top" class=top_knap_link><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M18 15L12 9L6 15" stroke="#E73127" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     <span class="label">
         Tilbage til toppen
     </span>
-
+  </a>
 </button>
 <style>
     button{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     padding: 0.5rem;
     background: none;
     color: none;
@@ -36,15 +36,18 @@ import "../styles/generel.css";
 svg{
   flex-shrink:0;
 }
+.top_knap_link{
+  text-decoration: none;
+            color: inherit;
+}
+a{
+  text-decoration: none;
+  align-items:baseline;
+}
     /*TABLET TABLET TABLET TABLET*/
     @media (min-width: 768px) and (max-width: 1024px) {
 .label{
   letter-spacing: 0.1375rem;
-}
-/* brugt chat til at lave billedet større og fjerne det gamle */
-svg{
-  width: 1.5rem;
-    height: 1.5rem; 
 }
     }
     
@@ -54,7 +57,7 @@ svg{
   letter-spacing: 0.1375rem;
 }
 svg{
-  width: 2rem;
-    height: 2rem; 
+  width: 1.5rem;
+    height: 1.5rem; 
 }}
     </style>

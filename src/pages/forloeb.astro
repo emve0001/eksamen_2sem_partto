@@ -6,6 +6,7 @@ import CtaKnap from "../components/CtaKnap.astro";
 import "../styles/generel.css";
 ---
 <MainLayout>
+   <!-- klassen er brugt til TopKnap, så man kommer herop igen -->
     <section class="container">
         <div id="item1" class="gap">
             <SiteOverskrifter text="FORLØB" text2="PROCESS OVERSIGT"/>  
@@ -14,7 +15,7 @@ import "../styles/generel.css";
             </p>
          </div>
          <article id="item3" class="item3_7" class="gap">
-            <div class="tekst_til_billede">
+            <div class="gap" class="tekst_til_billede">
                 <h4>DESIGN BUILD GROW</h4>
                 <div class="line_kort"></div>
                 <p>
@@ -25,7 +26,7 @@ import "../styles/generel.css";
                 <img src="https://placehold.co/256x154" alt="3D model i træ">
             </figure>
         </article>
-        <article id="item4" class="gap">
+        <article id="item4">
             <div class="gap">
                  <h6>
                    Opstartsmøde
@@ -38,8 +39,8 @@ import "../styles/generel.css";
                 Inden idémødet anbefaler vi, at du som bygherre identificerer dine behov og definerer din økonomiske ramme for projektet. Dette gør det muligt for os at drøfte en realistisk plan for både økonomi og tidsramme.
              </p>
         </article>
-        <article id="item5" class="gap">
-             <div>
+        <article class="flex_box">
+             <div class="gap">
                 <h6>
                     skitsefase
                  </h6>
@@ -51,75 +52,72 @@ import "../styles/generel.css";
                 Inden idémødet anbefaler vi, at du som bygherre identificerer dine behov og definerer din økonomiske ramme for projektet. Dette gør det muligt for os at drøfte en realistisk plan for både økonomi og tidsramme.
              </p>
         </article>
-        <article id="item6" class="gap">
-            <div>
-                <h6>
-                    MYNDIGHEDSFASE
-                 </h6>
-                 <div class="line_kort"></div>
-            </div>
-            
-             <p>
-                 I skitsefasen udvikler vi et indledende skitseforslag baseret på idéerne fra idémødet, som illustrerer projektets udseende og omfang. 
-                 Dette inkluderer et foreløbigt økonomisk overslag og en overordnet tidsplan. Det er vigtigt at bemærke, at der ikke kan opnås byggetilladelse eller igangsættes byggeri på basis af et skitseforslag alene. 
-                 Betalingsstrukturen i denne fase defineres også, hvor typisk halvdelen af beløbet betales før skitseringen påbegyndes, og den anden halvdel når skitseringen er afsluttet.
-          
+        <article class="flex_box">
+          <div class="gap">
+              <h6>
+                  MYNDIGHEDSFASE
+              </h6>
+                <div class="line_kort"></div>
+          </div>
+            <p>
+              I skitsefasen udvikler vi et indledende skitseforslag baseret på idéerne fra idémødet, som illustrerer projektets udseende og omfang. 
+              Dette inkluderer et foreløbigt økonomisk overslag og en overordnet tidsplan. Det er vigtigt at bemærke, at der ikke kan opnås byggetilladelse eller igangsættes byggeri på basis af et skitseforslag alene. 
+              Betalingsstrukturen i denne fase defineres også, hvor typisk halvdelen af beløbet betales før skitseringen påbegyndes, og den anden halvdel når skitseringen er afsluttet.
              </p>    
-  </article>
-  <article id="item7" class="gap">
-        <div>
-    <h6>
-        HOVEDPROJEKT
-    </h6>
-
-    <div class="line_kort"></div>
-  </div>
-    <p>
-        I hovedprojektfasen udarbejder vi detaljerede tegninger, som giver et klart overblik over projektet og er skræddersyet til opgavens specifikke krav. 
-        Disse tegninger danner grundlag for både indhentning af tilbud fra entreprenører og for de håndværkere, der skal udføre byggeriet, så de har præcise instruktioner at bygge efter.
-    </p>
-  </article>
-    <figure class="billede2" class="billede">
-        <img src="https://placehold.co/256x154" alt="3D model i træ">
-    </figure>
-
-  </article>
-  <article id="item8" class="gap">
-    <div>
-    <h6>
-        UDBUDS- OG KONTRAKTFASE
-    </h6>
-    <div class="line_kort"></div>
-</div>
-    <p>
-        Før jeg sender projektet i udbud, udarbejder jeg omfattende beskrivelser og de nødvendige detaljer, som varierer afhængigt af projektets størrelse og kompleksitet. Efterfølgende vurderes de indkomne tilbud, hvorfra jeg vælger den mest egnede entreprenør. Prissætningen af udførelsen foretages af entreprenøren og afhænger af de specifikke krav og omfanget af det enkelte projekt.
-    </p>
-</article>
-<article id="item9" class="gap">
-    <div>
+        </article>
+        <article class="flex_box">
+          <div class="gap">
+            <h6>
+              HOVEDPROJEKT
+            </h6>
+            <div class="line_kort"></div>
+          </div>
+          <p>
+          I hovedprojektfasen udarbejder vi detaljerede tegninger, som giver et klart overblik over projektet og er skræddersyet til opgavens specifikke krav. 
+          Disse tegninger danner grundlag for både indhentning af tilbud fra entreprenører og for de håndværkere, der skal udføre byggeriet, så de har præcise instruktioner at bygge efter.
+          </p>
+        </article>
+        <figure class="billede2" class="billede">
+          <img src="https://placehold.co/256x154" alt="3D model i træ">
+        </figure>
+        <article class="flex_box">
+          <div class="gap">
+            <h6>
+            UDBUDS- OG KONTRAKTFASE
+            </h6>
+            <div class="line_kort"></div>
+          </div>
+          <p>
+          Før jeg sender projektet i udbud, udarbejder jeg omfattende beskrivelser og de nødvendige detaljer, som varierer afhængigt af projektets størrelse og kompleksitet. Efterfølgende vurderes de indkomne tilbud, hvorfra jeg vælger den mest egnede entreprenør. Prissætningen af udførelsen foretages af entreprenøren og afhænger af de specifikke krav og omfanget af det enkelte projekt.
+          </p>
+        </article>
+<article class="flex_box">
+    <div class="gap">
     <h6>
         BYGGEFASEN
     </h6>
 
     <div class="line_kort"></div>
 </div>
-    <p>
+    <p class="gap">
         Under byggefasen kan jeg både udføre fagtilsyn og tilbyde byggeledelse. Som byggeleder repræsenterer jeg dig over for entreprenørerne og sikrer, at arbejdet udføres korrekt og efter planen. 
-        Projektets specifikke behov afgør hyppigheden af tilsyn og byggemøder. Som arkitekt sikrer jeg sammen med bygherren og ingeniøren, at vi besøger byggepladsen hver 14. dag for at kontrollere, at håndværkerne følger de detaljerede tegninger og myndighedskrav nøje. </p>
+        Projektets specifikke behov afgør hyppigheden af tilsyn og byggemøder. Som arkitekt sikrer jeg sammen med bygherren og ingeniøren, at vi besøger byggepladsen hver 14. dag for at kontrollere, at håndværkerne følger de detaljerede tegninger og myndighedskrav nøje. 
+      </p>
 </article>
-<CtaKnap text="LAD OS SAMARBEJDE" />
+<div class="gap">
+<CtaKnap text="LAD OS SAMARBEJDE"/>
+</div>
     </section>
     <div class="bund">
-    <TopKnap/>
-
+      <TopKnap/>
+      </div>
 </MainLayout>
+
+
 <style>
-    body{
-        margin-right:20px;
-    }
-  .container{
-    grid-column: 2 / 5; /* Starter fra kolonne 2 og strækker sig til kolonne 5 */
-  }
+   html {
+            scroll-behavior: smooth;
+        }
   .line_kort {
     border-top: 0.5px solid var(--secondary-color);
     width: 10%;
@@ -128,23 +126,20 @@ import "../styles/generel.css";
   .container > *{
     padding-bottom:6rem;
   }
-  /* #item3 > *{
+  #item3 > *{
     padding-bottom:1rem;
-  } */
-  .bund{
-    grid-column: 3 / span 2;
-  grid-row: 2;
-  justify-self: end;
   }
+  .bund {
+display:flex;
+flex-direction:row;
+  }
+  .bund > *{
+    justify-self:end;
+  }
+
   .gap > *{
     padding-bottom:1rem;
   }
-  main {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px; /* Afgør afstanden mellem kolonnerne */
-  }
-
     @media (min-width: 768px) and (max-width: 1024px) {
     main {
     display: grid;
@@ -169,7 +164,7 @@ import "../styles/generel.css";
   }
   @media (min-width: 1025px) {
     main {
-    display: grid;
+    display: inline-grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px; /* Afgør afstanden mellem kolonnerne */
   }
@@ -206,7 +201,7 @@ grid-column: 9 / span 4;
   .tekst_til_billede{
     width:60%;
   }
-  #item4,#item5,#item6,#item7,#item8,#item9{
+  .flex_box{
     display:flex;
     flex-direction:row; 
   }
