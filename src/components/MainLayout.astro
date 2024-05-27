@@ -14,14 +14,38 @@ import Footer from "./Footer.astro";
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="../styles/generel.css" />
     <title>Astro</title>
+
+  <style>
+.body_grid {
+  display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.menu_grid {
+  grid-column: 1;
+}
+.indhold_grid {
+   grid-column: 2 / span 3;
+}
+
+
+    </style> 
+
   </head>
   <body>
    <header>
 <Header />
   </header>
     <main>
+
+      <div class="body_grid">
+        <div class="menu_grid">
       <Navigation />
+      </div>
+      <div class="indhold_grid">
       <slot />
+      </div>
+      </div>
+
     </main>
     <footer>
        <Footer />
@@ -30,5 +54,3 @@ import Footer from "./Footer.astro";
   </body>
   </html>
 
-  <style>
-    </style>
