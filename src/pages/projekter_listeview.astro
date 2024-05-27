@@ -36,11 +36,27 @@ console.log(data)
 
 <style>
   .listeview_grid {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, auto);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .listeview_grid {
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
   }
+}
+
+/* Media queries for desktop (1025px and above) */
+@media (min-width: 1025px) {
+  .listeview_grid {
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+}
 
 /* 
   .landbolig_paa_mon {
