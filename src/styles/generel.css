@@ -41,7 +41,7 @@ body {
   --font-weight-regular: 400;
 
   /* Mobilt skriftstørrelser (max-width: 767px) */
-  --h1-font-size-mobile: 2rem;
+  --h1-font-size-mobile: 1.5rem;
   --h2-font-size-mobile: 1.75rem;
   --h3-font-size-mobile: 1.5rem;
   --h4-font-size-mobile: 1.25rem;
