@@ -49,7 +49,7 @@ import "../styles/generel.css";
         </article>
         <div class="line_long"></div>
 
-        <article class="flex_box">
+        <article id="item5">
              <div class="gap">
                 <h6>
                     skitsefase
@@ -65,7 +65,7 @@ import "../styles/generel.css";
 
         <div class="line_long"></div>
 
-        <article class="flex_box">
+        <article id="item6">
           <div class="gap">
               <h6>
                   MYNDIGHEDSFASE
@@ -81,7 +81,7 @@ import "../styles/generel.css";
 
         <div class="line_long"></div>
 
-        <article class="flex_box">
+        <article id="item7">
           <div class="gap">
             <h6>
               HOVEDPROJEKT
@@ -97,12 +97,12 @@ import "../styles/generel.css";
  <div class="line_long"></div>
 
 
-        <figure class="billede2" class="billede">
-          <img src="https://placehold.co/256x154" alt="3D model i træ">
+        <figure class="billede2">
+          <img class="grid-billede" src="https://placehold.co/256x154" alt="3D model i træ">
         </figure>
        
 
-        <article class="flex_box">
+        <article id="item8">
           <div class="gap">
             <h6>
             UDBUDS- OG KONTRAKTFASE
@@ -116,7 +116,7 @@ import "../styles/generel.css";
 
         <div class="line_long"></div>
 
-        <article class="flex_box">
+        <article id="item9">
           <div class="gap">
             <h6>
              BYGGEFASEN
@@ -130,55 +130,46 @@ import "../styles/generel.css";
         </article>
 
 
-        <div class="gap">
+        <div class="knap_grid">
+          <div class="knap">
           <CtaKnap text="LAD OS SAMARBEJDE"/>
+          <a href="/kontakt/"></a>
         </div>
-    </section>
-    <div class="bund">
+        </div>
+        </section>
+    <div class="bund_grid">
+      <div class="bund">
         <TopKnap/>
+      </div>
       </div>
 </MainLayout>
 
 
 <style>
-   html {
-            scroll-behavior: smooth;
-        }
   .line_kort {
     border-top: 0.5px solid var(--secondary-color);
     width: 10%;
     margin-top:0.5rem;
 }
   .container > *{
-    padding-bottom:6rem;
+    padding-bottom:3rem;
+    padding-right:2rem;
   }
+
   #item3 > *{
     padding-bottom:1rem;
-  }
-  .bund {
-display:flex;
-flex-direction:row;
-  }
-  .bund > *{
-    justify-self:end;
   }
   .gap > *{
     padding-bottom:1rem;
   }
 
-
   /* TABLET TABLET TABLET TABLET TABLET */
     @media (min-width: 768px) and (max-width: 1024px) {
-    /* main {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-  } */
 
-  .container{
-    grid-column: 2 / 7;
+  .container > *{
+    padding-bottom:6rem;
+    padding-right:2rem;
   }
-
   .sticky_menu {
     grid-row:1;
     grid-column: 1 / 2;
@@ -207,59 +198,62 @@ flex-direction:row;
   }
   }
   @media (min-width: 1025px) {
-    main {
-    display: inline-grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px; /* Afgør afstanden mellem kolonnerne */
-  }
   .line_long {
     border-top: 0.5px solid var(--secondary-color);
     width: 70%;
     margin-top:0.5rem;
-  
+  }
+    .container > *{
+    padding-bottom:6rem;
+    padding-right:2rem;
 }
-  .sticky_menu {
-    grid-row:1;
-    grid-column: 1 / 3;
-  }
-  .container{
-    grid-row:1;
-    grid-column: 2 / 13; /* Starter fra kolonne 2 og strækker sig til kolonne 5 */
-  }
   .gap > *{
     padding-bottom:1rem;
   }
-  .bund{
-grid-column: 9 / span 4;
-  grid-row: 2;
-  justify-self: end;
-  }
   #item1{
     margin-top:50px;
-  }
-  .item3_7{
-    display:flex;
-    align-items:center;
-    flex-direction:row;
+    padding-right: 7rem;
   }
   .billede{
    display:block;
-   padding-right:4rem;
-   width:60%;
+   width:90%;
    height:auto;
   }
+  #item3{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap:1rem;
+  }
+  #item4, #item5, #item6, #item7, #item8, #item9 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-right: 7rem;
+  }
   .billede2{
-    justify-self:end;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
   }
-  .tekst_til_billede{
-    width:60%;
+  .grid-billede{
+    grid-column:2;
+    padding-right: 5rem;
   }
-  .flex_box{
-    display:flex;
-    flex-direction:row; 
+  .knap_grid{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    padding-right: 5rem;
   }
-  /* .flex_mindre{
-    width:50%
+  /* .knap_grid > button{
+    grid-column:2;
   } */
+  .knap:nth-child(1) {
+        grid-column: 2; /* Placerer den første knap i første kolonne */
+    }
+    .bund_grid{
+    display:grid;
+    grid-template-columns:1fr 5fr;
+  }
+    .bund:nth-child(1) {
+        grid-column: 4; /* Placerer den første knap i første kolonne */
+    }
 }
   </style>
