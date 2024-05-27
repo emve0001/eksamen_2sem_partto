@@ -139,9 +139,18 @@ import "../styles/generel.css";
   .gap > *{
     padding-bottom:1rem;
   }
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Afgør afstanden mellem kolonnerne */
+  }
 
-
-  @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) and (max-width: 1024px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; /* Afgør afstanden mellem kolonnerne */
+  }
   .container{
     grid-column: 2 / 7; /* Starter fra kolonne 2 og strækker sig til kolonne 5 */
   }
@@ -159,6 +168,11 @@ import "../styles/generel.css";
   }
   }
   @media (min-width: 1025px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px; /* Afgør afstanden mellem kolonnerne */
+  }
   .sticky_menu {
     grid-row:1;
     grid-column: 1 / 3;
