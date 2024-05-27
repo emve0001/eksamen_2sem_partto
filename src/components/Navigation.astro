@@ -1,7 +1,7 @@
 ---
 import "../styles/generel.css";
 ---
-<section id="komponent">
+<section>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">FORSIDE</a></li>
@@ -43,9 +43,10 @@ import "../styles/generel.css";
             </ul>
         </div>
     </section>
-     <style>
+ 
+
+
     <style>
-   
  nav {
     display: flex;
     align-items: center;
@@ -175,55 +176,55 @@ import "../styles/generel.css";
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .sticky_menu {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        width: 200px;
-        height: 100vh;
-        padding-top: 40px;
-        margin-left: 20px;
-        background-color: var(--primary-color);
-    }
+   .sticky_menu {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    padding-top: 40px;
+    margin-left: 20px;
+    background-color: var(--primary-color);
+}
 
-    .sticky_menu ul {
-        list-style-type: none;
-        padding: 0;
-        height: 100%;
-    }
+.sticky_menu ul {
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+}
 
-    .sticky_menu li {
-        margin: 10px 0;
-    }
+.sticky_menu li {
+    margin: 10px 0;
+}
 
-    .sticky_menu a {
-        text-decoration: none;
-        color: var(--secondary-color);
-        font-family: var(--font-primary);
-        font-weight: 300;
-    }
+.sticky_menu a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: var(--font-primary);
+    font-weight: 300;
+}
 
-    .sticky_menu a:hover {
-        color: var(--tertiary-color);
-    }
+.sticky_menu a:hover {
+    color: var(--tertiary-color);
+}
 
-    .projekter_item.active .projekter_dropdown {
-        display: block;
-    }
+.projekter_item.active .projekter_dropdown {
+    display: block;
+}
 
-    .projekter_dropdown {
-        display: none;
-        position: absolute;
-        left: 0;
-        width: 220px;
-        z-index: 1;
-        font-family: var(--font-primary);
-    }
+.projekter_dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 220px;
+    z-index: 1;
+    font-family: var(--font-primary);
+}
 
-    .projekter_dropdown a {
-        font-size: 0.8em;
-        font-weight: 400;
-    }
+.projekter_dropdown a {
+    font-size: 0.8em;
+    font-weight: 400;
+}
 
     .menu {
         display: none;
@@ -232,53 +233,54 @@ import "../styles/generel.css";
 
 @media screen and (min-width: 1025px) {
     .sticky_menu {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        width: 200px;
-        height: 100vh;
-        padding-top: 40px;
-        margin-left: 20px;
-        background-color: var(--primary-color);
-    }
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    padding-top: 40px;
+    margin-left: 20px;
+    background-color: var(--primary-color);
+}
 
-    .sticky_menu ul {
-        list-style-type: none;
-        padding: 0;
-        height: 100%;
-    }
+.sticky_menu ul {
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+}
 
-    .sticky_menu li {
-        margin: 10px 0;
-    }
+.sticky_menu li {
+    margin: 10px 0;
+}
 
-    .sticky_menu a {
-        text-decoration: none;
-        color: var(--secondary-color);
-        font-family: var(--font-primary);
-        font-weight: 300;
-    }
+.sticky_menu a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: var(--font-primary);
+    font-weight: 300;
+}
 
-    .sticky_menu a:hover {
-        color: var(--tertiary-color);
-    }
+.sticky_menu a:hover {
+    color: var(--tertiary-color);
+}
 
-    .projekter_item.active .projekter_dropdown {
-        display: block;
-    }
+.projekter_item.active .projekter_dropdown {
+    display: block;
+}
 
-    .projekter_dropdown {
-        display: none;
-        position: absolute;
-        left: 0;
-        width: 220px;
-        z-index: 1;
-    }
+.projekter_dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 220px;
+    z-index: 1;
+    font-family: var(--font-primary);
+}
 
-    .projekter_dropdown a {
-        font-size: 0.8em;
-        font-weight: 400;
-    }
+.projekter_dropdown a {
+    font-size: 0.8em;
+    font-weight: 400;
+}
 
     .menu {
         display: none;
@@ -289,25 +291,22 @@ import "../styles/generel.css";
 
 
     <script>
-       document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector(".burger") as HTMLElement;
+     document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector(".burger") as HTMLDivElement;
     const nav = document.querySelector("nav") as HTMLElement;
-    const menu = document.querySelector(".menu") as HTMLElement;
-    const links = document.querySelectorAll(".menu li a");
-    const linksSticky = document.querySelectorAll(".sticky_menu li a");
+    const links = document.querySelectorAll(".menu li a") as NodeListOf<HTMLAnchorElement>;
+    const linksSticky = document.querySelectorAll(".sticky_menu li a") as NodeListOf<HTMLAnchorElement>;
     const projekterItemSticky = document.querySelector(".sticky_menu .projekter_item") as HTMLElement;
     const projekterDropdown = document.querySelector(".projekter_dropdown") as HTMLElement;
     const projekterItemMenu = document.querySelector(".menu .projekter_item") as HTMLElement;
-    const projekterDropdownMenu = document.querySelector(".menu .projekter_dropdown") as HTMLElement;
-    const stickyMenu = document.querySelector(".sticky_menu") as HTMLElement;
-    const stickyMenuUl = document.querySelector(".sticky_menu ul") as HTMLElement;
+    const stickyMenuUl = document.querySelector(".sticky_menu ul") as HTMLUListElement;
 
     // Function to handle active link
-    function handleActiveLink(event: Event, linkList: NodeListOf<Element>) {
+    function handleActiveLink(event: Event, linkList: NodeListOf<HTMLAnchorElement>) {
         linkList.forEach((otherLink) => {
             otherLink.classList.remove("active");
         });
-        (event.target as HTMLElement).classList.add("active");
+        (event.target as HTMLAnchorElement).classList.add("active");
     }
 
     // Add click event to links in the sticky menu
@@ -327,10 +326,8 @@ import "../styles/generel.css";
 
         if (projekterItemSticky.classList.contains("active")) {
             stickyMenuUl.style.height = `calc(100% + ${dropdownHeight}px)`;
-            stickyMenu.style.marginBottom = `${dropdownHeight}px`;
         } else {
             stickyMenuUl.style.height = "100%";
-            stickyMenu.style.marginBottom = "0";
         }
     });
 
@@ -364,8 +361,5 @@ import "../styles/generel.css";
     });
 });
 
+
     </script>
-
-</body>
-
-</html>
