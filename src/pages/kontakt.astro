@@ -7,123 +7,142 @@ import "../styles/generel.css";
 ---
 <MainLayout>
     <section class="container">
-        <div id="item1" class="gap">
+        <div id="item1" class="gap2">
             <SiteOverskrifter text="kontakt" text2="KONTAKTOPLYSNINGER"/>  
          </div>
-         <article id="item3" class="item3_7" class="gap">
-            <figure class="billede">
-                <img src="https://placehold.co/220x265" alt="Portræt af Hans Peter Hagens">
-            </figure>
-                <p>
-                    Kontakt mig hurtigt og nemt med spørgsmål eller for opstart af nye projekter. 
-                    Jeg svarer typisk inden for 1-2 hverdage. 
-                    Du kan kontakte mig gennem nedenstående kontaktoplysninger: 
-                </p>
-        </article>
-        <article id="kontakt" class="gap">
-            <div class="gap">
-                 <h6>
-                   Opstartsmøde
-                 </h6>
-                 <p>+45 33 13 27 25</p>
-                 <div class="line_lang "></div>
-            </div>
-            <div class="gap">
-                <h6>
-                    MAIL
-                </h6>
-                <p>post@arkitekturvaerkstedet.dk</p>
-                <div class="line_lang "></div>
-           </div> 
-           <div class="gap">
+         <p class="tekst_padding">
+          Kontakt mig hurtigt og nemt med spørgsmål eller for opstart af nye projekter. 
+          Jeg svarer typisk inden for 1-2 <span class="line-break">hverdage.</span> Du kan kontakte mig gennem nedenstående kontaktoplysninger: 
+      </p>
+      <br/>
+      <br/>
+         <article id="kontakt">
+          <div id="item2" class="gap">
+               <h6>
+                 Opstartsmøde
+               </h6>
+               <p>+45 33 13 27 25</p>
+               <div class="line_lang "></div>
+          </div>
+
+          <div id="item3" class="gap">
+              <h6>
+                  MAIL
+              </h6>
+              <p>post@arkitekturvaerkstedet.dk</p>
+              <div class="line_lang "></div>
+          </div> 
+
+          <div id="item4" class="gap">
             <h6>
-                TEGNESTUE ADRESSE
+              TEGNESTUE ADRESSE
             </h6>
             <p>Strandgade 30, st. tv</p>
             <div class="line_lang "></div>
-       </div>
-       <div class="gap">
-        <h6>
+          </div>
+          
+          <div id="item5" class="gap">
+            <h6>
             CVR NR
-        </h6>
-        <p>xxx xxxxx xxxx</p>
-        <div class="line_lang "></div>
-   </div>
-            </article>
+            </h6>
+            <p>xxx xxxxx xxxx</p>
+            <div class="line_lang "></div>
+          </div>
+
+          <figure class="billede">
+           <img src="https://placehold.co/220x265" alt="Portræt af Hans Peter Hagens">
+          </figure>
+        </article>
+            
     </section>
-    <div class="bund">
-    <TopKnap/>
+    <div class="bund_grid">
+      <div class="bund">
+        <TopKnap/>
+      </div>
+      </div>
 
 </MainLayout>
 <style>
- 
-  .container{
-    grid-column: 2 / 5; /* Starter fra kolonne 2 og strækker sig til kolonne 5 */
-  }
-  .line_kort {
-    border-top: 0.5px solid var(--thert);
-    width: 10%;
-    margin-top:0.5rem;
-}
 .line_lang {
         border-top: 0.5px solid var(--tertiary-color);
-        width: 98%;
+        width: 80%;
         margin: 3% 0;
         /* Lige margin over og under linjen */
     }
   .container > *{
-    padding-bottom:4rem;
-  }
-  /* #item3 > *{
-    padding-bottom:1rem;
-  } */
-  .bund{
-    grid-column: 3 / span 2;
-  grid-row: 2;
-  justify-self: end;
+    padding-bottom:2rem;
   }
   .gap > *{
-    padding-bottom:1rem;
+    padding-bottom:0.5rem;
+  }
+  .tekst_padding{
+    padding-right:3rem;
   }
   #kontakt{
-display:flex;
-    flex-direction:column;
+display:grid;
+grid-template-rows: 1fr 1fr 1fr 1fr 4fr;
   }
-
+  .bund_grid{
+    display:grid;
+    grid-template-columns:1fr 5fr;
+  }
+    .bund:nth-child(1) {
+        grid-column: 4; /* Placerer den første knap i første kolonne */
+    }
+    .billede{
+   display:block;
+   width:70%;
+   height:auto;
+  }
 
   @media (min-width: 768px) and (max-width: 1024px) {
-  .container{
-    grid-column: 2 / 7; /* Starter fra kolonne 2 og strækker sig til kolonne 5 */
+  .tekst_padding{
+    padding-right:7rem;
   }
-  .sticky_menu {
-    grid-row:1;
-    grid-column: 1 / 2;
+  #kontakt{
+display:grid;
+grid-template-rows: 1fr 1fr 1fr 1fr 5fr;
   }
-  .bund{
-    grid-column: 5 / span 2;
-  grid-row: 2;
-  justify-self: end;
-  }
-  #item1{
-    margin-top:50px;
-  }
-  }
+}
   @media (min-width: 1025px) {
-  .sticky_menu {
+    .line-break::after {
+        content: '\A';
+        white-space: pre;
+        display: inline;
+    }
+    .billede{
+   display:block;
+   width:100%;
+   height:auto;
+   padding-right:3rem;
+   max-width:27rem;
+  }
+  #kontakt{
+display:grid;
+grid-template-columns: 5fr 4fr;
+grid-template-rows: repeat(4, 7rem);
+  }
+  .tekst_padding{
+    padding-right:10rem;
+  }
+  #kontakt > #item2 {
+    grid-column:1;
     grid-row:1;
-    grid-column: 1 / 3;
-  }
-  .container{
-    grid-row:1;
-    grid-column: 2 / 13; /* Starter fra kolonne 2 og strækker sig til kolonne 5 */
-  }
-  .bund{
-grid-column: 9 / span 4;
-  grid-row: 2;
-  justify-self: end;
-  }
-  #item1{
-    margin-top:50px;
-  }
+    }
+    #kontakt > #item3 {
+      grid-column:1;
+      grid-row:2;
+    }
+    #kontakt > #item4 {
+      grid-column:1;
+      grid-row:3;
+    }
+    #kontakt > #item5 {
+      grid-column:1;
+      grid-row:4;
+    }
+    #kontakt:nth-child(5) {
+      grid-area: 2 / span 2;
+    }
 }
   </style>
