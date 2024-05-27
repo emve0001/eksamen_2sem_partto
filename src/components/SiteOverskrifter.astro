@@ -1,11 +1,12 @@
 ---
+const {text, text2} = Astro.props;
 import "../styles/generel.css";
 ---
 
 <article class="site_overskrifter">
-    <h2 class="so_h2">OM ARKITEKTURVÆRKSTEDET</h2>
+    <h2 class="so_h2">{text}</h2>
     <div class="line_lang"></div>
-    <h3 class="so_h3">HANS PETER HAGENS</h3>
+    <h3 class="so_h3">{text2}</h3>
     <div class="line_kort"></div>
 </article>
 
@@ -16,13 +17,11 @@ import "../styles/generel.css";
         margin: 3% 0;
         /* Lige margin over og under linjen */
     }
-
     .line_kort {
         border-top: 0.5px solid var(--secondary-color);
         width: 10%;
         margin: 10% 0% 3% 0%;
     }
-
     @media (min-width: 768px) {
         .line_lang {
             border-width: 1px;

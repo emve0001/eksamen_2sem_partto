@@ -1,6 +1,6 @@
 ---
 import "../styles/generel.css";
-import Header from "./Header.astro";
+import Header from "../components/Header.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "./Footer.astro";
 
@@ -29,3 +29,25 @@ import Footer from "./Footer.astro";
    
   </body>
   </html>
+
+  <style>
+    main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Afgør afstanden mellem kolonnerne */
+  }
+    @media (min-width: 768px) and (max-width: 1024px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px; /* Afgør afstanden mellem kolonnerne */
+  }
+}
+    @media (min-width: 1025px) {
+    main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px; /* Afgør afstanden mellem kolonnerne */
+  }
+}
+    </style>
