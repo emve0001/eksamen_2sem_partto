@@ -11,6 +11,11 @@ img {
   display: block;
 }
 
+main {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
 body {
   background-color: var(--primary-color);
 }
@@ -139,9 +144,7 @@ p {
   }
 
   h3 {
-    font-size: var(
-      --h3-font-size
-    ); /*h5 brugt til h3 (vi har ikke defineret andet)*/
+    font-size: var(--h3-font-size); /*h5 brugt til h3 (vi har ikke defineret andet)*/
     /* letter-spacing:; */
     font-weight: var(--font-weight-medium);
   }
