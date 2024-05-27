@@ -8,12 +8,17 @@ import "../styles/generel.css";
 <MainLayout>
    <!-- klassen er brugt til TopKnap, så man kommer herop igen -->
     <section class="container">
+
         <div id="item1" class="gap">
             <SiteOverskrifter text="FORLØB" text2="PROCESS OVERSIGT"/>  
              <p>
                  Tegnestuen beskæftiger sig med igangsætning og realisering af ide- og udviklingsprojekter. Én kærneværdi, nemlig at opretholdes den tætte kontakt mellem de involverede parter i alle byggeriets forskelligartede faser - en altafgørende faktor i arbejdet med gennemførelsen af et gennemført resultat sideløbende med en præcist styret byggeproces.
             </p>
          </div>
+
+
+
+
          <article id="item3" class="item3_7" class="gap">
             <div class="gap" class="tekst_til_billede">
                 <h4>DESIGN BUILD GROW</h4>
@@ -26,19 +31,24 @@ import "../styles/generel.css";
                 <img src="https://placehold.co/256x154" alt="3D model i træ">
             </figure>
         </article>
+
+
+
         <article id="item4">
             <div class="gap">
                  <h6>
                    Opstartsmøde
                  </h6>
                  <div class="line_kort"></div>
-            </div>
-            
+              </div>
              <p>
                  Projektet starter med et opstartsmøde, hvor vi drøfter ønsker og behov samt vurderer potentialet og de arkitektoniske muligheder i dit byggeprojekt. Mødet finder typisk sted på Arkitekturværkstedet, hvilket giver os mulighed for at komme med konkrete idéer tidligt i processen. 
                 Inden idémødet anbefaler vi, at du som bygherre identificerer dine behov og definerer din økonomiske ramme for projektet. Dette gør det muligt for os at drøfte en realistisk plan for både økonomi og tidsramme.
              </p>
+           
         </article>
+        <div class="line_long"></div>
+
         <article class="flex_box">
              <div class="gap">
                 <h6>
@@ -52,6 +62,9 @@ import "../styles/generel.css";
                 Inden idémødet anbefaler vi, at du som bygherre identificerer dine behov og definerer din økonomiske ramme for projektet. Dette gør det muligt for os at drøfte en realistisk plan for både økonomi og tidsramme.
              </p>
         </article>
+
+        <div class="line_long"></div>
+
         <article class="flex_box">
           <div class="gap">
               <h6>
@@ -65,6 +78,9 @@ import "../styles/generel.css";
               Betalingsstrukturen i denne fase defineres også, hvor typisk halvdelen af beløbet betales før skitseringen påbegyndes, og den anden halvdel når skitseringen er afsluttet.
              </p>    
         </article>
+
+        <div class="line_long"></div>
+
         <article class="flex_box">
           <div class="gap">
             <h6>
@@ -77,9 +93,15 @@ import "../styles/generel.css";
           Disse tegninger danner grundlag for både indhentning af tilbud fra entreprenører og for de håndværkere, der skal udføre byggeriet, så de har præcise instruktioner at bygge efter.
           </p>
         </article>
+
+ <div class="line_long"></div>
+
+
         <figure class="billede2" class="billede">
           <img src="https://placehold.co/256x154" alt="3D model i træ">
         </figure>
+       
+
         <article class="flex_box">
           <div class="gap">
             <h6>
@@ -91,25 +113,29 @@ import "../styles/generel.css";
           Før jeg sender projektet i udbud, udarbejder jeg omfattende beskrivelser og de nødvendige detaljer, som varierer afhængigt af projektets størrelse og kompleksitet. Efterfølgende vurderes de indkomne tilbud, hvorfra jeg vælger den mest egnede entreprenør. Prissætningen af udførelsen foretages af entreprenøren og afhænger af de specifikke krav og omfanget af det enkelte projekt.
           </p>
         </article>
-<article class="flex_box">
-    <div class="gap">
-    <h6>
-        BYGGEFASEN
-    </h6>
 
-    <div class="line_kort"></div>
-</div>
-    <p class="gap">
-        Under byggefasen kan jeg både udføre fagtilsyn og tilbyde byggeledelse. Som byggeleder repræsenterer jeg dig over for entreprenørerne og sikrer, at arbejdet udføres korrekt og efter planen. 
-        Projektets specifikke behov afgør hyppigheden af tilsyn og byggemøder. Som arkitekt sikrer jeg sammen med bygherren og ingeniøren, at vi besøger byggepladsen hver 14. dag for at kontrollere, at håndværkerne følger de detaljerede tegninger og myndighedskrav nøje. 
-      </p>
-</article>
-<div class="gap">
-<CtaKnap text="LAD OS SAMARBEJDE"/>
-</div>
+        <div class="line_long"></div>
+
+        <article class="flex_box">
+          <div class="gap">
+            <h6>
+             BYGGEFASEN
+            </h6>
+             <div class="line_kort"></div>
+          </div>
+          <p class="gap">
+            Under byggefasen kan jeg både udføre fagtilsyn og tilbyde byggeledelse. Som byggeleder repræsenterer jeg dig over for entreprenørerne og sikrer, at arbejdet udføres korrekt og efter planen. 
+            Projektets specifikke behov afgør hyppigheden af tilsyn og byggemøder. Som arkitekt sikrer jeg sammen med bygherren og ingeniøren, at vi besøger byggepladsen hver 14. dag for at kontrollere, at håndværkerne følger de detaljerede tegninger og myndighedskrav nøje. 
+          </p>
+        </article>
+
+
+        <div class="gap">
+          <CtaKnap text="LAD OS SAMARBEJDE"/>
+        </div>
     </section>
     <div class="bund">
-      <TopKnap/>
+        <TopKnap/>
       </div>
 </MainLayout>
 
@@ -136,19 +162,23 @@ flex-direction:row;
   .bund > *{
     justify-self:end;
   }
-
   .gap > *{
     padding-bottom:1rem;
   }
+
+
+  /* TABLET TABLET TABLET TABLET TABLET */
     @media (min-width: 768px) and (max-width: 1024px) {
-    main {
+    /* main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 10px; /* Afgør afstanden mellem kolonnerne */
-  }
+    gap: 10px;
+  } */
+
   .container{
-    grid-column: 2 / 7; /* Starter fra kolonne 2 og strækker sig til kolonne 5 */
+    grid-column: 2 / 7;
   }
+
   .sticky_menu {
     grid-row:1;
     grid-column: 1 / 2;
@@ -161,6 +191,20 @@ flex-direction:row;
   #item1{
     margin-top:50px;
   }
+  .line_kort {
+    border-top: 0.5px solid var(--secondary-color);
+    width: 3rem;
+    margin-top:0.5rem;
+}
+.line_long {
+    border-top: 0.5px solid var(--secondary-color);
+    width: 80%;
+    margin-top:0.5rem;
+  
+}
+.gap > *{
+    padding-bottom:5rem;
+  }
   }
   @media (min-width: 1025px) {
     main {
@@ -168,6 +212,12 @@ flex-direction:row;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px; /* Afgør afstanden mellem kolonnerne */
   }
+  .line_long {
+    border-top: 0.5px solid var(--secondary-color);
+    width: 70%;
+    margin-top:0.5rem;
+  
+}
   .sticky_menu {
     grid-row:1;
     grid-column: 1 / 3;
@@ -175,6 +225,9 @@ flex-direction:row;
   .container{
     grid-row:1;
     grid-column: 2 / 13; /* Starter fra kolonne 2 og strækker sig til kolonne 5 */
+  }
+  .gap > *{
+    padding-bottom:3rem;
   }
   .bund{
 grid-column: 9 / span 4;
