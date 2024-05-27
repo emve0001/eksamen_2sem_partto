@@ -9,59 +9,71 @@ import "../styles/generel.css";
 <MainLayout> 
 <div class="forsidebillede"> 
 <div class="hero-billede" >
-<img src="https://placehold.co/390x780" alt="torvhallerne1"> 
+<img id="hero-image" src="https://placehold.co/390x780" alt="torvhallerne1"> 
 <h1 class="hero-tekst">ARKITEKTURVÆRKSTEDET</h1>
 </div>
 </div>
 
 <section class="content-section">
-	<article>
-		<br>
-	<p>“Arkitekturværkstedet” er en arkitekttegnestue, der med central beliggenhed i København, tilbyder rådgivning og planlægning indenfor nybyggeri, ombygning og istandsættelse. Boligbyggeri, Erhvervsbyggeri, Kulturbyggeri, Have & landskab, Design & Udstillinger</p>
-<a href="./pages/kontakt.astro">
+<article>
+<br>
+<p>Arkitekturværkstedet er en arkitekttegnestue, der med central beliggenhed i København, tilbyder rådgivning og planlægning indenfor nybyggeri, ombygning og istandsættelse. 
+Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervsbyggeri, Kulturbyggeri, Have & landskab og Design & Udstillinger.
+</p>
+<div class="index_knap"> 
+<a href="/kontakt">
 	<CtaKnap text="BOOK OPSTARTSMØDE NU">
-</svg></CtaKnap>
 </a>
+</div>
 </article>
 
 
 <article>
-	 <p>Tegnestuen arbejder med igangsættelse og realisering af ide- og udviklingsprojekter. Det er vigtigt for os at opretholde tæt kontakt mellem alle parter gennem alle faser af byggeriet for at opnå smukke resultater og styre byggeøkonomien nøje.</p>
+<p>Tegnestuen beskæftiger sig med igangsætning og realisering af ide- og udviklingsprojekter. Én kærneværdi, nemlig at opretholdes den tætte kontakt mellem de involverede parter i alle byggeriets forskelligartede faser - en altafgørende faktor i arbejdet med gennemførelsen af et smukt resultat sideløbende med en præcist styret byggeøkonomi. </p>
 </article>
 <br>
 
-	<article><img src="https://placehold.co/258x211" alt="Torvehallerne">
-	<br>
-    <h4>TORVEHALLERNE</h4>
-    <h5>ISRAELS PLADS</h5>
-	<br>
-    <p>Beliggende på Israels Plads i hjertet af byen, består Torvehallerne af to store, moderne haller, der huser over 80 boder og butikker.</p>
-	<br>
-    <p>Torvehallerne udførtes gennem 14 år af Arkitekturværkstedet under ledelse af arkitekt Hans Peter Hagens - i samarbejde med Københavns Torvelaug‚ stiftet i 1998 med det ene formål at arbejde hen imod en realisering af projektet.</p>
-	</article>
-	<br>
-	
-	<a href=""></a><CtaKnap text="LÆS MERE OM TORVEHALLERNE"/></a>
-	<br>
+<article>
+<img id="content-image-1" src="https://placehold.co/258x211" alt="Torvehallerne">
+<br>
+<h4>TORVEHALLERNE</h4>
+<h5>ISRAELS PLADS</h5>
+<br>
+<p>Beliggende på Israels Plads i hjertet af byen, består Torvehallerne af to store, moderne haller, der huser over 80 boder og butikker.</p>
+<br>
+<p>Torvehallerne udførtes gennem 14 år af Arkitekturværkstedet under ledelse af arkitekt Hans Peter Hagens - i samarbejde med Københavns Torvelaug‚ stiftet i 1998 med det ene formål at arbejde hen imod en realisering af projektet.</p>
+</article>
+
+<svg id="vertical-line" width="1" height="679" viewBox="0 0 1 679" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0.5" y1="678.016" x2="0.5" y2="-0.00280762" stroke="#E73127"/>
+    </svg>
+<br>
+<div class="index_knap"> 
+<a href=""></a><CtaKnap text="LÆS MERE OM TORVEHALLERNE"/>
+</a></div>
+<br>
 <Carousel/>
 <br>
 </section>
 
 <section class="section_to"> 
-	<h6>Arkitekturværkstedet</h6>
-	<img src="https://placehold.co/257x225" alt="Arkitekturværkstedet billede">
-    <h6>HANS PETER Hagens</h6>
-    <article>
+<h6>Arkitekturværkstedet</h6>
+<img id="section-image-1" src="https://placehold.co/257x225" alt="Arkitekturværkstedet billede">
+<h6>HANS PETER Hagens</h6>
+ <article>
       <p>Arkitekturværkstedet etableredes som firma i eget navn i 1993 - med opgaver spændende fra traditionelle arkitekt- og håndværksopgaver, design, til landskab- og haveplanlægning. Herunder arkitekturskriveri til dagspressen og fagblade:.</p>
       <p>Lokal arkitektur rummer unikke historiske og poetiske særpræg og er omhyggeligt afstemt klima, levevis og kultur, der præger det land og det kontinent, der omgiver den.</p>
       <p>Der er mange værdier i oprindelige byggestile og arkitektur, men traditionel regional byggestil erstattes oftere og oftere af vestlige tilgange, uden at man skeler til de arkitektoniske og funktionelle tab, det indebærer. Der er brug for slidstærke og vejrbestandige konstruktionsprincipper – men de må og skal kombineres med et markant fokus på de oprindelige kvaliteter af hensyn til kulturarv såvel som bæredygtighed.</p>
-    </article>
-	<br>
-	<a href=""><CtaKnap text="LAD OS SAMARBEJDE"></CtaKnap></a>
+ </article>
 <br>
-<TopKnap/>
-</section>
-</MainLayout>
+<div class="index_knap"> 
+<a href="/kontakt"><CtaKnap text="LAD OS SAMARBEJDE"></CtaKnap></a></div>
+<br>
+<div class="index_knap">
+	<a href="/index"><TopKnap/></a>
+</div>
+    </section>
+    </MainLayout>
 
 
 
@@ -83,8 +95,7 @@ import "../styles/generel.css";
     height: auto;
     grid-column: 1 / -1;
     grid-row: 1 / 5;
-	padding: 0;
-    margin: 0;
+	
   }
 
   .hero-billede {
@@ -92,22 +103,32 @@ import "../styles/generel.css";
     width: 100%;
     height: 100%;
     object-fit: cover;
-	margin: 0;
-	padding: 0;
+	margin-top: 38px; /*ret evt så det er ens på alle sider... */
   }
 
   .hero-tekst, h1 {
     grid-area: 1 / 1 / 2 / 2;
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 55.5%;
     transform: translateX(-50%);
     padding-bottom: 20%; 
   }
  .content-section {
-    grid-column: 1 / -1;
-    grid-row: 5 / 9;
-    padding: 20px;
+  grid-column: 1 / -1;
+  grid-row: 5 / 9;
+  padding: 20px;
+  display: grid;
+  gap: 20px;
+  position: relative;
+}
+
+#vertical-line {
+  position: absolute;
+  top: calc(4.35 * 100% / 12); /*gør så jeg kan style linje hhv op og ned */
+  left: calc(1 * 100% / 4 - 25%); /*gør så jeg kan justere længere til venstre */
+  height: calc(4.37 * 100% / 12); /*strækker sig over 4.37 rækker*/
+  z-index: 1; 
 }
 
 .content-section article {
@@ -117,8 +138,6 @@ import "../styles/generel.css";
 .content-section p {
     margin: 0 0 1rem;
 }
-
-
 
 .content-section img {
     display: block;
@@ -150,15 +169,9 @@ import "../styles/generel.css";
     margin-top: 20px;
 	text-align: left;
 }
-/* .samarbejde_knap svg{
-flex-shrink: 0;
-  transform-origin: left;
-  transition: transform 0.5s ease;
-  width: 162px;
-} */
 
-/* INDEX-SIDE TABLET (768px til 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+ /* TABLET & INDEX-SIDE (768px til 1024px) */
+ @media (min-width: 768px) and (max-width: 1024px) {
   .container {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(12, 1fr);
@@ -169,16 +182,20 @@ flex-shrink: 0;
     grid-row: 5 / 9;
     padding: 40px;
   }
-
+ #vertical-line {
+    top: calc(1.9* 100% / 12); 
+    left: calc(1 * 100% / 8 - 10%); /* Juster for tablet */
+    height: calc(5 * 100% / 12); /* Juster for tablet */
+  }
   .section_to {
     grid-column: 2 / 8;
     grid-row: 10 / 12;
     padding: 40px;
   }
-}
-/* INDEX-SIDE DESKTOP (1025px +) */
-@media (min-width: 1025px) {
-  .container {
+ }
+ /* INDEX-SIDE DESKTOP (1025px +) */
+ @media (min-width: 1025px) {
+ .container {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
   }
@@ -188,11 +205,35 @@ flex-shrink: 0;
     grid-row: 5 / 9;
     padding: 60px;
   }
-
+ #vertical-line {
+    position: absolute;
+    top: calc(2 * 100% / 12); 
+    left: calc(3 * 100% / 12 - 0.5px); /* Juster venstre placering */
+    height: calc(4.2 * 100% / 12); 
+    z-index: 1;
+  }
   .section_to {
     grid-column: 3 / 11;
     grid-row: 10 / 12;
     padding: 60px;
   }
+
+  /*styling af billedernes id */
+  #hero-image {
+    width: 1237px;  
+    height: 761px;  
+    object-fit: cover; 
+  }
+
+  #content-image-1 {
+    width: 519px;  
+    height: 424px; 
+  }
+
+  #section-image-1 {
+    width: 556px;  
+    height: 493px; 
+  }
+
 }
 </style>
