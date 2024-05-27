@@ -1,6 +1,8 @@
 ---
-import Carousel from "../components/Carousel.astro"
+import Carousel from "../components/Carousel.astro";
 import MainLayout from "../components/MainLayout.astro";
+import TopKnap from "../components/TopKnap.astro";
+import CtaKnap from "../components/CtaKnap.astro";
 import "../styles/generel.css";
 ---
 
@@ -11,7 +13,55 @@ import "../styles/generel.css";
 <h1 class="hero-tekst">ARKITEKTURVÆRKSTEDET</h1>
 </div>
 </div>
+
+<section class="content-section">
+	<article>
+		<br>
+	<p>“Arkitekturværkstedet” er en arkitekttegnestue, der med central beliggenhed i København, tilbyder rådgivning og planlægning indenfor nybyggeri, ombygning og istandsættelse. Boligbyggeri, Erhvervsbyggeri, Kulturbyggeri, Have & landskab, Design & Udstillinger</p>
+<a href="./pages/kontakt.astro">
+	<CtaKnap text="BOOK OPSTARTSMØDE NU"><svg xmlns="http://www.w3.org/2000/svg" width="200" height="8" viewBox="0 0 202 8" fill="none">
+  <path d="M201.443 4.35355C201.638 4.15829 201.638 3.84171 201.443 3.64645L198.261 0.464466C198.066 0.269204 197.749 0.269204 197.554 0.464466C197.359 0.659728 197.359 0.976311 197.554 1.17157L200.382 4L197.554 6.82843C197.359 7.02369 197.359 7.34027 197.554 7.53553C197.749 7.7308 198.066 7.7308 198.261 7.53553L201.443 4.35355ZM0 4.5L201.09 4.5V3.5L0 3.5L0 4.5Z" fill="#E73127"/>
+</svg></CtaKnap>
+</a>
+</article>
+
+<article>
+	 <p>Tegnestuen arbejder med igangsættelse og realisering af ide- og udviklingsprojekter. Det er vigtigt for os at opretholde tæt kontakt mellem alle parter gennem alle faser af byggeriet for at opnå smukke resultater og styre byggeøkonomien nøje.</p>
+</article>
+<br>
+	<article><img src="https://placehold.co/258x211" alt="Torvehallerne">
+	<br>
+    <h4>TORVEHALLERNE</h4>
+    <h5>ISRAELS PLADS</h5>
+	<br>
+    <p>Beliggende på Israels Plads i hjertet af byen, består Torvehallerne af to store, moderne haller, der huser over 80 boder og butikker.</p>
+	<br>
+    <p>Torvehallerne udførtes gennem 14 år af Arkitekturværkstedet under ledelse af arkitekt Hans Peter Hagens - i samarbejde med Københavns Torvelaug‚ stiftet i 1998 med det ene formål at arbejde hen imod en realisering af projektet.</p>
+	</article>
+	<br>
+	
+	<a href=""></a><CtaKnap text="LÆS MERE OM TORVEHALLERNE"/></a>
+	<br>
 <Carousel />
+<br>
+</section>
+
+<section class="section_to"> 
+	<h6>Arkitekturværkstedet</h6>
+	<img src="https://placehold.co/257x225" alt="Arkitekturværkstedet billede">
+    <h6>HANS PETER Hagens</h6>
+    <article>
+      <p>Arkitekturværkstedet etableredes som firma i eget navn i 1993 - med opgaver spændende fra traditionelle arkitekt- og håndværksopgaver, design, til landskab- og haveplanlægning. Herunder arkitekturskriveri til dagspressen og fagblade:.</p>
+      <p>Lokal arkitektur rummer unikke historiske og poetiske særpræg og er omhyggeligt afstemt klima, levevis og kultur, der præger det land og det kontinent, der omgiver den.</p>
+      <p>Der er mange værdier i oprindelige byggestile og arkitektur, men traditionel regional byggestil erstattes oftere og oftere af vestlige tilgange, uden at man skeler til de arkitektoniske og funktionelle tab, det indebærer. Der er brug for slidstærke og vejrbestandige konstruktionsprincipper – men de må og skal kombineres med et markant fokus på de oprindelige kvaliteter af hensyn til kulturarv såvel som bæredygtighed.</p>
+    </article>
+	<br>
+	<a href=""><CtaKnap text="LAD OS SAMARBEJDE"><svg xmlns="http://www.w3.org/2000/svg" width="162" height="8" viewBox="0 0 202 8" fill="none">
+  <path d="M201.443 4.35355C201.638 4.15829 201.638 3.84171 201.443 3.64645L198.261 0.464466C198.066 0.269204 197.749 0.269204 197.554 0.464466C197.359 0.659728 197.359 0.976311 197.554 1.17157L200.382 4L197.554 6.82843C197.359 7.02369 197.359 7.34027 197.554 7.53553C197.749 7.7308 198.066 7.7308 198.261 7.53553L201.443 4.35355ZM0 4.5L201.09 4.5V3.5L0 3.5L0 4.5Z" fill="#E73127"/>
+</svg></CtaKnap></a>
+<br>
+<TopKnap/>
+</section>
 </MainLayout>
 
 
@@ -20,18 +70,10 @@ import "../styles/generel.css";
 
 <style>
 /*INDEX_SIDE MOBILESITE */
-
-/* .header, .navigation {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; 
-    background-color: transparent; /* Gør header gennemsigtig */
-
 .container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     width: 100%;
     height: 100vh;
   }
@@ -39,8 +81,11 @@ import "../styles/generel.css";
   .forsidebillede {
 	display: grid;
     width: 100%;
-    height: 100%;
-    position: relative; 
+    height: auto;
+    grid-column: 1 / -1;
+    grid-row: 1 / 5;
+	padding: 0;
+    margin: 0;
   }
 
   .hero-billede {
@@ -48,14 +93,107 @@ import "../styles/generel.css";
     width: 100%;
     height: 100%;
     object-fit: cover;
+	margin: 0;
+	padding: 0;
   }
 
   .hero-tekst, h1 {
     grid-area: 1 / 1 / 2 / 2;
     position: absolute;
-    bottom: 0; /* Justeres til at være i bunden af billedet */
-    left: 50%; /* Centrering horisontalt */
+    bottom: 0;
+    left: 50%;
     transform: translateX(-50%);
     padding-bottom: 20%; 
   }
+ .content-section {
+    grid-column: 1 / -1;
+    grid-row: 5 / 9;
+    padding: 20px;
+}
+
+.content-section article {
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    margin: 0 0 1rem;
+}
+
+
+
+.content-section img {
+    display: block;
+    margin: 1rem 0;
+}
+
+.content-section h4,
+.content-section h5 {
+    margin: 0.5rem 0;
+}
+
+.section_to {
+    grid-column: 1 / -1;
+    grid-row: 10 / 12;
+    padding: 20px;
+    text-align: center;
+}
+
+.section_to h6 {
+    margin: 20px 0;
+}
+
+.section_to img {
+    display: block;
+    margin: 20px auto;
+}
+
+.section_to p {
+    margin-top: 20px;
+	text-align: left;
+}
+/* .samarbejde_knap svg{
+flex-shrink: 0;
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  width: 162px;
+} */
+
+/* INDEX-SIDE TABLET (768px til 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .content-section {
+    grid-column: 2 / 8;
+    grid-row: 5 / 9;
+    padding: 40px;
+  }
+
+  .section_to {
+    grid-column: 2 / 8;
+    grid-row: 10 / 12;
+    padding: 40px;
+  }
+}
+/* INDEX-SIDE DESKTOP (1025px +) */
+@media (min-width: 1025px) {
+  .container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  .content-section {
+    grid-column: 3 / 11;
+    grid-row: 5 / 9;
+    padding: 60px;
+  }
+
+  .section_to {
+    grid-column: 3 / 11;
+    grid-row: 10 / 12;
+    padding: 60px;
+  }
+}
 </style>
