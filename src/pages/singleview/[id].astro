@@ -1,0 +1,558 @@
+---
+
+import CtaKnap from "../../components/CtaKnap.astro";
+import MainLayout from "../../components/MainLayout.astro"
+import SiteOverskrifter from "../../components/SiteOverskrifter.astro"
+import TilbageKnap from "../../components/TilbageKnap.astro";
+import TopKnap from "../../components/TopKnap.astro";
+
+
+
+export async function getStaticPaths() {
+  const data = await fetch("https://bwejzjnppscnjzvmnefp.supabase.co/rest/v1/database", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3ZWp6am5wcHNjbmp6dm1uZWZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1NDk4NjYsImV4cCI6MjAzMjEyNTg2Nn0.SmzupH_uwfFyHXFJMw7jt9RrXWUobKy5c_fMOpJRooI",
+    },
+  }).then((res) => res.json());
+
+  const newData = data.map((product) => {
+    return { params: { id: product.id }, props: { data: product } };
+  });
+  return newData;
+}
+
+const {data} = Astro.props;
+---
+
+
+
+<MainLayout>
+<SiteOverskrifter />
+
+
+<article>
+    <div class="projekt_introduktion">
+        <img class="projekt_introduktion_billede" src="https://placehold.co/594x525" alt="">
+        <h6 class="projekt_introduktion_overskrift">{data.projekt_introduktion_overskrift}</h6>
+        <p class="breadtxt_projekt_introduktion">{data.breadtxt_projekt_introduktion}
+        </p>
+    </div>
+
+
+  <div class="knap1"><TopKnap/></div> 
+
+
+    <img class="projekt_billede" src="https://placehold.co/1099x586" alt="">
+
+    <div class="projektinfo">
+        <h6 class="projektinfo_overskrift">PROJEKTINFO</h6>
+        <p class="inginør">Ingenør: {data.ingenør} </p>
+        <p class="bygherre">Bygherre:  {data.bygherre} </p>
+        <p class="byggeaar">Byggeår:  {data.byggeaar} </p>
+
+    </div>
+
+    <div class="to_billeder_illu">
+        <img class="to_billeder_illu01" src="https://placehold.co/594x525" alt="">
+        <img class="to_billeder_illu02" src="https://placehold.co/594x525" alt="">
+    </div>
+
+    <div class="mere_info">
+        <p class="bredtxt_mere_info01">
+            {data.bredtxt_mere_info01} 
+        </p>
+        <img class="mere_info_billede" src="https://placehold.co/594x525" alt="">
+        <p class="bredtxt_mere_info02">
+            {data.bredtxt_mere_info02} 
+        </p>
+    </div>
+
+    <div class="knap2"> <TilbageKnap/></div>
+
+    <div class="udforsk_andre_projekter">
+        <h6 class="udforsk_andre_projekter_overskrift">UDFORSK ANDRE PROJEKTER</h6>
+        <img class="udforsk_andre_projekter_kultur" src="https://placehold.co/388x487" alt="">
+        <p class="kultur">KULTUR</p>
+        <img class="udforsk_andre_projekter_erhverv" src="https://placehold.co/388x487" alt="">
+        <p class="erhverv">ERHVERV</p>
+        <img class="udforsk_andre_projekter_kommende_projekter" src="https://placehold.co/388x487" alt="">
+        <p class="kommende_projekter">KOMMENDE PROJEKTER</p>
+    </div>
+
+    <div class="knap3"> <CtaKnap text="LAD OS SAMARBEJDE"/> </div>
+    </article>
+    </MainLayout>
+<style>
+   .projekt_introduktion {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .projekt_introduktion_billede {
+            grid-column: 1 / span 2;
+        }
+
+        .projekt_introduktion_overskrift {
+            grid-row: 2;
+            grid-column: 1 / span 2;
+        }
+
+        .breadtxt_projekt_introduktion {
+            grid-row: 2;
+            grid-column: 1 / span 2;
+            margin-top: 5%;
+        }
+
+        .knap1 {
+            margin-top: 30%;
+            margin-bottom: 30%;
+        }
+
+        .projektinfo {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .projektinfo_overskrift {
+            grid-column: 1 / span 2;
+            margin-top: 5%;
+        }
+
+        .inginør {
+            grid-column: 1 / span 2;
+        }
+
+        .bygherre {
+            grid-column: 1 / span 2;
+            margin-top: 5%;
+        }
+
+        .byggeaar {
+            grid-column: 1 / span 2;
+            margin-top: 5%;
+            margin-bottom: 20%;
+        }
+
+        .to_billeder_illu {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .to_billeder_illu01 {
+            grid-row: 1;
+        }
+
+        .to_billeder_illu01 {
+            grid-row: 2;
+        }
+
+        .mere_info {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30%;
+        }
+
+        .bredtxt_mere_info01 {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+
+        }
+
+        .mere_info_billede {
+            grid-row: 2;
+            grid-column: 1 / span 2;
+        }
+
+        .bredtxt_mere_info02 {
+            grid-row: 3;
+            grid-column: 1 / span 2;
+        }
+
+        .knap2 {
+            margin-top: 30%;
+            margin-bottom: 30%;
+        }
+
+        .udforsk_andre_projekter {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .udforsk_andre_projekter_overskrift {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+        }
+
+        .udforsk_andre_projekter_kultur {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            margin-top: 15%;
+        }
+
+        .kultur {
+            grid-row: 1;
+            grid-column: 1 / span 2;
+            margin-top: 10%;
+        }
+
+        .udforsk_andre_projekter_erhverv {
+            grid-row: 2;
+            grid-column: 1 / span 2;
+            margin-top: 15%;
+        }
+
+        .erhverv {
+            grid-row: 2;
+            grid-column: 1 / span 2;
+            margin-top: 10%;
+        }
+
+        .udforsk_andre_projekter_kommende_projekter {
+            grid-row: 3;
+            grid-column: 1 / span 2;
+            margin-top: 15%;
+        }
+
+        .kommende_projekter {
+            grid-row: 3;
+            grid-column: 1 / span 2;
+            margin-top: 10%;
+        }
+
+        .knap3 {
+            margin-top: 30%;
+            margin-bottom: 30%;
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+
+            .projekt_introduktion {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+            }
+
+            .projekt_introduktion_billede {
+                grid-row: 1;
+                grid-column: 1 / span 2;
+            }
+
+            .projekt_introduktion_overskrift {
+                grid-row: 1;
+                grid-column: 3 / span 2;
+                margin-top: 5%;
+            }
+
+            .breadtxt_projekt_introduktion {
+                grid-row: 1;
+                grid-column: 3 / span 2;
+                margin-top: 15%;
+            }
+
+            .knap1 {
+                margin-top: 15%;
+                margin-bottom: 15%;
+            }
+
+            .projektinfo {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+                margin-bottom: 20%;
+            }
+
+            .projektinfo_overskrift {
+                grid-column: 1 / span 2;
+                margin-top: 5%;
+            }
+
+            .inginør {
+                grid-column: 2 / span 3;
+                margin-top: 5%;
+            }
+
+            .bygherre {
+                grid-column: 2 / span 3;
+                margin-top: 5%;
+            }
+
+            .byggeaar {
+                grid-column: 2 / span 3;
+                margin-top: 5%;
+            }
+
+            .to_billeder_illu {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+            }
+
+            .to_billeder_illu01 {
+                grid-row: 1;
+                grid-column: 1 / span 2;
+            }
+
+            .to_billeder_illu02 {
+                grid-row: 1;
+                grid-column: 3 / span 2;
+            }
+
+            .mere_info {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 30px;
+                margin-top: 20%;
+            }
+
+            .bredtxt_mere_info01 {
+                grid-row: 1;
+                grid-column: 3 / span 2;
+
+            }
+
+            .mere_info_billede {
+                grid-row: 1;
+                grid-column: 1 / span 2;
+            }
+
+            .bredtxt_mere_info02 {
+                grid-row: 2;
+                grid-column: 1 / span 2;
+            }
+
+            .knap2 {
+                margin-top: 20%;
+                margin-bottom: 20%;
+            }
+
+            .udforsk_andre_projekter {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 20px;
+            }
+
+            .udforsk_andre_projekter_overskrift {
+                grid-row: 1;
+                grid-column: 1;
+            }
+
+            .udforsk_andre_projekter_kultur {
+                grid-row: 1;
+                grid-column: 1;
+                margin-top: 20%;
+            }
+
+            .kultur {
+                grid-row: 1;
+                grid-column: 1;
+                margin-top: 15%;
+            }
+
+            .udforsk_andre_projekter_erhverv {
+                grid-row: 1;
+                grid-column: 2;
+                margin-top: 20%;
+            }
+
+            .erhverv {
+                grid-row: 1;
+                grid-column: 2;
+                margin-top: 15%;
+            }
+
+            .udforsk_andre_projekter_kommende_projekter {
+                grid-row: 1;
+                grid-column: 3;
+                margin-top: 20%;
+            }
+
+            .kommende_projekter {
+                grid-row: 1;
+                grid-column: 3;
+                margin-top: 15%;
+            }
+
+            .knap3 {
+                margin-top: 20%;
+                margin-bottom: 20%;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .projekt_introduktion {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+            }
+
+            .projekt_introduktion_billede {
+                grid-row: 1;
+                grid-column: 1 / span 2;
+            }
+
+            .projekt_introduktion_overskrift {
+                grid-row: 1;
+                grid-column: 3 / span 2;
+                margin-top: 5%;
+            }
+
+            .breadtxt_projekt_introduktion {
+                grid-row: 1;
+                grid-column: 3 / span 2;
+                margin-top: 15%;
+            }
+
+            .knap1 {
+                margin-top: 15%;
+                margin-bottom: 15%;
+            }
+
+            .projektinfo {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+                margin-bottom: 20%;
+            }
+
+            .projektinfo_overskrift {
+                grid-column: 1 / span 2;
+                margin-top: 5%;
+            }
+
+            .inginør {
+                grid-column: 2 / span 3;
+                margin-top: 5%;
+            }
+
+            .bygherre {
+                grid-column: 2 / span 3;
+                margin-top: 5%;
+            }
+
+            .byggeaar {
+                grid-column: 2 / span 3;
+                margin-top: 5%;
+            }
+
+            .to_billeder_illu {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 20px;
+            }
+
+            .to_billeder_illu01 {
+                grid-row: 1;
+                grid-column: 1 / span 2;
+            }
+
+            .to_billeder_illu02 {
+                grid-row: 1;
+                grid-column: 3 / span 2;
+            }
+
+            .mere_info {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                gap: 30px;
+                margin-top: 20%;
+            }
+
+            .bredtxt_mere_info01 {
+                grid-row: 1;
+                grid-column: 3 / span 2;
+
+            }
+
+            .mere_info_billede {
+                grid-row: 1;
+                grid-column: 1 / span 2;
+            }
+
+            .bredtxt_mere_info02 {
+                grid-row: 2;
+                grid-column: 1 / span 2;
+            }
+
+            .knap2 {
+                margin-top: 20%;
+                margin-bottom: 20%;
+            }
+
+            .udforsk_andre_projekter {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 20px;
+            }
+
+            .udforsk_andre_projekter_overskrift {
+                grid-row: 1;
+                grid-column: 1;
+            }
+
+            .udforsk_andre_projekter_kultur {
+                grid-row: 1;
+                grid-column: 1;
+                margin-top: 20%;
+            }
+
+            .kultur {
+                grid-row: 1;
+                grid-column: 1;
+                margin-top: 15%;
+            }
+
+            .udforsk_andre_projekter_erhverv {
+                grid-row: 1;
+                grid-column: 2;
+                margin-top: 20%;
+            }
+
+            .erhverv {
+                grid-row: 1;
+                grid-column: 2;
+                margin-top: 15%;
+            }
+
+            .udforsk_andre_projekter_kommende_projekter {
+                grid-row: 1;
+                grid-column: 3;
+                margin-top: 20%;
+            }
+
+            .kommende_projekter {
+                grid-row: 1;
+                grid-column: 3;
+                margin-top: 15%;
+            }
+
+            .knap3 {
+                margin-top: 20%;
+                margin-bottom: 20%;
+            }
+
+        }
+    </style>
+
+
+
+</MainLayout>
