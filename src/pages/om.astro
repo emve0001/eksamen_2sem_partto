@@ -3,6 +3,7 @@ import MainLayout from "../components/MainLayout.astro";
 import SiteOverskrifter from "../components/SiteOverskrifter.astro"
 import "../styles/generel.css"
 import CvKnap from "../components/CvKnap.astro";
+import CtaKnap from "../components/CtaKnap.astro";
 ---
 <MainLayout>
 <SiteOverskrifter text="OM ARKITEKTUR&shy;VÆRKSTEDET" text2="HANS PETER HAGENS"/>
@@ -13,7 +14,7 @@ import CvKnap from "../components/CvKnap.astro";
             har jeg ledet adskillige
             prestigefyldte projekter i Danmark.
         </p>
-        <img class="img_01_hanspeter" src="https://placehold.co/594x525" alt="">
+        <img class="img_01_hanspeter" src="../public/img/img01hp.webp" alt="img_01_hanspeter">
         <p class="info_02">Min passion for arkitekturens indflydelse på samspillet mellem mennesker, bygninger og
             landskaber er kernen i mit
             arbejde. Jeg stræber efter at skabe rum, der både forbedrer livskvaliteten og styrker fællesskabet.
@@ -32,7 +33,7 @@ import CvKnap from "../components/CvKnap.astro";
     </div>
 
     <div>
-        <img class="img_02_hanspeter" src="https://placehold.co/594x525" alt="">
+        <img class="img_02_hanspeter" src="../public/img/img02hp.webp" alt="img_02_hanspeter">
     </div>
 
     <div class="firma_sektion">
@@ -59,7 +60,7 @@ import CvKnap from "../components/CvKnap.astro";
             Haver.</p>
     </div>
 
-    <div>(knap) kontakt mig her</div>
+  <CtaKnap text="KONTAKT MIG HER"/>
 
     <div class="placering_sektion">
         <h6 class="h6_04">ARKITEKTURVÆRKSTEDETS PLACERING</h6>
@@ -106,6 +107,10 @@ import CvKnap from "../components/CvKnap.astro";
         padding: 10%;
     }
 
+    .info_01, .info_02 {
+       padding: 4% 10% 1% 0%;
+    }
+
     @media (min-width: 768px) {
         .kort_linje {
             border-width: 1px;
@@ -132,6 +137,7 @@ import CvKnap from "../components/CvKnap.astro";
         .img_01_hanspeter {
             grid-column: 3 / span 2;
             grid-row: 1 / span 3;
+           padding: 0% 15% 6% 0%;
         }
 
         .knap_cv {
@@ -146,6 +152,8 @@ import CvKnap from "../components/CvKnap.astro";
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(4, 1fr);
+            padding-top: 4%;
+            padding-bottom: 2%;
         }
 
         .h6_01 {
@@ -169,6 +177,8 @@ import CvKnap from "../components/CvKnap.astro";
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(4, 1fr);
+                   padding-top: 4%;
+            padding-bottom: 2%;
         }
 
         .h6_02 {
@@ -192,6 +202,8 @@ import CvKnap from "../components/CvKnap.astro";
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(4, 1fr);
+                   padding-top: 4%;
+            padding-bottom: 2%;
         }
 
         .h6_03 {
@@ -215,6 +227,8 @@ import CvKnap from "../components/CvKnap.astro";
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(4, 1fr);
+                   padding-top: 4%;
+            padding-bottom: 2%;
         }
 
         .h6_04 {
@@ -238,6 +252,8 @@ import CvKnap from "../components/CvKnap.astro";
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 3%;
+                   padding-top: 4%;
+            padding-bottom: 2%;
         }
     }
 </style>
