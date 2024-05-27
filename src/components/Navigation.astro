@@ -1,10 +1,7 @@
 ---
 import "../styles/generel.css";
 ---
-
-
-    <section>
-
+<section id="komponent">
         <nav>
             <ul class="menu">
                 <li><a href="index.html">FORSIDE</a></li>
@@ -28,7 +25,6 @@ import "../styles/generel.css";
             <div class="line"></div>
             <div class="line"></div>
         </div>
-
         <div class="sticky_menu">
             <ul>
                 <li><a href="index.html">FORSIDE</a></li>
@@ -46,9 +42,7 @@ import "../styles/generel.css";
                 </li>
             </ul>
         </div>
-
     </section>
-
      <style>
    
        nav {
@@ -92,8 +86,11 @@ import "../styles/generel.css";
 .burger {
     width: 30px;
     height: 20px;
+    margin:20px;
     cursor: pointer;
     display: none;
+    position: fixed;
+    top: 70px; 
 }
 
 .burger .line {
@@ -136,8 +133,6 @@ import "../styles/generel.css";
 
     .burger {
         display: block;
-        margin-left: 20px;
-        padding-top: 40px;
     }
 
     nav.active .menu {
@@ -172,19 +167,21 @@ import "../styles/generel.css";
 
     .sticky_menu {
         display: none;
+        background:none;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+    #komponent{
+        z-index:100;
+    }
     .sticky_menu {
         position: -webkit-sticky;
         position: sticky;
-        top: 0;
+        top: 100px;
         width: 200px;
-        height: 100vh;
         padding-top: 40px;
         margin-left: 20px;
-        background-color: var(--primary-color);
     }
 
     .sticky_menu ul {
@@ -240,7 +237,6 @@ import "../styles/generel.css";
         height: 100vh;
         padding-top: 40px;
         margin-left: 20px;
-        background-color: var(--primary-color);
     }
 
     .sticky_menu ul {
