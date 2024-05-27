@@ -7,19 +7,19 @@ import "../styles/generel.css";
   <div class="carousel-track">
     <!-- Enkelte carousel-elementer med billede og slørede sider -->
     <div class="carousel-item">
-     <img src="carousel_test.webp" alt="test" class="carousel-image">
-      <div class="blurry-image-left" style="background-image: url('/img/carousel_test3.webp');"></div>
+      <img src="carousel_test.webp" alt="test" class="carousel-image active">
+      <div class="blurry-image-left" style="background-image: url('img/carousel_test3.webp');"></div>
       <div class="blurry-image-right" style="background-image: url('/img/carousel_test2.webp');"></div>
     </div>
     <div class="carousel-item">
-     <img src="carousel_test2.webp" alt="test2" class="carousel-image">
+      <img src="carousel_test2.webp" alt="test2" class="carousel-image">
       <div class="blurry-image-left" style="background-image: url('/img/carousel_test3.webp');"></div>
       <div class="blurry-image-right" style="background-image: url('/img/carousel_test.webp');"></div>
     </div>
     <div class="carousel-item">
-     <img src="carousel_test3.webp" alt="test3" class="carousel-image">
+      <img src="carousel_test3.webp" alt="test3" class="carousel-image">
       <div class="blurry-image-left" style="background-image: url('/img/carousel_test.webp');"></div>
-      <div class="blurry-image-right" style="background-image: url('/img/carousel_test2.webp'');"></div>
+      <div class="blurry-image-right" style="background-image: url('/img/carousel_test2.webp');"></div>
     </div>
   </div>
   <!-- Knapper til at skifte billede -->
@@ -27,10 +27,8 @@ import "../styles/generel.css";
   <button class="next" aria-label="Næste billede">&#62;</button>
 </div>
 
-
-
 <style>
-  .carousel {
+.carousel {
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -52,7 +50,7 @@ import "../styles/generel.css";
   opacity: 0.5;
 }
 
-.carousel-image {
+.carousel-image.active {
   opacity: 1; /* Gør kun det aktive billede fuldt synligt */
 }
 
@@ -88,25 +86,24 @@ button {
   border: 1px solid #ccc;
   cursor: pointer;
 }
-
 </style>
 
-
 <script>
-const images = document.querySelectorAll('.carousel-image');
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.carousel-image');
+  let current = 0;
 
-let current = 0;
+  function changeSlide(direction) {
+    images[current].classList.remove('active'); // Skjuler det nuværende billede
+    current = (current + direction + images.length) % images.length;
+    images[current].classList.add('active'); // Viser det nye billede
+  }
 
-function changeSlide(direction) {
-  images[current].classList.remove('active'); // Skjuler det nuværende billede
-  current = (current + direction + images.length) % images.length;
-  images[current].classList.add('active'); // Viser det nye billede
-}
+  setInterval(() => {
+    changeSlide(1);
+  }, 10000);
 
-setInterval(() => {
-  changeSlide(1);
-}, 10000);
-
-document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+  document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+  document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+});
 </script>
