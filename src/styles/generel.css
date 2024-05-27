@@ -56,6 +56,11 @@ body {
   --footer-font-size: 1rem;
   --footer-secondary-font-size: 0.81rem;
 }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("public/fonts/raleway-variablefont_wght-webfont.woff2");
+}
 h1 {
   font-size: var(--h1-font-size);
   letter-spacing: 2.3px;
