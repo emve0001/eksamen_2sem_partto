@@ -2,9 +2,10 @@
 import MainLayout from "../components/MainLayout.astro";
 import SiteOverskrifter from "../components/SiteOverskrifter.astro"
 import "../styles/generel.css"
+import CvKnap from "../components/CvKnap.astro";
 ---
 <MainLayout>
-<SiteOverskrifter />
+<SiteOverskrifter text="OM ARKITEKTUR&shy;VÆRKSTEDET" text2="HANS PETER HAGENS"/>
     <section>
     <div class="intro_sektion">
         <p class="info_01">Som uddannet arkitekt fra Det Kongelige Danske Kunstakademi med bred international
@@ -17,7 +18,7 @@ import "../styles/generel.css"
             landskaber er kernen i mit
             arbejde. Jeg stræber efter at skabe rum, der både forbedrer livskvaliteten og styrker fællesskabet.
         </p>
-        <h4 class="knap_cv">SE CV</h4>
+       <CvKnap/>
     </div>
 
     <div class="om_sektion">
@@ -95,10 +96,10 @@ import "../styles/generel.css"
 
 
 <style>
-    .line_kort {
+    .kort_linje {
         border-top: 0.5px solid var(--secondary-color);
         width: 10%;
-        margin: 10% 0% 3% 0%;
+        margin: 3% 0% 3% 0%;
     }
 
     .img_02_hanspeter {
@@ -106,7 +107,7 @@ import "../styles/generel.css"
     }
 
     @media (min-width: 768px) {
-        .line_kort {
+        .kort_linje {
             border-width: 1px;
         }
 
