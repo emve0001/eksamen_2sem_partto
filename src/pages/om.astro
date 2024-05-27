@@ -51,11 +51,11 @@ import CtaKnap from "../components/CtaKnap.astro";
     <div class="filosofi_sektion">
         <h6 class="h6_03">FILOSOFI OG MÅLSÆTNING</h6>
         <div class="kort_linje"></div>
-        <p class="p_03">Hos Arkitekturværkstedet, en innovativ arkitekttegnestue i hjertet af København, har vi
+        <p class="p_03">Hos Arkitekturværkstedet, en innovativ arkitekttegnestue i hjertet af København, har jeg
             ekspertise i både nybyggeri og
-            renoveringer. Vores projekter spænder fra bolig- og erhvervsbyggeri til kulturelle og landskabsdesign. Vi er
-            stolte af
-            at påtage os og realisere idé- og udviklingsprojekter, som Torvehallerne på Israels Plads og Hovedstadens
+            renoveringer. Mine projekter spænder fra bolig- og erhvervsbyggeri til kulturelle og landskabsdesign. Jeg er
+            stolt af
+            at påtage mig og realisere idé- og udviklingsprojekter, som Torvehallerne på Israels Plads og Hovedstadens
             Hængende
             Haver.</p>
     </div>
@@ -65,8 +65,8 @@ import CtaKnap from "../components/CtaKnap.astro";
     <div class="placering_sektion">
         <h6 class="h6_04">ARKITEKTURVÆRKSTEDETS PLACERING</h6>
         <div class="kort_linje"></div>
-        <p class="p_04">Arkitekturværkstedet er placeret på Strandgade 30 st tv, 1401 København K, i det charmerende
-            Christianshavn område i
+        <p class="p_04">Arkitekturværkstedet er placeret på Strandgade 30 st tv, 1401 København K, på
+            Christianshavn, i
             hjertet af København.</p>
     </div>
 
@@ -88,9 +88,10 @@ import CtaKnap from "../components/CtaKnap.astro";
     </div>
 
     <div class="maps_sektion">
-        <h6 class="h6_04">FIND OS PÅ GOOGLE MAPS</h6>
+        <h6 class="h6_04">FIND MIG PÅ GOOGLE MAPS</h6>
         <div class="kort_linje"></div>
     </div>
+    <div class="maps"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.8524239555177!2d12.587773576955371!3d55.67416637305523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652533e9cd1e205%3A0xaa74b4640334ccf7!2sStrandgade%2030%2C%201401%20K%C3%B8benhavn%20K!5e0!3m2!1sda!2sdk!4v1716848918057!5m2!1sda!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
     <div>LAD OS SAMARBEJDE</div>
 </section>
@@ -109,6 +110,11 @@ import CtaKnap from "../components/CtaKnap.astro";
 
     .info_01, .info_02 {
        padding: 4% 10% 1% 0%;
+    }
+    .maps iframe{ 
+       width: 362px;
+       height: 405;
+       margin-bottom:30px;
     }
 
     @media (min-width: 768px) {
@@ -245,7 +251,11 @@ import CtaKnap from "../components/CtaKnap.astro";
             grid-column: 2 / span 4;
             grid-row: 3 / span 2;
         }
-
+    .maps iframe{ 
+       width: 1263px;
+       height: 405;
+       margin-bottom:30px;
+    }
         /* ------- */
 
         .img_3_imger {
