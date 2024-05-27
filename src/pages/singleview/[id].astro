@@ -1,5 +1,4 @@
 ---
-
 import CtaKnap from "../../components/CtaKnap.astro";
 import MainLayout from "../../components/MainLayout.astro"
 import SiteOverskrifter from "../../components/SiteOverskrifter.astro"
@@ -48,6 +47,7 @@ const {data} = Astro.props;
 
     <div class="projektinfo">
         <h6 class="projektinfo_overskrift">PROJEKTINFO</h6>
+         <div class="line_kort"></div>
         <p class="inginør">Ingenør: {data.ingenør} </p>
         <p class="bygherre">Bygherre:  {data.bygherre} </p>
         <p class="byggeaar">Byggeår:  {data.byggeaar} </p>
@@ -73,6 +73,7 @@ const {data} = Astro.props;
 
     <div class="udforsk_andre_projekter">
         <h6 class="udforsk_andre_projekter_overskrift">UDFORSK ANDRE PROJEKTER</h6>
+             <div class="line_kort2"></div>
         <img class="udforsk_andre_projekter_kultur" src="https://placehold.co/388x487" alt="">
         <p class="kultur">KULTUR</p>
         <img class="udforsk_andre_projekter_erhverv" src="https://placehold.co/388x487" alt="">
@@ -85,7 +86,7 @@ const {data} = Astro.props;
     </article>
     </MainLayout>
 <style>
-   .projekt_introduktion {
+    .projekt_introduktion {
             display: grid;
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
@@ -94,36 +95,41 @@ const {data} = Astro.props;
 
         .projekt_introduktion_billede {
             grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
         }
 
         .projekt_introduktion_overskrift {
-            grid-row: 2;
+            grid-row: 3;
             grid-column: 1 / span 2;
         }
 
         .breadtxt_projekt_introduktion {
-            grid-row: 2;
+            grid-row: 3;
             grid-column: 1 / span 2;
             margin-top: 5%;
         }
 
         .knap1 {
-            margin-top: 30%;
-            margin-bottom: 30%;
+            margin-top: 20%;
+            margin-bottom: 20%;
         }
 
         .projektinfo {
             display: grid;
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 5px;
         }
 
         .projektinfo_overskrift {
             grid-column: 1 / span 2;
             margin-top: 5%;
         }
-
+  .line_kort {
+        border-top: 0.5px solid var(--secondary-color);
+        width: 20%;
+        margin: 6% 0% 3% 0%;
+    }
         .inginør {
             grid-column: 1 / span 2;
         }
@@ -178,8 +184,8 @@ const {data} = Astro.props;
         }
 
         .knap2 {
-            margin-top: 30%;
-            margin-bottom: 30%;
+            margin-top: 20%;
+            margin-bottom: 20%;
         }
 
         .udforsk_andre_projekter {
@@ -192,6 +198,14 @@ const {data} = Astro.props;
         .udforsk_andre_projekter_overskrift {
             grid-row: 1;
             grid-column: 1 / span 2;
+        }
+        .line_kort2 {
+                 border-top: 0.5px solid var(--secondary-color);
+        width: 20%;
+        margin: 6% 0% 3% 0%;
+        grid-row: 1; 
+        grid-column: 1;
+        margin-top: 15%;
         }
 
         .udforsk_andre_projekter_kultur {
@@ -231,8 +245,9 @@ const {data} = Astro.props;
         }
 
         .knap3 {
-            margin-top: 30%;
-            margin-bottom: 30%;
+            margin-top: 20%;
+            margin-bottom: 20%;
+            margin-left: 20%;
         }
 
         @media (min-width: 768px) and (max-width: 1024px) {
@@ -252,18 +267,18 @@ const {data} = Astro.props;
             .projekt_introduktion_overskrift {
                 grid-row: 1;
                 grid-column: 3 / span 2;
-                margin-top: 5%;
+                margin-top: 1%;
             }
 
             .breadtxt_projekt_introduktion {
                 grid-row: 1;
                 grid-column: 3 / span 2;
-                margin-top: 15%;
+                margin-top: 10%;
             }
 
             .knap1 {
-                margin-top: 15%;
-                margin-bottom: 15%;
+                margin-top: 20%;
+                margin-bottom: 5%;
             }
 
             .projektinfo {
@@ -276,22 +291,31 @@ const {data} = Astro.props;
 
             .projektinfo_overskrift {
                 grid-column: 1 / span 2;
+                grid-row: 1;
                 margin-top: 5%;
             }
-
+.line_kort {
+            grid-row: 1;
+  margin-top: 40%;
+  grid-column: 1;
+  }
             .inginør {
-                grid-column: 2 / span 3;
-                margin-top: 5%;
+            grid-column: 1 / span 3;
+    margin-top: 0%;
+    margin-left: 10%;
             }
 
             .bygherre {
-                grid-column: 2 / span 3;
-                margin-top: 5%;
+                grid-column: 1 / span 3;
+                margin-top: 0%;
+    margin-left: 10%;
             }
 
             .byggeaar {
-                grid-column: 2 / span 3;
-                margin-top: 5%;
+                grid-column: 1 / span 3;
+               margin-top: 0%;
+    margin-left: 10%;
+    margin-bottom: 0%;
             }
 
             .to_billeder_illu {
@@ -316,7 +340,7 @@ const {data} = Astro.props;
                 grid-template-rows: 1fr 1fr;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 gap: 30px;
-                margin-top: 20%;
+                margin-top: 35%;
             }
 
             .bredtxt_mere_info01 {
@@ -337,7 +361,7 @@ const {data} = Astro.props;
 
             .knap2 {
                 margin-top: 20%;
-                margin-bottom: 20%;
+                 margin-bottom: 5%;
             }
 
             .udforsk_andre_projekter {
@@ -349,43 +373,43 @@ const {data} = Astro.props;
 
             .udforsk_andre_projekter_overskrift {
                 grid-row: 1;
-                grid-column: 1;
+           grid-column: 1 / span 2;
             }
 
             .udforsk_andre_projekter_kultur {
                 grid-row: 1;
                 grid-column: 1;
-                margin-top: 20%;
+                margin-top: 40%;
             }
 
             .kultur {
                 grid-row: 1;
                 grid-column: 1;
-                margin-top: 15%;
+                margin-top: 25%;
             }
 
             .udforsk_andre_projekter_erhverv {
                 grid-row: 1;
                 grid-column: 2;
-                margin-top: 20%;
+                margin-top: 40%;
             }
 
             .erhverv {
                 grid-row: 1;
                 grid-column: 2;
-                margin-top: 15%;
+              margin-top: 25%;
             }
 
             .udforsk_andre_projekter_kommende_projekter {
                 grid-row: 1;
                 grid-column: 3;
-                margin-top: 20%;
+                margin-top: 40%;
             }
 
             .kommende_projekter {
                 grid-row: 1;
                 grid-column: 3;
-                margin-top: 15%;
+           margin-top: 25%;
             }
 
             .knap3 {
@@ -434,22 +458,33 @@ const {data} = Astro.props;
 
             .projektinfo_overskrift {
                 grid-column: 1 / span 2;
+                grid-row: 1;
                 margin-top: 5%;
             }
+            .line_kort {
+            grid-row: 1;
+  margin-top: 40%;
+  grid-column: 1;
+  }
 
             .inginør {
-                grid-column: 2 / span 3;
-                margin-top: 5%;
+                grid-column: 1 / span 3;
+                  margin-left: 10%;
+    margin-bottom: 0%;
+        margin-top: 0%;
             }
 
             .bygherre {
-                grid-column: 2 / span 3;
-                margin-top: 5%;
+                grid-column: 1 / span 3;
+               margin-left: 10%;
+    margin-top: 0%;
             }
 
             .byggeaar {
-                grid-column: 2 / span 3;
-                margin-top: 5%;
+                grid-column: 1 / span 3;
+              margin-left: 10%;
+    margin-bottom: 0%;
+       margin-top: 0%;
             }
 
             .to_billeder_illu {
@@ -495,7 +530,7 @@ const {data} = Astro.props;
 
             .knap2 {
                 margin-top: 20%;
-                margin-bottom: 20%;
+                margin-bottom: 5%;
             }
 
             .udforsk_andre_projekter {
@@ -513,42 +548,43 @@ const {data} = Astro.props;
             .udforsk_andre_projekter_kultur {
                 grid-row: 1;
                 grid-column: 1;
-                margin-top: 20%;
+                margin-top: 35%;
             }
 
             .kultur {
                 grid-row: 1;
                 grid-column: 1;
-                margin-top: 15%;
+                margin-top: 25%;
             }
 
             .udforsk_andre_projekter_erhverv {
                 grid-row: 1;
                 grid-column: 2;
-                margin-top: 20%;
+             margin-top: 35%;
             }
 
             .erhverv {
                 grid-row: 1;
                 grid-column: 2;
-                margin-top: 15%;
+                margin-top: 25%;
             }
 
             .udforsk_andre_projekter_kommende_projekter {
                 grid-row: 1;
                 grid-column: 3;
-                margin-top: 20%;
+            margin-top: 35%;
             }
 
             .kommende_projekter {
                 grid-row: 1;
                 grid-column: 3;
-                margin-top: 15%;
+                margin-top: 25%;
             }
 
             .knap3 {
                 margin-top: 20%;
                 margin-bottom: 20%;
+                margin-left: 35%;
             }
 
         }

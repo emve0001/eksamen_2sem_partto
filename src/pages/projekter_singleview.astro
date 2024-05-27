@@ -36,6 +36,7 @@ import SiteOverskrifter from "../components/SiteOverskrifter.astro"
 
     <div class="projektinfo">
         <h6 class="projektinfo_overskrift">PROJEKTINFO</h6>
+        <span class="line1"></span>
         <p class="inginør">Inginør</p>
         <p class="bygherre">Bygherre</p>
         <p class="byggeaar">Byggeår</p>
@@ -103,35 +104,37 @@ import SiteOverskrifter from "../components/SiteOverskrifter.astro"
 
         .projekt_introduktion_billede {
             grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
         }
 
         .projekt_introduktion_overskrift {
-            grid-row: 2;
+            grid-row: 3;
             grid-column: 1 / span 2;
         }
 
         .breadtxt_projekt_introduktion {
-            grid-row: 2;
+            grid-row: 3;
             grid-column: 1 / span 2;
             margin-top: 5%;
         }
 
         .knap1 {
-            margin-top: 30%;
-            margin-bottom: 30%;
+            margin-top: 20%;
+            margin-bottom: 20%;
         }
 
         .projektinfo {
             display: grid;
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 5px;
         }
 
         .projektinfo_overskrift {
             grid-column: 1 / span 2;
             margin-top: 5%;
         }
+
 
         .inginør {
             grid-column: 1 / span 2;
@@ -187,8 +190,8 @@ import SiteOverskrifter from "../components/SiteOverskrifter.astro"
         }
 
         .knap2 {
-            margin-top: 30%;
-            margin-bottom: 30%;
+            margin-top: 20%;
+            margin-bottom: 20%;
         }
 
         .udforsk_andre_projekter {
@@ -240,8 +243,9 @@ import SiteOverskrifter from "../components/SiteOverskrifter.astro"
         }
 
         .knap3 {
-            margin-top: 30%;
-            margin-bottom: 30%;
+            margin-top: 20%;
+            margin-bottom: 20%;
+            margin-left: 20%;
         }
 
         @media (min-width: 768px) and (max-width: 1024px) {
