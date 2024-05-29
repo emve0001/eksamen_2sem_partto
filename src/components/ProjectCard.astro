@@ -22,11 +22,47 @@ const { data } = Astro.props;
 <style>
 .item_container:first-child{
     grid-column: span 2;
+   
 }
 
 .item_container:nth-child(2){
     grid-column: span 2;
+        margin: 0% 0% 5% 5%;
 }
+
+.item_container:nth-child(3){
+    grid-column: span 4;
+    margin: 10% 0% 10% 0%;  
+}
+
+
+.item_container:nth-child(4){
+    grid-column: span 2;
+margin: 0% 0% 10% 0%;
+        width: 88%;  
+}
+
+
+.item_container:nth-child(5){
+    grid-column: span 2;
+margin: 20% 0% 5% 5%;
+}
+
+.item_container:nth-child(6){
+    grid-column: span 2;
+    margin: -50% 11% 12% 0%;
+}
+
+.item_container:nth-child(7){
+    grid-column: span 2;
+    margin: 34% 40% 7% -60%;
+}
+
+.item_container:nth-child(8){
+    grid-column: span 4;
+     margin: 10% 0% 15% 0%;
+}
+
     .button a{ 
     display: flex;
     flex-direction: column;
@@ -46,9 +82,9 @@ const { data } = Astro.props;
 /* svg {
     flex-shrink: 0;
     transform-origin: left;
-    transition: transform 0.5s ease; /* Glat overgang kun for transformationer */
+    transition: transform 0.5s ease; /* Glat overgang kun for transformationer } */
 
-}
+
 slot {
     flex-shrink: 0;
     transform-origin: left;
