@@ -2,7 +2,7 @@
 const { data } = Astro.props;
 ---
 
-<div>
+<div class="item_container">
 <img src={data.projektbillede} alt="billede">
 <!-- <button type="button" onclick="window.location.href="> -->
     <div class="button"><a href={`/singleview/${data.id}`}> <span class="label">
@@ -20,7 +20,14 @@ const { data } = Astro.props;
 <!-- </button> -->
 
 <style>
-    .button{ 
+.item_container:first-child{
+    grid-column: span 2;
+}
+
+.item_container:nth-child(2){
+    grid-column: span 2;
+}
+    .button a{ 
     display: flex;
     flex-direction: column;
 
@@ -36,7 +43,7 @@ const { data } = Astro.props;
         text-decoration: none;
     }
 
-svg {
+/* svg {
     flex-shrink: 0;
     transform-origin: left;
     transition: transform 0.5s ease; /* Glat overgang kun for transformationer */
@@ -48,7 +55,7 @@ slot {
     transition: transform 0.5s ease; /* Glat overgang kun for transformationer */
 
 
-}
+} */
 /* virker ikke på slot */
 /* button:hover slot {
     transform: scaleX(1.1);
@@ -76,7 +83,7 @@ button:hover .label{
   font-size: var(--footer-secondary-font-size);
   letter-spacing: 0.1375rem;
 }
-svg {
+/* svg {
     flex-shrink: 0;
     transform-origin: left;
     transition: transform 0.5s ease;
@@ -84,7 +91,7 @@ svg {
 
     button:hover svg {
     transform: scaleX(1.4);
-}
+} */
 }
     /*DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP*/
 
@@ -93,7 +100,7 @@ svg {
   font-size: var(--footer-secondary-font-size);
   letter-spacing: 0.1375rem;
 }
-svg {
+/* svg {
     flex-shrink: 0;
     transform-origin: left;
     transition: transform 0.5s ease;
@@ -101,7 +108,7 @@ svg {
 
     button:hover svg {
     transform: scaleX(1.4);
-}
+} */
 }
 
     </style>
