@@ -71,11 +71,13 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
 <div class="index_knap"> 
 <a href="/kontakt"><CtaKnap text="LAD OS SAMARBEJDE"></CtaKnap></a></div>
 <br>
-<div class="index_knap">
-	<a href="/index"><TopKnap/></a>
-</div>
     </section>
-    </MainLayout>
+<div class="bund_grid">
+		<div class="bund"> 
+		<TopKnap/>
+</div>
+</div>
+</MainLayout>
 
 
 
@@ -168,6 +170,16 @@ justify-content: center;
 	margin-right: 3%;
 }
 
+/*styling af tilbage-til-top-knap */
+    .bund_grid{
+    display:grid;
+    grid-template-columns:1fr 5fr;
+  }
+    .bund:nth-child(1) {
+        grid-column: 4; /* Placerer den første knap i første kolonne */
+    }
+
+
  /* TABLET & INDEX-SIDE (768px til 1024px) */
  @media (min-width: 768px) and (max-width: 1024px) {
   .indhold-section {
@@ -212,4 +224,5 @@ justify-content: center;
 .section_to_tekst{
 	margin-right: 7%;
 }
+ }
 </style>
