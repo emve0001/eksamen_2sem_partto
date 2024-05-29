@@ -10,7 +10,7 @@ import "../styles/generel.css"
                 <li><a href="/forloeb">FORLØB</a></li>
                 <li><a href="/kontakt">KONTAKT</a></li>
                 <li class="projekter_item">
-                    <a href="#">PROJEKTER</a>
+                    <button class="togglebutton">PROJEKTER</button>
                     <ul class="projekter_dropdown">
                         <li><a href="/projekter_listeview">PRIVAT</a></li>
                         <li><a href="#">ERHVERV</a></li>
@@ -45,6 +45,10 @@ import "../styles/generel.css"
         </div>
     </section>
      <style>
+
+        .showblock{
+            display: block;
+        }
    
      nav {
     display: flex;
@@ -52,6 +56,7 @@ import "../styles/generel.css"
 }
 
 .menu {
+    position: fixed;
     display: flex;
     list-style: none;
     margin: 0;
@@ -89,6 +94,7 @@ import "../styles/generel.css"
     height: 20px;
     cursor: pointer;
     display: none;
+    position: fixed;
 }
 
 .burger .line {
@@ -97,6 +103,13 @@ import "../styles/generel.css"
     background-color: var(--secondary-color);
     margin-bottom: 7px;
     transition: 0.2s linear;
+}
+
+.burger.active{
+    position: fixed;
+    right: 15px;
+    top: 50px;
+    z-index: 100;
 }
 
 .burger.active .line:nth-child(1) {
@@ -174,8 +187,8 @@ import "../styles/generel.css"
  @media (min-width: 768px) and (max-width: 1024px), screen and (min-width: 1025px) {
     .sticky_menu {
         position: -webkit-sticky;
-        position: sticky;
-        top: 0;
+        position: fixed;
+        top: 40px;
         width: 200px;
         height: 100vh;
         padding-top: 40px;
@@ -256,6 +269,10 @@ import "../styles/generel.css"
             nav.classList.remove("active");
         });
     });
+
+    document.querySelector(".togglebutton").addEventListener("click", ()=>{
+        document.querySelector(".projekter_dropdown").classList.toggle("showblock")
+    })
 
     // Toggle dropdown for sticky menu
     projekterItemSticky.addEventListener("click", (event) => {

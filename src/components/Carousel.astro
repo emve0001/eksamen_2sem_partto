@@ -4,58 +4,111 @@ import "../styles/generel.css";
 
 <div class="carousel">
   <div class="carousel-container">
-    <button class="prev" onclick="changeSlide(-1);"><img src="/img/tilbage_pil.webp"></button>
-    <img src="/img/carousel_test.webp" class="carousel-image">
-    <img src="/img/carousel_test2.webp" class="carousel-image">
-    <img src="/img/carousel_test3.webp" class="carousel-image">
-    <button class="next" onclick="changeSlide(1);"><img src="/img/frem_pil.webp"></button>
+    <button class="prev"><img src="/img/tilbage_pil.webp"></button>
+    <div class="carousel-slide">
+      <img src="/img/carousel_test.webp" class="carousel-image">
+      <div class="carousel-text">Tekst for billede 1</div>
+    </div>
+    <div class="carousel-slide">
+      <img src="/img/carousel_test2.webp" class="carousel-image">
+      <div class="carousel-text">Tekst for billede 2</div>
+    </div>
+    <div class="carousel-slide">
+      <img src="/img/carousel_test3.webp" class="carousel-image">
+      <div class="carousel-text">Tekst for billede 3</div>
+    </div>
+    <button class="next"><img src="/img/frem_pil.webp"></button>
   </div>
 </div>
-
-
 
 <style>
   .carousel {
     width: 80%;
     overflow: hidden;
     display: flex;
-    align-items: center; /* Centrerer elementerne vertikalt */
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
   }
+
   .carousel-container {
     display: flex;
     width: 100%;
     transition: transform 0.5s ease;
+    position: relative;
   }
-  .carousel-image {
+
+  .carousel-slide {
+    position: relative;
     min-width: 100%;
-    transition: opacity 0.5s ease;
-    display: block;
-    flex-shrink: 0; /* Forhindrer billederne i at blive skaleret */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .carousel-image {
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .carousel-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary-color);
+    background: none;
+    font-size: 1rem;
+    font-family: var( --font-primary);
+    font-weight: var(--font-weight-regular);
+  }
+
   .prev, .next {
     background: none;
     border: none;
     cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 10;
   }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
   .prev img, .next img {
-    width: 30px; /* Størrelse på dine pil-billeder */
+    width: 30px;
     height: auto;
   }
 </style>
 
-
 <script>
 let current = 0;
-const images = document.querySelectorAll('.carousel-image');
+let slides;
 
-function changeSlide(direction: number) {
-  (images[current] as HTMLElement).style.display = 'none';
-  current = (current + direction + images.length) % images.length;
-  (images[current] as HTMLElement).style.display = 'block';
+if (typeof window !== "undefined") {
+  slides = document.querySelectorAll('.carousel-slide');
+  slides.forEach((slide, index) => {
+    slide.style.display = index === 0 ? 'flex' : 'none';
+  });
+
+  document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+  document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+
+  setInterval(() => {
+    changeSlide(1);
+  }, 10000);
 }
 
-setInterval(() => {
-  changeSlide(1);
-}, 10000);
+function changeSlide(direction) {
+  slides[current].style.display = 'none';
+  current = (current + direction + slides.length) % slides.length;
+  slides[current].style.display = 'flex';
+}
 </script>
