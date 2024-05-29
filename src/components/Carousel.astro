@@ -2,17 +2,22 @@
 import "../styles/generel.css";
 ---
 
+<!-- Karussel container -->
 <div class="carousel">
   <div class="carousel-container">
+    <!-- Forrige knap -->
     <button class="prev"><img src="/img/tilbage_pil.webp"></button>
+    <!-- Billede 1 -->
     <div class="carousel-slide">
       <img src="/img/carousel_test.webp" class="carousel-image">
       <div class="carousel-text">Tekst for billede 1</div>
     </div>
+    <!-- Billede 2 -->
     <div class="carousel-slide">
       <img src="/img/carousel_test2.webp" class="carousel-image">
       <div class="carousel-text">Tekst for billede 2</div>
     </div>
+    <!-- Billede 3 -->
     <div class="carousel-slide">
       <img src="/img/carousel_test3.webp" class="carousel-image">
       <div class="carousel-text">Tekst for billede 3</div>
@@ -22,22 +27,25 @@ import "../styles/generel.css";
 </div>
 
 <style>
+  /* Karusselens stil */
   .carousel {
     width: 80%;
     overflow: hidden;
     display: flex;
-    align-items: center;
+    align-items: center; /* Sørger for, at tingene er centreret lodret */
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto; /* Gør karussellen centreret på siden */
   }
 
+  /* Dette er containeren, der holder alle billederne */
   .carousel-container {
     display: flex;
     width: 100%;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; /* Glat overgang, når vi skifter billeder */
     position: relative;
   }
 
+  /* Hver slide i karussellen */
   .carousel-slide {
     position: relative;
     min-width: 100%;
@@ -46,12 +54,14 @@ import "../styles/generel.css";
     align-items: center;
   }
 
+  /* Billederne i hver slide */
   .carousel-image {
     width: 100%;
     display: block;
     flex-shrink: 0;
   }
 
+  /* Teksten, der vises ovenpå billederne */
   .carousel-text {
     position: absolute;
     bottom: 20px;
@@ -60,10 +70,12 @@ import "../styles/generel.css";
     color: var(--primary-color);
     background: none;
     font-size: 1rem;
-    font-family: var( --font-primary);
+    font-family: var(--font-primary);
     font-weight: var(--font-weight-regular);
+    text-align: center;
   }
 
+  /* Knapperne til at skifte billeder */
   .prev, .next {
     background: none;
     border: none;
@@ -83,32 +95,86 @@ import "../styles/generel.css";
   }
 
   .prev img, .next img {
-    width: 30px;
+    width: 30px; /* Størrelsen på pilene */
     height: auto;
+  }
+
+  /* Tablet stil */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .carousel {
+      width: 90%;
+    }
+
+    .carousel-text {
+      font-size: 1.25rem;
+      bottom: 30px;
+      padding: 10px;
+    }
+
+    .prev img, .next img {
+      width: 6%; 
+    }
+  }
+
+  /* Desktop stil */
+  @media (min-width: 1025px) {
+    .carousel {
+      width: 70%;
+    }
+
+    .carousel-text {
+      font-size: 1.5rem;
+      bottom: 40px;
+      padding: 15px;
+    }
+
+    .carousel-image {
+      width: 400px;
+      height: 365px;
+      object-fit: cover; /* Sørger for, at billedet fylder hele containeren */
+    }
+
+    .prev, .next {
+      top: 50%;
+      transform: translateY(-20%);
+    }
+
+    .prev {
+      left: 20px; /* Placerer knappen inde på billedet */
+    }
+
+    .next {
+      right: 20px; /* Placerer knappen inde på billedet */
+    }
+
+    .prev img, .next img {
+      width: 30px; /* Juster pilenes størrelse for desktop */
+      height: auto;
+    }
   }
 </style>
 
 <script>
-let current = 0;
+let current = 0; // Dette holder styr på hvilket billede der vises nu
 let slides;
 
 if (typeof window !== "undefined") {
   slides = document.querySelectorAll('.carousel-slide');
   slides.forEach((slide, index) => {
-    slide.style.display = index === 0 ? 'flex' : 'none';
+    slide.style.display = index === 0 ? 'flex' : 'none'; // Vis det første billede, skjul resten
   });
 
-  document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
-  document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+  document.querySelector('.prev').addEventListener('click', () => changeSlide(-1)); // Skift til forrige billede
+  document.querySelector('.next').addEventListener('click', () => changeSlide(1));  // Skift til næste billede
 
   setInterval(() => {
-    changeSlide(1);
+    changeSlide(1); // Skift til næste billede hver 10. sekund
   }, 10000);
 }
 
 function changeSlide(direction) {
-  slides[current].style.display = 'none';
-  current = (current + direction + slides.length) % slides.length;
-  slides[current].style.display = 'flex';
+  slides[current].style.display = 'none'; // Skjul det nuværende billede
+  current = (current + direction + slides.length) % slides.length; // Find næste billede
+  slides[current].style.display = 'flex'; // Vis det næste billede
 }
 </script>
