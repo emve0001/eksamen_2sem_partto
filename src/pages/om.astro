@@ -103,14 +103,12 @@ import TopKnap from "../components/TopKnap.astro";
 <div class="listviewcta">
   <CtaKnap text="LAD OS SAMARBEJDE"/>
   </div>
-
-   <div class="bund_grid">
-      <div class="bund">
-        <TopKnap/>
-      </div>
-      </div>
 </section>
-
+<div class="bund_grid">
+    <div class="bund">
+      <TopKnap/>
+    </div>
+    </div>
 
 <style>
     .kort_linje {
@@ -163,7 +161,6 @@ import TopKnap from "../components/TopKnap.astro";
         .bund_grid{
     display:grid;
     grid-template-columns:1fr 5fr;
-    padding-bottom: 10%;
   }
     .bund:nth-child(1) {
         grid-column: 4; /* Placerer den første knap i første kolonne */
