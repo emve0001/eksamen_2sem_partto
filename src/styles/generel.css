@@ -145,6 +145,7 @@ p {
   font-family: var(--font-secondary);
   color: var(--secondary-color);
   line-height: 1.5rem;
+  font-weight: var(--font-weight-regular);
 }
 
 /* Tablet styles */
