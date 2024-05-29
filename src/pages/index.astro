@@ -14,7 +14,7 @@ import "../styles/generel.css";
 </div>
 </div>
 
-<section class="content-section">
+<section class="indhold-section">
 <article>
 <br>
 <p>Arkitekturværkstedet er en arkitekttegnestue, der med central beliggenhed i København, tilbyder rådgivning og planlægning indenfor nybyggeri, ombygning og istandsættelse. 
@@ -28,13 +28,17 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
 </article>
 
 
-<article>
+<div> 	
 <p>Tegnestuen beskæftiger sig med igangsætning og realisering af ide- og udviklingsprojekter. Én kærneværdi, nemlig at opretholdes den tætte kontakt mellem de involverede parter i alle byggeriets forskelligartede faser - en altafgørende faktor i arbejdet med gennemførelsen af et smukt resultat sideløbende med en præcist styret byggeøkonomi. </p>
-</article>
+</div>
 <br>
-
-<article>
-<img id="content-image-1" src="https://placehold.co/258x211" alt="Torvehallerne">
+<section class="torvehallerne_indhold"> 	
+<svg class="vertical-line" width="1" height="679" viewBox="0 0 1 679" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0.5" y1="678.016" x2="0.5" y2="-0.00280762" stroke="#E73127"/>
+    </svg>
+<div> 
+	<div class="indhold-image-1"> 
+<img src="https://placehold.co/258x211" alt="Torvehallerne"></div>
 <br>
 <h4>TORVEHALLERNE</h4>
 <h5>ISRAELS PLADS</h5>
@@ -42,28 +46,26 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
 <p>Beliggende på Israels Plads i hjertet af byen, består Torvehallerne af to store, moderne haller, der huser over 80 boder og butikker.</p>
 <br>
 <p>Torvehallerne udførtes gennem 14 år af Arkitekturværkstedet under ledelse af arkitekt Hans Peter Hagens - i samarbejde med Københavns Torvelaug‚ stiftet i 1998 med det ene formål at arbejde hen imod en realisering af projektet.</p>
-</article>
 
-<svg id="vertical-line" width="1" height="679" viewBox="0 0 1 679" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="0.5" y1="678.016" x2="0.5" y2="-0.00280762" stroke="#E73127"/>
-    </svg>
 <br>
 <div class="index_knap"> 
 <a href=""></a><CtaKnap text="LÆS MERE OM TORVEHALLERNE"/>
 </a></div>
+</div>
+</section>
 <br>
 <Carousel/>
 <br>
 </section>
-
+</div>
 <section class="section_to"> 
 <h6>Arkitekturværkstedet</h6>
-<img id="section-image-1" src="https://placehold.co/257x225" alt="Arkitekturværkstedet billede">
+<div class="section-image-1"><img src="https://placehold.co/257x225" alt="Arkitekturværkstedet billede"></div>
 <h6>HANS PETER Hagens</h6>
  <article>
-      <p>Arkitekturværkstedet etableredes som firma i eget navn i 1993 - med opgaver spændende fra traditionelle arkitekt- og håndværksopgaver, design, til landskab- og haveplanlægning. Herunder arkitekturskriveri til dagspressen og fagblade:.</p>
-      <p>Lokal arkitektur rummer unikke historiske og poetiske særpræg og er omhyggeligt afstemt klima, levevis og kultur, der præger det land og det kontinent, der omgiver den.</p>
-      <p>Der er mange værdier i oprindelige byggestile og arkitektur, men traditionel regional byggestil erstattes oftere og oftere af vestlige tilgange, uden at man skeler til de arkitektoniske og funktionelle tab, det indebærer. Der er brug for slidstærke og vejrbestandige konstruktionsprincipper – men de må og skal kombineres med et markant fokus på de oprindelige kvaliteter af hensyn til kulturarv såvel som bæredygtighed.</p>
+      <p class="section_to_tekst">Arkitekturværkstedet etableredes som firma i eget navn i 1993 - med opgaver spændende fra traditionelle arkitekt- og håndværksopgaver, design, til landskab- og haveplanlægning. Herunder arkitekturskriveri til dagspressen og fagblade:.</p>
+      <p class="section_to_tekst">Lokal arkitektur rummer unikke historiske og poetiske særpræg og er omhyggeligt afstemt klima, levevis og kultur, der præger det land og det kontinent, der omgiver den.</p>
+      <p class="section_to_tekst">Der er mange værdier i oprindelige byggestile og arkitektur, men traditionel regional byggestil erstattes oftere og oftere af vestlige tilgange, uden at man skeler til de arkitektoniske og funktionelle tab, det indebærer. Der er brug for slidstærke og vejrbestandige konstruktionsprincipper – men de må og skal kombineres med et markant fokus på de oprindelige kvaliteter af hensyn til kulturarv såvel som bæredygtighed.</p>
  </article>
 <br>
 <div class="index_knap"> 
@@ -80,6 +82,7 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
 
 
 <style>
+
 /*INDEX_SIDE MOBILESITE */
   .forsidebillede {
     width: 100%;
@@ -89,13 +92,11 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
   }
 
   #hero-image {
-   /* grid-area: 1 / 1 / 2 / 2; */
    position:absolute;
    left: 0;
     width: 100%;
     height: 100vh;
     object-fit: cover;
-	/* margin-top: 38px; ret evt så det er ens på alle sider... */
   }
 
   .hero-tekst, h1 {
@@ -106,7 +107,7 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
     transform: translateX(-50%);
     padding-bottom: 20%; 
   }
- .content-section {
+ .indhold-section {
   grid-column: 1 / -1;
   grid-row: 5 / 9;
   padding: 20px;
@@ -115,29 +116,31 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
   position: relative;
 }
 
-#vertical-line {
-  position: absolute;
-  top: calc(4.35 * 100% / 12); /*gør så jeg kan style linje hhv op og ned */
-  left: calc(1 * 100% / 4 - 25%); /*gør så jeg kan justere længere til venstre */
-  height: calc(4.37 * 100% / 12); /*strækker sig over 4.37 rækker*/
-  z-index: 1; 
+.vertical-line {
+  grid-column: 1 / 2;
+  width: 1px;
+  color: var(--tertiary-color);
 }
 
-.content-section article {
+.torvehallerne_indhold{
+display: grid;
+grid-template-columns: 5% 3fr;
+justify-content: center;
+}
+.indhold-section section {
     margin-bottom: 20px;
 }
 
-.content-section p {
+.indhold-section p {
     margin: 0 0 1rem;
 }
 
-.content-section img {
+.indhold-section img {
     display: block;
-    margin: 1rem 0;
 }
 
-.content-section h4,
-.content-section h5 {
+.indhold-section h4,
+.indhold-section h5 {
     margin: 0.5rem 0;
 }
 
@@ -161,61 +164,52 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
     margin-top: 20px;
 	text-align: left;
 }
+.section_to_tekst{
+	margin-right: 3%;
+}
 
  /* TABLET & INDEX-SIDE (768px til 1024px) */
  @media (min-width: 768px) and (max-width: 1024px) {
-  .content-section {
+  .indhold-section {
     grid-column: 2 / 8;
     grid-row: 5 / 9;
     padding: 40px;
-  }
- #vertical-line {
-    top: calc(1.9* 100% / 12); 
-    left: calc(1 * 100% / 8 - 10%); /* Juster for tablet */
-    height: calc(5 * 100% / 12); /* Juster for tablet */
   }
   .section_to {
     grid-column: 2 / 8;
     grid-row: 10 / 12;
     padding: 40px;
   }
- }
+}
  /* INDEX-SIDE DESKTOP (1025px +) */
  @media (min-width: 1025px) {
-  .content-section {
+  .indhold-section {
     grid-column: 3 / 11;
     grid-row: 5 / 9;
     padding: 60px;
   }
- #vertical-line {
-    position: absolute;
-    top: calc(2 * 100% / 12); 
-    left: calc(3 * 100% / 12 - 0.5px); /* Juster venstre placering */
-    height: calc(4.2 * 100% / 12); 
-    z-index: 1;
-  }
+
   .section_to {
-    grid-column: 3 / 11;
+    grid-column: 4 / 11;
     grid-row: 10 / 12;
     padding: 60px;
   }
 
-  /*styling af billedernes id */
-  /* #hero-image {
-    width: 1237px;  
-    height: 761px;  
-    object-fit: cover; 
-  } */
-
-  #content-image-1 {
+  .indhold-image-1 {
     width: 519px;  
     height: 424px; 
   }
 
-  #section-image-1 {
+  .section-image-1 {
+	justify-content: center;
+	margin: 20px auto;
     width: 556px;  
     height: 493px; 
   }
-
+  .torvehallerne_indhold{
+   margin: 20px 25%;
+}
+.section_to_tekst{
+	margin-right: 7%;
 }
 </style>
