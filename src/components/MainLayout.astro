@@ -61,4 +61,21 @@ html {
    
   </body>
   </html>
+  <style>
+    .body_grid {
+      display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .menu_grid {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .indhold_grid {
+       grid-column: 2 / span 6;
+       grid-row: 1;
+    }
+    html {
+                scroll-behavior: smooth;
+            }
+        </style> 
 
