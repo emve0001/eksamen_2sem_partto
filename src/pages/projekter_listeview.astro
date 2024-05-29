@@ -21,13 +21,7 @@ console.log(data)
    
  <SiteOverskrifter text="PRIVATE PROJEKTER" text2="GALLERI"/>
   <section class="listeview_grid">
-    <!-- <img class="landejendom_i_kong" src="https://placehold.co/594x525" alt="landejendom i køng">
-    <img class="landbolig_paa_mon" src="https://placehold.co/388x487" alt="landbolig på møn">
-    <img class="sommerhus_bolig_kulhuse" src="https://placehold.co/1099x586" alt="sommerhus bolig i kulhuse">
-    <img class="strandgade_50_01" src="https://placehold.co/434x625" alt="strandgade 50">
-    <img class="strandgade_50_02" src="https://placehold.co/627x482" alt="strandgade 50">
-    <img class="fjordvej_124" src="https://placehold.co/1099x586" alt="fjordvej 124"> -->
-    
+
     {
   data.map ((product) => {
     return (<ProjectCard data = {product} />)
@@ -47,11 +41,10 @@ console.log(data)
   .listeview_grid {
   display: grid;
   gap: 10px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
 
 }
-
 .listviewcta{
   margin-left: 40%;
     margin-right: 40%;
@@ -74,144 +67,4 @@ console.log(data)
     grid-template-rows: auto;
   }
 }
-
-/* 
-  .landbolig_paa_mon {
-    grid-row: 2;
-    grid-column: 1 / span 2;
-  }
-
-  .sommerhus_bolig_kulhuse {
-    grid-row: 3;
-    grid-column: 1 / span 2;
-    margin-top: 30%;
-  }
-
-  .strandgade_50_01 {
-    grid-row: 4;
-    grid-column: 1 / span 2;
-  }
-
-  .strandgade_50_02 {
-    grid-row: 5;
-    grid-column: 1 / span 2;
-  }
-
-  .fjordvej_124 {
-    grid-row: 6;
-    grid-column: 1 / span 2;
-    width: 100%;
-  }
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .listeview_grid {
-      gap: 20px;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, auto);
-    }
-
-    .landejendom_i_kong {
-      grid-row: 1;
-      grid-column: 1 / span 2;
-    }
-
-    .landbolig_paa_mon {
-      grid-row: 1;
-      grid-column: 3 / span 2;
-      margin-top: 10%;
-    }
-
-    .sommerhus_bolig_kulhuse {
-      grid-row: 2;
-      grid-column: 1 / span 4;
-      margin-top: 0%;
-    }
-
-    .strandgade_50_01 {
-      grid-row: 3;
-      grid-column: 1 / span 2;
-    }
-
-    .strandgade_50_02 {
-      grid-row: 3;
-      grid-column: 3 / span 2;
-    }
-
-    .fjordvej_124 {
-      grid-row: 4;
-      grid-column: 1 / span 4;
-      width: 100%;
-      margin-top: 10%;
-    }
-  }
-
-  @media (min-width: 1025px) {
-    .listeview_grid {
-      gap: 20px;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(4, auto);
-    }
-
-    .landejendom_i_kong {
-      grid-column: 1 / span 2;
-    }
-
-    .landbolig_paa_mon {
-      grid-row: 1;
-      grid-column: 3 / span 2;
-      margin-top: 10%;
-    }
-
-    .sommerhus_bolig_kulhuse {
-      grid-row: 2;
-      grid-column: 1 / span 4;
-      margin-top: 5%;
-    }
-
-    .strandgade_50_01 {
-      grid-row: 3;
-      grid-column: 1 / span 2;
-    }
-
-    .strandgade_50_02 {
-      grid-row: 3;
-      grid-column: 3 / span 2;
-    }
-
-    .fjordvej_124 {
-      grid-row: 4;
-      grid-column: 1 / span 4;
-      width: 100%;
-      margin-top: 10%;
-    }
-  } */
 </style>
-
-<script>
-
-// https://bwejzjnppscnjzvmnefp.supabase.co
-
-// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3ZWp6am5wcHNjbmp6dm1uZWZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1NDk4NjYsImV4cCI6MjAzMjEyNTg2Nn0.SmzupH_uwfFyHXFJMw7jt9RrXWUobKy5c_fMOpJRooI
-
-// const urlParams = new URLSearchParams(window.location.search);
-// const category = urlParams.get("id");
-
-// fetch
-// fetch("https://kea-alt-del.dk/t7/api/products?category="), {
-//   method: "GET",
-//   headers:{
-//     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3ZWp6am5wcHNjbmp6dm1uZWZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1NDk4NjYsImV4cCI6MjAzMjEyNTg2Nn0.SmzupH_uwfFyHXFJMw7jt9RrXWUobKy5c_fMOpJRooI",
-//   },
-// }
-//   .then((res) => res.json())
-//   .then(showProducts);
-
-//   console.log(showProducts)
-
-// function showProducts(products) {
-//   //looper og kalder showProduct
-//   products.forEach(showProducts);
-// }
-
-
-</script>
