@@ -68,10 +68,16 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
       <p class="section_to_tekst">Lokal arkitektur rummer unikke historiske og poetiske særpræg og er omhyggeligt afstemt klima, levevis og kultur, der præger det land og det kontinent, der omgiver den.</p>
       <p class="section_to_tekst">Der er mange værdier i oprindelige byggestile og arkitektur, men traditionel regional byggestil erstattes oftere og oftere af vestlige tilgange, uden at man skeler til de arkitektoniske og funktionelle tab, det indebærer. Der er brug for slidstærke og vejrbestandige konstruktionsprincipper – men de må og skal kombineres med et markant fokus på de oprindelige kvaliteter af hensyn til kulturarv såvel som bæredygtighed.</p>
  </article>
-<br>
-<div class="index_knap"> 
-<a href="/kontakt"><CtaKnap text="LAD OS SAMARBEJDE"></CtaKnap></a></div>
-<br>
+ <br/>
+ <br/>
+<br/>
+ <div class="knap_grid">
+  <div class="knap">
+    <a href="/kontakt">
+  <CtaKnap text="LAD OS SAMARBEJDE"/>
+    </a>
+</div>
+</div>
     </section>
 <div class="bund_grid">
 		<div class="bund"> 
@@ -174,6 +180,18 @@ justify-content: center;
 .section_to_tekst{
 	margin-right: 3%;
 }
+.knap_grid{
+    display:grid;
+    grid-template-columns:1fr 3fr;
+    padding-right: 3rem;
+  }
+  /* Placerer den første knap i første kolonne */
+  .knap:nth-child(1) {
+        grid-column: 2; 
+    }
+    .knap{
+      margin-bottom: 15%;
+    }
 
 /*styling af tilbage-til-top-knap */
     .bund_grid{
