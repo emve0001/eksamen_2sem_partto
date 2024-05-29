@@ -10,7 +10,7 @@ import SpecialBtn from "../components/SpecialBtn.astro";
 <MainLayout> 
 <div class="forsidebillede"> 
 <div class="hero-billede" >
-<img id="hero-image" src="https://placehold.co/390x780" alt="torvhallerne1"> 
+<img id="hero-image" src="/img/torvehallerne.webp" alt="Torvehallerne København" loading="lazy"> 
 <h1 class="hero-tekst">ARKITEKTURVÆRKSTEDET</h1>
 </div>
 </div>
@@ -39,7 +39,7 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
     </svg>
 <div> 
 	<div class="indhold-image-1"> 
-<img src="https://placehold.co/258x211" alt="Torvehallerne"></div>
+<img src="/img/torvehallerneskitse.webp" alt="Torvehallerne skitse" loading="lazy"></div>
 <br>
 <h4>TORVEHALLERNE</h4>
 <h5>ISRAELS PLADS</h5>
@@ -61,7 +61,7 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
 </div>
 <section class="section_to"> 
 <h6>Arkitekturværkstedet</h6>
-<div class="section-image-1"><img src="https://placehold.co/257x225" alt="Arkitekturværkstedet billede"></div>
+<div class="section-image-1"><img src="/img/hph.webp" alt="Billede af Hans Peter Hagens" loading="lazy"></div>
 <h6>HANS PETER Hagens</h6>
  <article>
       <p class="section_to_tekst">Arkitekturværkstedet etableredes som firma i eget navn i 1993 - med opgaver spændende fra traditionelle arkitekt- og håndværksopgaver, design, til landskab- og haveplanlægning. Herunder arkitekturskriveri til dagspressen og fagblade:.</p>
@@ -193,6 +193,7 @@ justify-content: center;
       margin-bottom: 15%;
     }
 
+
 /*styling af tilbage-til-top-knap */
     .bund_grid{
     display:grid;
@@ -237,6 +238,10 @@ justify-content: center;
     grid-column: 4 / 11;
     grid-row: 10 / 12;
     padding: 60px;
+  }
+  .section_to img{
+    height: 500px;
+    width: auto;
   }
 
   .indhold-image-1 {
