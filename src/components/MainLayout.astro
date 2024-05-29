@@ -17,24 +17,7 @@ import TopKnap from "./TopKnap.astro";
     <link rel="stylesheet" href="../styles/generel.css" />
     <title>Astro</title>
    
-  <style>
-.body_grid {
-  display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.menu_grid {
-  grid-column: 1;
-  grid-row: 1;
-}
-.indhold_grid {
-   grid-column: 1 / span 4;
-   grid-row: 1;
-   margin-left: 15%;
-}
-html {
-            scroll-behavior: smooth;
-        }
-    </style> 
+  
   <div id="top"></div>
   </head>
   <body>
@@ -59,4 +42,21 @@ html {
    
   </body>
   </html>
+  <style>
+    .body_grid {
+      display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .menu_grid {
+      grid-column: 1;
+      grid-row: 1;
+    }
+    .indhold_grid {
+       grid-column: 2 / span 6;
+       grid-row: 1;
+    }
+    html {
+                scroll-behavior: smooth;
+            }
+        </style> 
 
