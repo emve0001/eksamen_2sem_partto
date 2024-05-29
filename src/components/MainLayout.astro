@@ -22,7 +22,7 @@ import TopKnap from "./TopKnap.astro";
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 margin-right: 3%;
-}
+} 
 body{
   max-width: 1450px;
   margin-inline: auto;
@@ -44,6 +44,12 @@ body{
    grid-row: 1;
    margin-left: 20%;
 }
+@media (min-width: 1025px) {
+.indhold_grid {
+   margin-left: 15%;
+}
+}
+
 html {
             scroll-behavior: smooth;
         }
@@ -73,10 +79,7 @@ html {
   </body>
   </html>
   <style>
-    .body_grid {
-      display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
+
     .menu_grid {
       grid-column: 1;
       grid-row: 1;
