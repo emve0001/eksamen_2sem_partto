@@ -32,12 +32,22 @@ console.log(data)
   <CtaKnap text="LAD OS SAMARBEJDE"/>
   </div>
 
-  <div class="listviewtop">
-  <TopKnap />
-  </div>
+  <div class="bund_grid">
+    <div class="bund">
+      <TopKnap/>
+    </div>
+    </div>
 </MainLayout>
 
 <style>
+      .bund_grid{
+    display:grid;
+    grid-template-columns:1fr 5fr;
+  }
+    .bund:nth-child(1) {
+        grid-column: 4; /* Placerer den første knap i første kolonne */
+    }
+
   .listeview_grid {
   display: grid;
   gap: 10px;

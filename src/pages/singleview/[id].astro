@@ -29,8 +29,7 @@ const {data} = Astro.props;
 
 
 <MainLayout>
-<SiteOverskrifter text="PRIVATE PROJEKTER" text2={data.projektnavn} 
-/>
+<SiteOverskrifter text="PRIVATE PROJEKTER" text2={data.projektnavn} />
 
 
 <article>
@@ -84,15 +83,24 @@ const {data} = Astro.props;
         <p class="kommende_projekter">KOMMENDE PROJEKTER</p>
     </div>
 
-    <div class="knap3"> <a href="/kontakt"><CtaKnap text="LAD OS SAMARBEJDE"></CtaKnap></a></div> </div>
-
-    <div class="tilbagetopknap">
-        <TopKnap />
-    </div>
+    <div class="knap3"> <a href="/kontakt"><CtaKnap text="LAD OS SAMARBEJDE"></CtaKnap></a></div>
 
     </article>
+    <div class="bund_grid">
+        <div class="bund">
+          <TopKnap/>
+        </div>
+        </div>
     </MainLayout>
 <style>
+      .bund_grid{
+    display:grid;
+    grid-template-columns:1fr 5fr;
+  }
+    .bund:nth-child(1) {
+        grid-column: 4; /* Placerer den første knap i første kolonne */
+    }
+
      p {
         font-weight: 300;
         line-height: 1.5rem;
