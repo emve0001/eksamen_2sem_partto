@@ -17,15 +17,19 @@ import TopKnap from "./TopKnap.astro";
     <link rel="stylesheet" href="../styles/generel.css" />
     <title>Astro</title>
    
-<<<<<<< HEAD
-=======
   <style>
 .body_grid {
-  display: grid;
+display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
-
+margin-right: 3%;
 }
 
+@media (min-width: 768px){
+ .body_grid {
+  margin-right: 8%;
+ }
+
+}
 
 .menu_grid {
   grid-column: 1;
@@ -39,7 +43,6 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 html {
             scroll-behavior: smooth;
         }
->>>>>>> omside-v1
     </style> 
   <div id="top"></div>
   </head>
