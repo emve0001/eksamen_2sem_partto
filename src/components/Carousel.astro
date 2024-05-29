@@ -5,24 +5,24 @@ import "../styles/generel.css";
 <!-- Karussel container -->
 <div class="carousel">
   <div class="carousel-container">
-    <!-- Forrige knap -->
-    <button class="prev"><img src="/img/tilbage_pil.webp"></button>
-    <!-- Billede 1 -->
+   
+    <button class="prev"><img src="/img/tilbage_pil.webp" alt="tilbage pil" loading="lazy"></button>
+    
     <div class="carousel-slide">
-      <img src="/img/carousel_test.webp" class="carousel-image">
-      <div class="carousel-text">Tekst for billede 1</div>
+      <img src="/img/strandgade50_carousel.webp" class="carousel-image" alt="Strandgade 50" loading="lazy">
+      <div class="carousel-text">STRANDGADE 50</div>
     </div>
-    <!-- Billede 2 -->
+    
     <div class="carousel-slide">
-      <img src="/img/carousel_test2.webp" class="carousel-image">
-      <div class="carousel-text">Tekst for billede 2</div>
+      <img src="/img/c_kulhuse.webp" class="carousel-image" alt="Sommerbolig i Kulhuse" loading="lazy">
+      <div class="carousel-text">SOMMERBOLIG I KULHUSE</div>
     </div>
-    <!-- Billede 3 -->
+   
     <div class="carousel-slide">
-      <img src="/img/carousel_test3.webp" class="carousel-image">
-      <div class="carousel-text">Tekst for billede 3</div>
+      <img src="/img/c_villahubbe.webp" class="carousel-image" alt="Villa Hubbe" loading="lazy">
+      <div class="carousel-text">VILLA HÜBBE</div>
     </div>
-    <button class="next"><img src="/img/frem_pil.webp"></button>
+    <button class="next"><img src="/img/frem_pil.webp" alt="frem pil" loading="lazy"></button>
   </div>
 </div>
 
@@ -32,16 +32,16 @@ import "../styles/generel.css";
     width: 80%;
     overflow: hidden;
     display: flex;
-    align-items: center; /* Sørger for, at tingene er centreret lodret */
+    align-items: center; 
     position: relative;
     margin: 0 auto; /* Gør karussellen centreret på siden */
   }
 
-  /* Dette er containeren, der holder alle billederne */
+  /* Dette er containeren som  indeholder alle img */
   .carousel-container {
     display: flex;
     width: 100%;
-    transition: transform 0.5s ease; /* Glat overgang, når vi skifter billeder */
+    transition: transform 0.5s ease; 
     position: relative;
   }
 
@@ -61,7 +61,7 @@ import "../styles/generel.css";
     flex-shrink: 0;
   }
 
-  /* Teksten, der vises ovenpå billederne */
+  /* styling af teksten der vises ovenpå billederne */
   .carousel-text {
     position: absolute;
     bottom: 20px;
@@ -87,15 +87,15 @@ import "../styles/generel.css";
   }
 
   .prev {
-    left: 10px;
+    left: 5px;
   }
 
   .next {
-    right: 10px;
+    right: 5px;
   }
 
   .prev img, .next img {
-    width: 30px; /* Størrelsen på pilene */
+    width: 30px; 
     height: auto;
   }
 
@@ -131,7 +131,7 @@ import "../styles/generel.css";
     .carousel-image {
       width: 400px;
       height: 365px;
-      object-fit: cover; /* Sørger for, at billedet fylder hele containeren */
+      object-fit: cover; /* Sørger for, at billedet fylder hele containeren! */
     }
 
     .prev, .next {
@@ -140,15 +140,15 @@ import "../styles/generel.css";
     }
 
     .prev {
-      left: 20px; /* Placerer knappen inde på billedet */
+      left: 170px; /* Placerer knappen inde på billedet */
     }
 
     .next {
-      right: 20px; /* Placerer knappen inde på billedet */
+      right: 170px; /* Placerer knappen inde på billedet */
     }
 
     .prev img, .next img {
-      width: 30px; /* Juster pilenes størrelse for desktop */
+      width: 40px; /* Juster pilenes størrelse for desktop */
       height: auto;
     }
   }
