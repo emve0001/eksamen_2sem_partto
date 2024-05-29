@@ -37,7 +37,7 @@ import TopKnap from "../components/TopKnap.astro";
     </div>
 
     <div>
-        <img class="img_02_hanspeter" src="../public/img/img02hp.webp" alt="img_02_hanspeter">
+        <img class="img_02_hanspeter" src="../public/img/img02hp.webp" alt="img af hans peter">
     </div>
 
     <div class="firma_sektion">
@@ -78,40 +78,46 @@ import TopKnap from "../components/TopKnap.astro";
 
     <div class="img_3_imger">
         <div class="img_03">
-            <img src="https://placehold.co/256x198" alt="">
-            <p>Facade</p>
+            <img src= "../public/img/img_om01.webp" alt="Facade">
+              <p style="font-style: italic;">Facade</p>
         </div>
 
         <div class="img_04">
-            <img src="https://placehold.co/256x198" alt="">
-            <p>Mødelokale</p>
+              <img src= "../public/img/img_om02.webp" alt=Mødelokale">
+             <p style="font-style: italic;">Mødelokale</p>
         </div>
 
         <div class="img_05">
-            <img src="https://placehold.co/256x198" alt="">
-            <p>Kontor</p>
+             <img src= "../public/img/img_om03.webp" alt="Kontor">
+            <p style="font-style: italic;">Kontor</p>
         </div>
     </div>
 
     <div class="maps_sektion">
         <h6 class="h6_04">FIND MIG PÅ GOOGLE MAPS</h6>
-        <div class="kort_linje"></div>
+        <div class="maps_linje"></div>
     </div>
     <div class="maps"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.8524239555177!2d12.587773576955371!3d55.67416637305523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652533e9cd1e205%3A0xaa74b4640334ccf7!2sStrandgade%2030%2C%201401%20K%C3%B8benhavn%20K!5e0!3m2!1sda!2sdk!4v1716848918057!5m2!1sda!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
      </section>
-<div class="listviewcta">
-  <CtaKnap text="LAD OS SAMARBEJDE"/>
-  </div>
-</section>
-<div class="bund_grid">
-    <div class="bund">
-      <TopKnap/>
+    <div class="listviewcta">
+    <CtaKnap text="LAD OS SAMARBEJDE"/>
+    </div>
+    </section>
+    <div class="bund_grid">
+        <div class="bund">
+        <TopKnap/>
     </div>
     </div>
 
 <style>
     .kort_linje {
+        border-top: 0.5px solid var(--secondary-color);
+        width: 10%;
+        margin: 5% 0% 3% 0%;
+    }
+
+      .maps_linje {
         border-top: 0.5px solid var(--secondary-color);
         width: 10%;
         margin: 5% 0% 3% 0%;
@@ -129,9 +135,29 @@ import TopKnap from "../components/TopKnap.astro";
         padding: 10% 10% 0% 10%;
     }
 
-     .om_sektion, .firma_sektion, .filosofi_sektion, .placering_sektion, .maps_sektion {
+     .om_sektion {
         padding-top: 19%;
         padding-bottom: 5%;
+        }
+
+     .firma_sektion {
+        padding-top: 19%;
+        padding-bottom: 5%;
+        }
+
+     .filosofi_sektion   {
+        padding-top: 19%;
+        padding-bottom: 5%;
+        }
+
+        .placering_sektion {
+        padding-top: 19%;
+        padding-bottom: 5%;
+        }
+        .maps_sektion {
+        padding-top: 19%;
+        padding-bottom: 5%;
+         margin-right: 5%;
         }
 
       .p_01, .p_02, .p_03, .p_04 {
@@ -156,6 +182,7 @@ import TopKnap from "../components/TopKnap.astro";
        width: 100%;
        height: 405;
        margin-bottom:30px;
+        margin-right: 5%;
     }
 
         .bund_grid{
@@ -168,7 +195,12 @@ import TopKnap from "../components/TopKnap.astro";
    
     @media (min-width: 768px) {
         .kort_linje {
-            border-width: 1px;
+        border-width: 1px;
+         margin: -6% 0% 0% 0%;
+        }
+
+         .maps_linje {
+               border-width: 1px;
          margin: -6% 0% 0% 0%;
         }
 
@@ -215,7 +247,7 @@ import TopKnap from "../components/TopKnap.astro";
          margin-top: 15%;
 }
 
-.p_01, .p_02, .p_03, .p_04 {
+    .p_01, .p_02, .p_03, .p_04 {
                padding-top: 0%;
         }
 
@@ -231,6 +263,7 @@ import TopKnap from "../components/TopKnap.astro";
        width: 362px;
        height: 405;
        margin-bottom:30px;
+        margin-right: 5%;
     }
         /* ------- */
 
@@ -257,7 +290,7 @@ import TopKnap from "../components/TopKnap.astro";
         .p_01 {
             grid-column: 2 / span 4;
             grid-row: 2 / span 3;
-margin-top: 3%;
+        margin-top: 3%;
         }
 
         /* ------- */
@@ -281,6 +314,7 @@ margin-top: 3%;
             grid-row: 2 / span 1;
             margin-top: 3%;
         }
+
 
         .p_02 {
             grid-column: 2 / span 4;
@@ -310,6 +344,13 @@ margin-top: 3%;
             margin-top: 3%;
         }
 
+            .maps_linje {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+            margin-top: 3%;
+        }
+
+
         .p_03 {
             grid-column: 2 / span 4;
             grid-row: 2 / span 3;
@@ -338,29 +379,43 @@ margin-top: 3%;
             margin-top: 7%;
         }
 
+        .maps_linje {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+            margin-top: 7%;
+        }
+
         .p_04 {
             grid-column: 2 / span 4;
             grid-row: 2 / span 3;
             margin-top: 3%;
         }
 
-        .img_3_imger {
+                .img_3_imger {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 3%;
-                   padding-top: 4%;
+            padding-top: 4%;
             padding-bottom: 2%;
-        }
-
+        
+    }
+    .maps iframe{ 
+       width: 1263px;
+       height: 405;
+       margin-bottom:30px;
+       max-width: 1130px;
+        margin-right: 5%;
     }
 
-        @media (min-width: 1024px)  {
+}
+
+    @media (min-width: 1020px)  {
         .ctaknap1{
             margin: 0% 24% 9% 63%;
         }
 
           .img_02_hanspeter {
-        padding: 8% 27% 3% 19%;
+        padding: 5% 27% 4% 19%;
     }
 
        .img_01_hanspeter {
@@ -368,7 +423,38 @@ margin-top: 3%;
             grid-row: 1 / span 3;
            padding: 0% 20% 10% 0%;
         }
+        .om_sektion{
+            padding-top: 5%;
+        padding-bottom: 3%;
+        }
+        .placering_sektion {
+       padding-top: 4%;
+    padding-bottom: 0%;
+        }
 
+        .maps_sektion{
+    padding-top: 11%;
+    padding-bottom: 4%;
+     margin-right: 5%;
+    }
+
+    .kort_linje{
+        margin-top: 7%;
+    }
+
+    .maps_linje{
+        margin-top: 3%;
+    }
+
+     .firma_sektion {
+        padding-top: 6%;
+        padding-bottom: 3%;
+        }
+
+     .filosofi_sektion   {
+        padding-top: 9%;
+        padding-bottom: 5%;
+        }
 
     }
 </style>
