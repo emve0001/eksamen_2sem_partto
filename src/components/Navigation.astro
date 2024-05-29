@@ -271,79 +271,84 @@ margin-left: -5%;
     </style>
 
     <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector(".burger") as HTMLDivElement;
-    const nav = document.querySelector("nav") as HTMLElement;
-    const links = document.querySelectorAll(".menu li a") as NodeListOf<HTMLAnchorElement>;
-    const linksSticky = document.querySelectorAll(".sticky_menu li a") as NodeListOf<HTMLAnchorElement>;
-    const projekterItemSticky = document.querySelector(".sticky_menu .projekter_item") as HTMLElement;
-    const projekterDropdown = document.querySelector(".projekter_dropdown") as HTMLElement;
-    const projekterItemMenu = document.querySelector(".menu .projekter_item") as HTMLElement;
-    const stickyMenuUl = document.querySelector(".sticky_menu ul") as HTMLUListElement;
+        // DETTE HAR VI FÅET HJÆLP TIL AT LAVE OG FUNGERE AF TUTOR OG CHAT-GPT
+        
+ document.addEventListener('DOMContentLoaded', () => {
+    // Hent forskellige elementer fra DOM'en (Document Object Model)
+    const burger = document.querySelector(".burger") as HTMLDivElement; // Burger-ikonet til mobilnavigation
+    const nav = document.querySelector("nav") as HTMLElement; // Navigationselementet
+    const links = document.querySelectorAll(".menu li a") as NodeListOf<HTMLAnchorElement>; // Links i hovedmenuen
+    const linksSticky = document.querySelectorAll(".sticky_menu li a") as NodeListOf<HTMLAnchorElement>; // Links i sticky menuen
+    const projekterItemSticky = document.querySelector(".sticky_menu .projekter_item") as HTMLElement; // Projekter item i sticky menuen
+    const projekterDropdown = document.querySelector(".projekter_dropdown") as HTMLElement; // Dropdown-menu for projekter
+    const projekterItemMenu = document.querySelector(".menu .projekter_item") as HTMLElement; // Projekter item i hovedmenuen
+    const stickyMenuUl = document.querySelector(".sticky_menu ul") as HTMLUListElement; // Ul-element i sticky menuen
 
-    // Function to handle active link
+    // Funktion til at håndtere aktivt link
     function handleActiveLink(event: Event, linkList: NodeListOf<HTMLAnchorElement>) {
         linkList.forEach((otherLink) => {
-            otherLink.classList.remove("active");
+            otherLink.classList.remove("active"); // Fjern aktiv klasse fra alle links
         });
-        (event.target as HTMLAnchorElement).classList.add("active");
+        (event.target as HTMLAnchorElement).classList.add("active"); // Tilføj aktiv klasse til det klikede link
     }
 
-    // Add click event to links in the sticky menu
+    // Tilføj klikbegivenhed til links i sticky menuen
     linksSticky.forEach((link) => {
         link.addEventListener("click", (event) => {
-            handleActiveLink(event, linksSticky);
-            burger.classList.remove("active");
-            nav.classList.remove("active");
+            handleActiveLink(event, linksSticky); // Håndter aktivt link
+            burger.classList.remove("active"); // Skjul burger-menuen
+            nav.classList.remove("active"); // Skjul navigationen
         });
     });
 
-    document.querySelector(".togglebutton").addEventListener("click", ()=>{
-        document.querySelector(".projekter_dropdown").classList.toggle("showblock")
-    })
+    // Tilføj klikbegivenhed til toggle knap for dropdown-menuen
+    document.querySelector(".togglebutton").addEventListener("click", () => {
+        document.querySelector(".projekter_dropdown").classList.toggle("showblock"); // Vis/skjul dropdown-menuen
+    });
 
     // Toggle dropdown for sticky menu
     projekterItemSticky.addEventListener("click", (event) => {
-        event.stopPropagation();
-        projekterItemSticky.classList.toggle("active");
-        const dropdownHeight = projekterDropdown.offsetHeight;
+        event.stopPropagation(); // Forhindrer klikbegivenheden i at boble op
+        projekterItemSticky.classList.toggle("active"); // Skift aktiv klasse på projekter item
+        const dropdownHeight = projekterDropdown.offsetHeight; // Hent dropdown-menuens højde
 
         if (projekterItemSticky.classList.contains("active")) {
-            stickyMenuUl.style.height = `calc(100% + ${dropdownHeight}px)`;
+            stickyMenuUl.style.height = `calc(100% + ${dropdownHeight}px)`; // Juster sticky menuens højde
         } else {
-            stickyMenuUl.style.height = "100%";
+            stickyMenuUl.style.height = "100%"; // Nulstil sticky menuens højde
         }
     });
 
-    // Add click event to burger icon
+    // Tilføj klikbegivenhed til burger-ikonet
     burger.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        nav.classList.toggle("active");
+        burger.classList.toggle("active"); // Skift aktiv klasse på burger-ikonet
+        nav.classList.toggle("active"); // Skift aktiv klasse på navigationen
     });
 
-    // Close menu when clicking on a link
+    // Luk menuen når der klikkes på et link
     links.forEach((link) => {
         link.addEventListener("click", (event) => {
-            handleActiveLink(event, links);
-            burger.classList.remove("active");
-            nav.classList.remove("active");
+            handleActiveLink(event, links); // Håndter aktivt link
+            burger.classList.remove("active"); // Skjul burger-menuen
+            nav.classList.remove("active"); // Skjul navigationen
         });
     });
 
-    // Toggle dropdown for main menu in mobile view
+    // Toggle dropdown for hovedmenuen i mobilvisning
     projekterItemMenu.addEventListener("click", (event) => {
-        event.stopPropagation();
-        projekterItemMenu.classList.toggle("active");
+        event.stopPropagation(); // Forhindrer klikbegivenheden i at boble op
+        projekterItemMenu.classList.toggle("active"); // Skift aktiv klasse på projekter item i hovedmenuen
     });
 
-    // Close dropdown when clicking outside
+    // Luk dropdown-menuen når der klikkes udenfor
     document.addEventListener("click", (event) => {
         const targetNode = event.target as Node;
         if (!projekterItemMenu.contains(targetNode)) {
-            projekterItemMenu.classList.remove("active");
+            projekterItemMenu.classList.remove("active"); // Fjern aktiv klasse hvis der klikkes udenfor
         }
     });
 });
+
 
 
     </script>
