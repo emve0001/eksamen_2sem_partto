@@ -124,7 +124,7 @@ import TopKnap from "../components/TopKnap.astro";
         }
 
     .cvknap{
-        padding: 8% 4% 6% 32%;
+        padding: 4% 50% 11% 37%;
     }
 
     .img_02_hanspeter {
@@ -141,7 +141,7 @@ import TopKnap from "../components/TopKnap.astro";
         }
     
         .ctaknap1{
-            margin: 25% 20% 16% 20%;
+            margin: 10% 20% 10% 20%;
         }
 
         .listviewcta{
@@ -168,9 +168,7 @@ import TopKnap from "../components/TopKnap.astro";
     .bund:nth-child(1) {
         grid-column: 4; /* Placerer den første knap i første kolonne */
     }
-
    
-
     @media (min-width: 768px) {
         .kort_linje {
             border-width: 1px;
@@ -183,7 +181,7 @@ import TopKnap from "../components/TopKnap.astro";
             /* Tre kolonner med lige bredde */
             grid-template-rows: repeat(3, 1fr);
             /* Tre kolonner med lige bredde */
-            
+            margin-right: 5%;
         }
 
         .info_01 {
@@ -199,14 +197,19 @@ import TopKnap from "../components/TopKnap.astro";
         .img_01_hanspeter {
             grid-column: 3 / span 2;
             grid-row: 1 / span 3;
-           padding: 0% 15% 6% 0%;
+           padding: 4% 0% 0% 0%;
         }
 
-        .knap_cv {
+        .cvknap {
             grid-column: 1 / span 2;
             grid-row: 3 / span 1;
-            padding: 1% 0% 17% 45%;
+            margin: 0% 0% 0% 0%;
         }
+
+          .img_02_hanspeter {
+        padding: 9% 28% 9% 19%;
+        width: 100%;
+    }
 
         .listviewcta{
          margin-left: 40%;
@@ -214,6 +217,10 @@ import TopKnap from "../components/TopKnap.astro";
          margin-bottom: 15%;
          margin-top: 15%;
 }
+
+.p_01, .p_02, .p_03, .p_04 {
+               padding-top: 0%;
+        }
 
         .bund_grid{
         display:grid;
@@ -247,11 +254,13 @@ import TopKnap from "../components/TopKnap.astro";
         .kort_linje {
             grid-column: 1 / span 2;
             grid-row: 2 / span 1;
+            margin-top: 3%;
         }
 
         .p_01 {
             grid-column: 2 / span 4;
-            grid-row: 3 / span 2;
+            grid-row: 2 / span 3;
+margin-top: 3%;
         }
 
         /* ------- */
@@ -273,11 +282,13 @@ import TopKnap from "../components/TopKnap.astro";
         .kort_linje {
             grid-column: 1 / span 2;
             grid-row: 2 / span 1;
+            margin-top: 3%;
         }
 
         .p_02 {
             grid-column: 2 / span 4;
-            grid-row: 3 / span 2;
+            grid-row: 2 / span 3;
+            margin-top: 3%;
         }
 
         /* ------- */
@@ -299,11 +310,13 @@ import TopKnap from "../components/TopKnap.astro";
         .kort_linje {
             grid-column: 1 / span 2;
             grid-row: 2 / span 1;
+            margin-top: 3%;
         }
 
         .p_03 {
             grid-column: 2 / span 4;
-            grid-row: 3 / span 2;
+            grid-row: 2 / span 3;
+            margin-top: 3%;
         }
 
         /* ------- */
@@ -325,16 +338,19 @@ import TopKnap from "../components/TopKnap.astro";
         .kort_linje {
             grid-column: 1 / span 2;
             grid-row: 2 / span 1;
+            margin-top: 7%;
         }
 
         .p_04 {
             grid-column: 2 / span 4;
-            grid-row: 3 / span 2;
+            grid-row: 2 / span 3;
+            margin-top: 3%;
         }
     .maps iframe{ 
        width: 1263px;
        height: 405;
        margin-bottom:30px;
+       max-width: 1130px;
     }
         /* ------- */
 
@@ -345,5 +361,29 @@ import TopKnap from "../components/TopKnap.astro";
                    padding-top: 4%;
             padding-bottom: 2%;
         }
+
+
+           .om_sektion, .firma_sektion, .filosofi_sektion, .placering_sektion, .maps_sektion {
+        padding-top: 8%;
+        padding-bottom: 5%;
+        }
+    }
+
+        @media (min-width: 1024px)  {
+        .ctaknap1{
+            margin: 0% 24% 9% 63%;
+        }
+
+          .img_02_hanspeter {
+        padding: 8% 27% 3% 19%;
+    }
+
+       .img_01_hanspeter {
+            grid-column: 3 / span 2;
+            grid-row: 1 / span 3;
+           padding: 0% 20% 10% 0%;
+        }
+
+
     }
 </style>
