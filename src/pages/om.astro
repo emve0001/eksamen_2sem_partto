@@ -4,6 +4,7 @@ import SiteOverskrifter from "../components/SiteOverskrifter.astro"
 import "../styles/generel.css"
 import CvKnap from "../components/CvKnap.astro";
 import CtaKnap from "../components/CtaKnap.astro";
+import TopKnap from "../components/TopKnap.astro";
 ---
 <MainLayout>
 <SiteOverskrifter text="OM ARKITEKTUR&shy;VÆRKSTEDET" text2="HANS PETER HAGENS"/>
@@ -19,7 +20,10 @@ import CtaKnap from "../components/CtaKnap.astro";
             landskaber er kernen i mit
             arbejde. Jeg stræber efter at skabe rum, der både forbedrer livskvaliteten og styrker fællesskabet.
         </p>
-       <CvKnap/>
+        <div class="cvknap">
+              <CvKnap/>
+        </div>
+     
     </div>
 
     <div class="om_sektion">
@@ -60,7 +64,9 @@ import CtaKnap from "../components/CtaKnap.astro";
             Haver.</p>
     </div>
 
+    <div class="ctaknap1">
   <CtaKnap text="KONTAKT MIG HER"/>
+</div>
 
     <div class="placering_sektion">
         <h6 class="h6_04">ARKITEKTURVÆRKSTEDETS PLACERING</h6>
@@ -97,6 +103,12 @@ import CtaKnap from "../components/CtaKnap.astro";
 <div class="listviewcta">
   <CtaKnap text="LAD OS SAMARBEJDE"/>
   </div>
+
+   <div class="bund_grid">
+      <div class="bund">
+        <TopKnap/>
+      </div>
+      </div>
 </section>
 
 
@@ -104,25 +116,65 @@ import CtaKnap from "../components/CtaKnap.astro";
     .kort_linje {
         border-top: 0.5px solid var(--secondary-color);
         width: 10%;
-        margin: 3% 0% 3% 0%;
+        margin: 5% 0% 3% 0%;
+    }
+
+     .img_01_hanspeter {
+        padding: 8% 4% 8% 0%;
+        }
+
+    .cvknap{
+        padding: 8% 4% 6% 32%;
     }
 
     .img_02_hanspeter {
-        padding: 10%;
+        padding: 10% 10% 0% 10%;
     }
 
+     .om_sektion, .firma_sektion, .filosofi_sektion, .placering_sektion, .maps_sektion {
+        padding-top: 19%;
+        padding-bottom: 5%;
+        }
+
+      .p_01, .p_02, .p_03, .p_04 {
+               padding-top: 5%;
+        }
+    
+        .ctaknap1{
+            margin: 25% 20% 16% 20%;
+        }
+
+        .listviewcta{
+               margin: 20% 20% 20% 20%;
+        }
+
+        .img_03, .img_04, .img_05{
+           padding: 5% 2% 2% 0%;
+        }
     .info_01, .info_02 {
        padding: 4% 10% 1% 0%;
     }
     .maps iframe{ 
-       width: 362px;
+       width: 100%;
        height: 405;
        margin-bottom:30px;
     }
 
+        .bund_grid{
+    display:grid;
+    grid-template-columns:1fr 5fr;
+    padding-bottom: 10%;
+  }
+    .bund:nth-child(1) {
+        grid-column: 4; /* Placerer den første knap i første kolonne */
+    }
+
+   
+
     @media (min-width: 768px) {
         .kort_linje {
             border-width: 1px;
+         margin: -6% 0% 0% 0%;
         }
 
         .intro_sektion {
@@ -157,12 +209,25 @@ import CtaKnap from "../components/CtaKnap.astro";
         }
 
         .listviewcta{
-  margin-left: 40%;
-    margin-right: 40%;
-    margin-bottom: 15%;
-     margin-top: 15%;
+         margin-left: 40%;
+         margin-right: 40%;
+         margin-bottom: 15%;
+         margin-top: 15%;
 }
 
+        .bund_grid{
+        display:grid;
+        grid-template-columns:1fr 5fr;
+    }
+    .bund:nth-child(1) {
+        grid-column: 4; /* Placerer den første knap i første kolonne */
+    }
+
+        .maps iframe{ 
+       width: 362px;
+       height: 405;
+       margin-bottom:30px;
+    }
         /* ------- */
 
         .om_sektion {
