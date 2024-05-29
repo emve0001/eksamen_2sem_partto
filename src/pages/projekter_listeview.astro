@@ -4,6 +4,8 @@ import MainLayout from "../components/MainLayout.astro";
 import SiteOverskrifter from "../components/SiteOverskrifter.astro";
 import "../styles/generel.css";
 import ProjectCard from "../components/ProjectCard.astro";
+import CtaKnap from "../components/CtaKnap.astro";
+import TopKnap from "../components/TopKnap.astro";
 
 const data = await fetch("https://bwejzjnppscnjzvmnefp.supabase.co/rest/v1/database", {
    method: "GET",
@@ -32,7 +34,13 @@ console.log(data)
   })
  }
   </section>
+<div class="listviewcta">
+  <CtaKnap text="LAD OS SAMARBEJDE"/>
+  </div>
 
+  <div class="listviewtop">
+  <TopKnap />
+  </div>
 </MainLayout>
 
 <style>
@@ -41,8 +49,14 @@ console.log(data)
   gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+
 }
 
+.listviewcta{
+  margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: 20%;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .listeview_grid {
