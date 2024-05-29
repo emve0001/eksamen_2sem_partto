@@ -34,7 +34,7 @@ const {data} = Astro.props;
 
 <article>
     <div class="projekt_introduktion">
-        <img class="projekt_introduktion_billede" src={data.projektbillede}  alt="">
+        <img class="projekt_introduktion_billede" src={data.projektbillede}  alt="billede af sommerhusbolig i kulhuse udefra" loading="lazy">
         <h6 class="projekt_introduktion_overskrift">{data.projekt_introduktion_overskrift}</h6>
         <p class="breadtxt_projekt_introduktion">{data.breadtxt_projekt_introduktion}
         </p>
@@ -44,7 +44,7 @@ const {data} = Astro.props;
 
 
 
-    <img class="projekt_billede" src="https://placehold.co/1099x586" alt="">
+    <img class="projekt_billede" src={data.billede_02} alt="billede af projekt indefra" loading="lazy">
 
     <div class="projektinfo">
         <h6 class="projektinfo_overskrift">PROJEKTINFO</h6>
@@ -56,15 +56,15 @@ const {data} = Astro.props;
     </div>
 
     <div class="to_billeder_illu">
-        <img class="to_billeder_illu01" src="https://placehold.co/594x525" alt="">
-        <img class="to_billeder_illu02" src="https://placehold.co/594x525" alt="">
+        <img class="to_billeder_illu01" src={data.to_billeder_illu01} alt="billede af plantegninger" loading="lazy">
+        <img class="to_billeder_illu02" src={data.to_billeder_illu02} alt="billede af plantegninger" loading="lazy">
     </div>
 
     <div class="mere_info">
         <p class="bredtxt_mere_info02">
             {data.bredtxt_mere_info01} 
         </p>
-        <img class="mere_info_billede" src="https://placehold.co/594x525" alt="">
+        <img class="mere_info_billede" src={data.mere_info_billede} alt="billede af projekt indefra" loading="lazy">
         <p class="bredtxt_mere_info01">
             {data.bredtxt_mere_info02} 
         </p>
@@ -75,11 +75,11 @@ const {data} = Astro.props;
     <div class="udforsk_andre_projekter">
         <h6 class="udforsk_andre_projekter_overskrift">UDFORSK ANDRE PROJEKTER</h6>
              <div class="line_kort2"></div>
-        <img class="udforsk_andre_projekter_kultur" src="https://placehold.co/388x487" alt="">
+        <img class="udforsk_andre_projekter_kultur" src="../../../public/img/kultur_billede.webp" alt="billede af station og cykler" loading="lazy">
         <p class="kultur">KULTUR</p>
-        <img class="udforsk_andre_projekter_erhverv" src="https://placehold.co/388x487" alt="">
+        <img class="udforsk_andre_projekter_erhverv" src="../../../public/img/erhverv_billede.webp" alt="billede af torvehallerne" loading="lazy">
         <p class="erhverv">ERHVERV</p>
-        <img class="udforsk_andre_projekter_kommende_projekter" src="https://placehold.co/388x487" alt="">
+        <img class="udforsk_andre_projekter_kommende_projekter" src="../../../public/img/kommende_projekter_billede.webp" alt="et billede af bindingsværk i en lejlighed" loading="lazy">
         <p class="kommende_projekter">KOMMENDE PROJEKTER</p>
     </div>
 
