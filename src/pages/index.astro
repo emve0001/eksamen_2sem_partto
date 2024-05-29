@@ -14,7 +14,7 @@ import "../styles/generel.css";
 </div>
 </div>
 
-<section class="content-section">
+<section class="indhold-section">
 <article>
 <br>
 <p>Arkitekturværkstedet er en arkitekttegnestue, der med central beliggenhed i København, tilbyder rådgivning og planlægning indenfor nybyggeri, ombygning og istandsættelse. 
@@ -28,13 +28,18 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
 </article>
 
 
-<article>
+<article>	
 <p>Tegnestuen beskæftiger sig med igangsætning og realisering af ide- og udviklingsprojekter. Én kærneværdi, nemlig at opretholdes den tætte kontakt mellem de involverede parter i alle byggeriets forskelligartede faser - en altafgørende faktor i arbejdet med gennemførelsen af et smukt resultat sideløbende med en præcist styret byggeøkonomi. </p>
 </article>
 <br>
 
-<article>
-<img id="content-image-1" src="https://placehold.co/258x211" alt="Torvehallerne">
+<article class="torvehallerne_indhold">
+<svg class="vertical-line" width="1" height="679" viewBox="0 0 1 679" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0.5" y1="678.016" x2="0.5" y2="-0.00280762" stroke="#E73127"/>
+    </svg>
+<div> 
+	<div class="indhold-image-1"> 
+<img src="https://placehold.co/258x211" alt="Torvehallerne"></div>
 <br>
 <h4>TORVEHALLERNE</h4>
 <h5>ISRAELS PLADS</h5>
@@ -42,15 +47,13 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
 <p>Beliggende på Israels Plads i hjertet af byen, består Torvehallerne af to store, moderne haller, der huser over 80 boder og butikker.</p>
 <br>
 <p>Torvehallerne udførtes gennem 14 år af Arkitekturværkstedet under ledelse af arkitekt Hans Peter Hagens - i samarbejde med Københavns Torvelaug‚ stiftet i 1998 med det ene formål at arbejde hen imod en realisering af projektet.</p>
-</article>
 
-<svg id="vertical-line" width="1" height="679" viewBox="0 0 1 679" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="0.5" y1="678.016" x2="0.5" y2="-0.00280762" stroke="#E73127"/>
-    </svg>
 <br>
 <div class="index_knap"> 
 <a href=""></a><CtaKnap text="LÆS MERE OM TORVEHALLERNE"/>
 </a></div>
+</div>
+</article>
 <br>
 <Carousel/>
 <br>
@@ -58,7 +61,7 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
 
 <section class="section_to"> 
 <h6>Arkitekturværkstedet</h6>
-<img id="section-image-1" src="https://placehold.co/257x225" alt="Arkitekturværkstedet billede">
+<div class="section-image-1"><img src="https://placehold.co/257x225" alt="Arkitekturværkstedet billede"></div>
 <h6>HANS PETER Hagens</h6>
  <article>
       <p>Arkitekturværkstedet etableredes som firma i eget navn i 1993 - med opgaver spændende fra traditionelle arkitekt- og håndværksopgaver, design, til landskab- og haveplanlægning. Herunder arkitekturskriveri til dagspressen og fagblade:.</p>
@@ -106,7 +109,7 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
     transform: translateX(-50%);
     padding-bottom: 20%; 
   }
- .content-section {
+ .indhold-section {
   grid-column: 1 / -1;
   grid-row: 5 / 9;
   padding: 20px;
@@ -115,29 +118,32 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
   position: relative;
 }
 
-#vertical-line {
-  position: absolute;
-  top: calc(4.35 * 100% / 12); /*gør så jeg kan style linje hhv op og ned */
-  left: calc(1 * 100% / 4 - 25%); /*gør så jeg kan justere længere til venstre */
-  height: calc(4.37 * 100% / 12); /*strækker sig over 4.37 rækker*/
-  z-index: 1; 
+.vertical-line {
+  grid-column: 1 / 2;
+  height: 100%; /* Juster højden som nødvendigt */
+  width: 1px;
+  background-color: #E73127;
+  justify-self: center;
 }
 
-.content-section article {
+.torvehallerne_indhold{
+display: grid;
+grid-template-columns: 5% 3fr;
+}
+.indhold-section article {
     margin-bottom: 20px;
 }
 
-.content-section p {
+.indhold-section p {
     margin: 0 0 1rem;
 }
 
-.content-section img {
+.indhold-section img {
     display: block;
-    margin: 1rem 0;
 }
 
-.content-section h4,
-.content-section h5 {
+.indhold-section h4,
+.indhold-section h5 {
     margin: 0.5rem 0;
 }
 
@@ -164,7 +170,7 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
 
  /* TABLET & INDEX-SIDE (768px til 1024px) */
  @media (min-width: 768px) and (max-width: 1024px) {
-  .content-section {
+  .indhold-section {
     grid-column: 2 / 8;
     grid-row: 5 / 9;
     padding: 40px;
@@ -182,7 +188,7 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
  }
  /* INDEX-SIDE DESKTOP (1025px +) */
  @media (min-width: 1025px) {
-  .content-section {
+  .indhold-section {
     grid-column: 3 / 11;
     grid-row: 5 / 9;
     padding: 60px;
@@ -207,12 +213,12 @@ Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervs
     object-fit: cover; 
   } */
 
-  #content-image-1 {
+  .indhold-image-1 {
     width: 519px;  
     height: 424px; 
   }
 
-  #section-image-1 {
+  .section-image-1 {
     width: 556px;  
     height: 493px; 
   }
