@@ -1,5 +1,5 @@
 ---
-import { redirectToDefaultLocale } from "astro:i18n";
+// Importer nødvendige komponenter og stilark
 import MainLayout from "../components/MainLayout.astro";
 import SiteOverskrifter from "../components/SiteOverskrifter.astro";
 import "../styles/generel.css";
@@ -7,14 +7,16 @@ import ProjectCard from "../components/ProjectCard.astro";
 import CtaKnap from "../components/CtaKnap.astro";
 import TopKnap from "../components/TopKnap.astro";
 
+// Hent data fra en ekstern API ved brug af fetch
 const data = await fetch("https://bwejzjnppscnjzvmnefp.supabase.co/rest/v1/database", {
-   method: "GET",
+   method: "GET", // HTTP metode
   headers:{
+    // API-nøgle til godkendelse
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3ZWp6am5wcHNjbmp6dm1uZWZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1NDk4NjYsImV4cCI6MjAzMjEyNTg2Nn0.SmzupH_uwfFyHXFJMw7jt9RrXWUobKy5c_fMOpJRooI",
   },
-}).then((res) => res.json());
+}).then((res) => res.json()); // Konverter svar til JSON
 
-
+// Log dataen til konsollen for at verificere, at den er hentet korrekt
 console.log(data)
 ---
 <MainLayout >

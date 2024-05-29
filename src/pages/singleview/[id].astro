@@ -1,32 +1,36 @@
 ---
+// Importer nødvendige komponenter og CSS-stilark
 import CtaKnap from "../../components/CtaKnap.astro";
-import MainLayout from "../../components/MainLayout.astro"
-import SiteOverskrifter from "../../components/SiteOverskrifter.astro"
+import MainLayout from "../../components/MainLayout.astro";
+import SiteOverskrifter from "../../components/SiteOverskrifter.astro";
 import TilbageKnap from "../../components/TilbageKnap.astro";
 import TopKnap from "../../components/TopKnap.astro";
 
-import "../../styles/generel.css"
+import "../../styles/generel.css";
 
-
-
+// Funktion til at hente alle stier til statiske sider
 export async function getStaticPaths() {
+  // Hent data fra Supabase API
   const data = await fetch("https://bwejzjnppscnjzvmnefp.supabase.co/rest/v1/database", {
     method: "GET",
     headers: {
+      // API-nøgle til autentificering af anmodningen
       apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ3ZWp6am5wcHNjbmp6dm1uZWZwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY1NDk4NjYsImV4cCI6MjAzMjEyNTg2Nn0.SmzupH_uwfFyHXFJMw7jt9RrXWUobKy5c_fMOpJRooI",
     },
-  }).then((res) => res.json());
+  }).then((res) => res.json()); // Konverter svar til JSON
 
+  // Omdan data til det format, der kræves af Astro
   const newData = data.map((product) => {
     return { params: { id: product.id }, props: { data: product } };
   });
+
+  // Returner stierne for de statiske sider
   return newData;
 }
 
-const {data} = Astro.props;
+// Hent data fra Astro.props, som er leveret af getStaticPaths
+const { data } = Astro.props;
 ---
-
-
 
 <MainLayout>
 <SiteOverskrifter text="PRIVATE PROJEKTER" text2={data.projektnavn} />
@@ -125,7 +129,7 @@ const {data} = Astro.props;
         .breadtxt_projekt_introduktion {
             grid-row: 3;
             grid-column: 1 / span 2;
-            margin-top: 5%;
+            margin-top: 10%;
         }
 
         .projekt_billede {
@@ -146,7 +150,7 @@ const {data} = Astro.props;
   .line_kort {
         border-top: 0.5px solid var(--secondary-color);
         width: 20%;
-        margin: 6% 0% 3% 0%;
+        margin: 3% 0% 3% 0%;
     }
         .inginør {
             grid-column: 1 / span 2;
@@ -224,7 +228,7 @@ const {data} = Astro.props;
         margin: 6% 0% 3% 0%;
         grid-row: 1; 
         grid-column: 1;
-        margin-top: 15%;
+        margin-top: 20%;
         }
 
         .udforsk_andre_projekter_kultur {
@@ -323,7 +327,7 @@ const {data} = Astro.props;
             }
 .line_kort {
             grid-row: 1;
-  margin-top: 40%;
+  margin-top: 30%;
   grid-column: 1;
   }
             .inginør {
@@ -495,7 +499,7 @@ const {data} = Astro.props;
             }
             .line_kort {
             grid-row: 1;
-  margin-top: 40%;
+  margin-top: 30%;
   grid-column: 1;
   }
 
@@ -574,7 +578,7 @@ const {data} = Astro.props;
 
             .udforsk_andre_projekter_overskrift {
                 grid-row: 1;
-                grid-column: 1;
+                grid-column: 1 / span 2;
             }
 
             .udforsk_andre_projekter_kultur {
