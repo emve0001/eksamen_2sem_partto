@@ -17,19 +17,19 @@ import "../styles/generel.css";
 <section class="indhold-section">
 <article>
 <br>
+<div id="grid_p_index">
 <p>Arkitekturværkstedet er en arkitekttegnestue, der med central beliggenhed i København, tilbyder rådgivning og planlægning indenfor nybyggeri, ombygning og istandsættelse. 
 Blandt tegnestuens hidtidige arbejdsområder kan nævnes: Boligbyggeri, Erhvervsbyggeri, Kulturbyggeri, Have & landskab og Design & Udstillinger.
 </p>
+<p>Tegnestuen beskæftiger sig med igangsætning og realisering af ide- og udviklingsprojekter. Én kærneværdi, nemlig at opretholdes den tætte kontakt mellem de involverede parter i alle byggeriets forskelligartede faser - en altafgørende faktor i arbejdet med gennemførelsen af et smukt resultat sideløbende med en præcist styret byggeøkonomi. </p>
+ </div>
+ 
+</article>
+
 <div class="index_knap"> 
 <a href="/kontakt">
 	<CtaKnap text="BOOK OPSTARTSMØDE NU">
 </a>
-</div>
-</article>
-
-
-<div> 	
-<p>Tegnestuen beskæftiger sig med igangsætning og realisering af ide- og udviklingsprojekter. Én kærneværdi, nemlig at opretholdes den tætte kontakt mellem de involverede parter i alle byggeriets forskelligartede faser - en altafgørende faktor i arbejdet med gennemførelsen af et smukt resultat sideløbende med en præcist styret byggeøkonomi. </p>
 </div>
 <br>
 <section class="torvehallerne_indhold"> 	
@@ -199,6 +199,15 @@ justify-content: center;
 }
  /* INDEX-SIDE DESKTOP (1025px +) */
  @media (min-width: 1025px) {
+
+	.grid_p_index:nth-child(2){
+		grid-column: 2;
+}
+#grid_p_index{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	 gap: 20px;
+}
   .indhold-section {
     grid-column: 3 / 11;
     grid-row: 5 / 9;
