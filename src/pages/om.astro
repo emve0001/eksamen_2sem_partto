@@ -15,7 +15,7 @@ import TopKnap from "../components/TopKnap.astro";
             har jeg ledet adskillige
             prestigefyldte projekter i Danmark.
         </p>
-        <img class="img_01_hanspeter" src="../public/img/img01hp.webp" alt="img_01_hanspeter">
+        <img class="img_01_hanspeter" src="/img/img01hp.webp" loading="lazy" alt="img_01_hanspeter">
         <p class="info_02">Min passion for arkitekturens indflydelse på samspillet mellem mennesker, bygninger og
             landskaber er kernen i mit
             arbejde. Jeg stræber efter at skabe rum, der både forbedrer livskvaliteten og styrker fællesskabet.
@@ -37,7 +37,7 @@ import TopKnap from "../components/TopKnap.astro";
     </div>
 
     <div>
-        <img class="img_02_hanspeter" src="../public/img/img02hp.webp" alt="img af hans peter">
+        <img class="img_02_hanspeter" src="/img/img02hp.webp" loading="lazy" alt="img af hans peter">
     </div>
 
     <div class="firma_sektion">
@@ -65,7 +65,9 @@ import TopKnap from "../components/TopKnap.astro";
     </div>
 
     <div class="ctaknap1">
+        <a href="/kontakt">
   <CtaKnap text="KONTAKT MIG HER"/>
+  </a>
 </div>
 
     <div class="placering_sektion">
@@ -78,17 +80,17 @@ import TopKnap from "../components/TopKnap.astro";
 
     <div class="img_3_imger">
         <div class="img_03">
-            <img src= "../public/img/img_om01.webp" alt="Facade">
+            <img src= "/img/img_om01.webp" loading="lazy" alt="Facade">
               <p style="font-style: italic;">Facade</p>
         </div>
 
         <div class="img_04">
-              <img src= "../public/img/img_om02.webp" alt=Mødelokale">
+              <img src= "/img/img_om02.webp" loading="lazy" alt=Mødelokale">
              <p style="font-style: italic;">Mødelokale</p>
         </div>
 
         <div class="img_05">
-             <img src= "../public/img/img_om03.webp" alt="Kontor">
+             <img src= "/img/img_om03.webp" loading="lazy" alt="Kontor">
             <p style="font-style: italic;">Kontor</p>
         </div>
     </div>
@@ -100,8 +102,10 @@ import TopKnap from "../components/TopKnap.astro";
     <div class="maps"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.8524239555177!2d12.587773576955371!3d55.67416637305523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652533e9cd1e205%3A0xaa74b4640334ccf7!2sStrandgade%2030%2C%201401%20K%C3%B8benhavn%20K!5e0!3m2!1sda!2sdk!4v1716848918057!5m2!1sda!2sdk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
      </section>
-    <div class="listviewcta">
+     <div class="listviewcta">
+        <a href="/kontakt">
     <CtaKnap text="LAD OS SAMARBEJDE"/>
+</a>
     </div>
     </section>
     <div class="bund_grid">
@@ -111,6 +115,10 @@ import TopKnap from "../components/TopKnap.astro";
     </div>
 
 <style>
+     a{
+     text-decoration: none;
+            color: inherit;
+        }
     .kort_linje {
         border-top: 0.5px solid var(--secondary-color);
         width: 10%;
@@ -191,6 +199,7 @@ import TopKnap from "../components/TopKnap.astro";
   }
     .bund:nth-child(1) {
         grid-column: 4; /* Placerer den første knap i første kolonne */
+         margin-bottom: 4%;
     }
    
     @media (min-width: 768px) {
@@ -257,6 +266,7 @@ import TopKnap from "../components/TopKnap.astro";
     }
     .bund:nth-child(1) {
         grid-column: 4; /* Placerer den første knap i første kolonne */
+         margin-bottom: 4%;
     }
 
         .maps iframe{ 
@@ -400,7 +410,7 @@ import TopKnap from "../components/TopKnap.astro";
         
     }
     .maps iframe{ 
-       width: 1263px;
+       width: 900px;
        height: 405;
        margin-bottom:30px;
        max-width: 1130px;
