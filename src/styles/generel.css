@@ -79,7 +79,7 @@ body {
 
 @font-face {
   font-family: "Raleway";
-  src: url("public/fonts/raleway-variablefont_wght-webfont.woff2");
+  src: url("/fonts/raleway-variablefont_wght-webfont.woff2");
 }
 
 /* Mobile styles (default) */
